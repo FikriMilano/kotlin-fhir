@@ -378,7 +378,7 @@ public data class EvidenceVariable(
    * applied with "and" semantics.
    */
   @Serializable(with = EvidenceVariableCharacteristicSerializer::class)
-  public class Characteristic(
+  public data class Characteristic(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

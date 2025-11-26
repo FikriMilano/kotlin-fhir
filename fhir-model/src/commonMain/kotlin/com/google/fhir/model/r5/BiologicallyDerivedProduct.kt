@@ -236,7 +236,7 @@ public data class BiologicallyDerivedProduct(
 
   /** How this product was collected. */
   @Serializable(with = BiologicallyDerivedProductCollectionSerializer::class)
-  public class Collection(
+  public data class Collection(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -385,7 +385,7 @@ public data class BiologicallyDerivedProduct(
 
   /** A property that is specific to this BiologicallyDerviedProduct instance. */
   @Serializable(with = BiologicallyDerivedProductPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

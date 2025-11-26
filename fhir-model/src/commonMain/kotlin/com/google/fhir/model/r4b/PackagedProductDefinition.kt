@@ -227,7 +227,7 @@ public data class PackagedProductDefinition(
 
   /** The legal status of supply of the packaged item as classified by the regulator. */
   @Serializable(with = PackagedProductDefinitionLegalStatusOfSupplySerializer::class)
-  public class LegalStatusOfSupply(
+  public data class LegalStatusOfSupply(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -357,7 +357,7 @@ public data class PackagedProductDefinition(
    * medication manufactured item).
    */
   @Serializable(with = PackagedProductDefinitionPackageSerializer::class)
-  public class Package(
+  public data class Package(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -453,7 +453,7 @@ public data class PackagedProductDefinition(
 
     /** Shelf Life and storage information. */
     @Serializable(with = PackagedProductDefinitionPackageShelfLifeStorageSerializer::class)
-    public class ShelfLifeStorage(
+    public data class ShelfLifeStorage(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -626,7 +626,7 @@ public data class PackagedProductDefinition(
 
     /** General characteristics of this item. */
     @Serializable(with = PackagedProductDefinitionPackagePropertySerializer::class)
-    public class Property(
+    public data class Property(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -782,7 +782,7 @@ public data class PackagedProductDefinition(
 
     /** The item(s) within the packaging. */
     @Serializable(with = PackagedProductDefinitionPackageContainedItemSerializer::class)
-    public class ContainedItem(
+    public data class ContainedItem(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

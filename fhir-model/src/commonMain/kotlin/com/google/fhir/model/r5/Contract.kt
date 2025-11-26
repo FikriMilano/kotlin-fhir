@@ -409,7 +409,7 @@ public data class Contract(
    * instance, which may be associated with and transformable into a Contract.
    */
   @Serializable(with = ContractContentDefinitionSerializer::class)
-  public class ContentDefinition(
+  public data class ContentDefinition(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -573,7 +573,7 @@ public data class Contract(
    * nested groups.
    */
   @Serializable(with = ContractTermSerializer::class)
-  public class Term(
+  public data class Term(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -694,7 +694,7 @@ public data class Contract(
      * which may be specifically identified.
      */
     @Serializable(with = ContractTermSecurityLabelSerializer::class)
-    public class SecurityLabel(
+    public data class SecurityLabel(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -839,7 +839,7 @@ public data class Contract(
 
     /** The matter of concern in the context of this provision of the agrement. */
     @Serializable(with = ContractTermOfferSerializer::class)
-    public class Offer(
+    public data class Offer(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -953,7 +953,7 @@ public data class Contract(
 
       /** Offer Recipient. */
       @Serializable(with = ContractTermOfferPartySerializer::class)
-      public class Party(
+      public data class Party(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1064,7 +1064,7 @@ public data class Contract(
 
       /** Response to offer text. */
       @Serializable(with = ContractTermOfferAnswerSerializer::class)
-      public class Answer(
+      public data class Answer(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1385,7 +1385,7 @@ public data class Contract(
 
     /** Contract Term Asset List. */
     @Serializable(with = ContractTermAssetSerializer::class)
-    public class Asset(
+    public data class Asset(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1493,7 +1493,7 @@ public data class Contract(
 
       /** Circumstance of the asset. */
       @Serializable(with = ContractTermAssetContextSerializer::class)
-      public class Context(
+      public data class Context(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1626,7 +1626,7 @@ public data class Contract(
 
       /** Contract Valued Item List. */
       @Serializable(with = ContractTermAssetValuedItemSerializer::class)
-      public class ValuedItem(
+      public data class ValuedItem(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -2013,7 +2013,7 @@ public data class Contract(
      * responsibility for the activity taking place.
      */
     @Serializable(with = ContractTermActionSerializer::class)
-    public class Action(
+    public data class Action(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2148,7 +2148,7 @@ public data class Contract(
 
       /** Entity of the action. */
       @Serializable(with = ContractTermActionSubjectSerializer::class)
-      public class Subject(
+      public data class Subject(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -2603,7 +2603,7 @@ public data class Contract(
    * parties, which facilitate the execution of the contract such as a notary or witness.
    */
   @Serializable(with = ContractSignerSerializer::class)
-  public class Signer(
+  public data class Signer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2730,7 +2730,7 @@ public data class Contract(
    * roles, actions, obligations, responsibilities, and implication of the agreement.
    */
   @Serializable(with = ContractFriendlySerializer::class)
-  public class Friendly(
+  public data class Friendly(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2865,7 +2865,7 @@ public data class Contract(
 
   /** List of Legal expressions or representations of this Contract. */
   @Serializable(with = ContractLegalSerializer::class)
-  public class Legal(
+  public data class Legal(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2994,7 +2994,7 @@ public data class Contract(
 
   /** List of Computable Policy Rule Language Representations of this Contract. */
   @Serializable(with = ContractRuleSerializer::class)
-  public class Rule(
+  public data class Rule(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

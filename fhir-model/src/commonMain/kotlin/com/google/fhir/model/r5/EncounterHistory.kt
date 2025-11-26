@@ -239,7 +239,7 @@ public data class EncounterHistory(
    * de-normalizing the levels of the location hierarchy, such as site/ward/room/bed.
    */
   @Serializable(with = EncounterHistoryLocationSerializer::class)
-  public class Location(
+  public data class Location(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

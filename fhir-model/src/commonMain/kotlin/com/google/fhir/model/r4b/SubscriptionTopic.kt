@@ -337,7 +337,7 @@ public data class SubscriptionTopic(
    * resource update matching ANY of the definitions will trigger a notification).
    */
   @Serializable(with = SubscriptionTopicResourceTriggerSerializer::class)
-  public class ResourceTrigger(
+  public data class ResourceTrigger(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -427,7 +427,7 @@ public data class SubscriptionTopic(
      * notification for this subscription topic.
      */
     @Serializable(with = SubscriptionTopicResourceTriggerQueryCriteriaSerializer::class)
-    public class QueryCriteria(
+    public data class QueryCriteria(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -700,7 +700,7 @@ public data class SubscriptionTopic(
 
   /** Event definition which can be used to trigger the SubscriptionTopic. */
   @Serializable(with = SubscriptionTopicEventTriggerSerializer::class)
-  public class EventTrigger(
+  public data class EventTrigger(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -853,7 +853,7 @@ public data class SubscriptionTopic(
    * SubscriptionTopic context (e.g., hub.event).
    */
   @Serializable(with = SubscriptionTopicCanFilterBySerializer::class)
-  public class CanFilterBy(
+  public data class CanFilterBy(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1046,7 +1046,7 @@ public data class SubscriptionTopic(
    * Subscription Topic.
    */
   @Serializable(with = SubscriptionTopicNotificationShapeSerializer::class)
-  public class NotificationShape(
+  public data class NotificationShape(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -291,7 +291,7 @@ public data class MedicationKnowledge(
    * (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor.
    */
   @Serializable(with = MedicationKnowledgeRelatedMedicationKnowledgeSerializer::class)
-  public class RelatedMedicationKnowledge(
+  public data class RelatedMedicationKnowledge(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -402,7 +402,7 @@ public data class MedicationKnowledge(
 
   /** Associated documentation about the medication. */
   @Serializable(with = MedicationKnowledgeMonographSerializer::class)
-  public class Monograph(
+  public data class Monograph(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -522,7 +522,7 @@ public data class MedicationKnowledge(
 
   /** The price of the medication. */
   @Serializable(with = MedicationKnowledgeCostSerializer::class)
-  public class Cost(
+  public data class Cost(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -683,7 +683,7 @@ public data class MedicationKnowledge(
 
   /** The program under which the medication is reviewed. */
   @Serializable(with = MedicationKnowledgeMonitoringProgramSerializer::class)
-  public class MonitoringProgram(
+  public data class MonitoringProgram(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -800,7 +800,7 @@ public data class MedicationKnowledge(
    * indication.
    */
   @Serializable(with = MedicationKnowledgeIndicationGuidelineSerializer::class)
-  public class IndicationGuideline(
+  public data class IndicationGuideline(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -859,7 +859,7 @@ public data class MedicationKnowledge(
 
     /** The guidelines for the dosage of the medication for the indication. */
     @Serializable(with = MedicationKnowledgeIndicationGuidelineDosingGuidelineSerializer::class)
-    public class DosingGuideline(
+    public data class DosingGuideline(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -933,7 +933,7 @@ public data class MedicationKnowledge(
       @Serializable(
         with = MedicationKnowledgeIndicationGuidelineDosingGuidelineDosageSerializer::class
       )
-      public class Dosage(
+      public data class Dosage(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1056,7 +1056,7 @@ public data class MedicationKnowledge(
         with =
           MedicationKnowledgeIndicationGuidelineDosingGuidelinePatientCharacteristicSerializer::class
       )
-      public class PatientCharacteristic(
+      public data class PatientCharacteristic(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1345,7 +1345,7 @@ public data class MedicationKnowledge(
 
   /** Categorization of the medication within a formulary or classification system. */
   @Serializable(with = MedicationKnowledgeMedicineClassificationSerializer::class)
-  public class MedicineClassification(
+  public data class MedicineClassification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1499,7 +1499,7 @@ public data class MedicationKnowledge(
 
   /** Information that only applies to packages (not products). */
   @Serializable(with = MedicationKnowledgePackagingSerializer::class)
-  public class Packaging(
+  public data class Packaging(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1622,7 +1622,7 @@ public data class MedicationKnowledge(
    * length of stability at a given temperature.
    */
   @Serializable(with = MedicationKnowledgeStorageGuidelineSerializer::class)
-  public class StorageGuideline(
+  public data class StorageGuideline(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1693,7 +1693,7 @@ public data class MedicationKnowledge(
      * light.
      */
     @Serializable(with = MedicationKnowledgeStorageGuidelineEnvironmentalSettingSerializer::class)
-    public class EnvironmentalSetting(
+    public data class EnvironmentalSetting(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1911,7 +1911,7 @@ public data class MedicationKnowledge(
 
   /** Regulatory information about a medication. */
   @Serializable(with = MedicationKnowledgeRegulatorySerializer::class)
-  public class Regulatory(
+  public data class Regulatory(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1976,7 +1976,7 @@ public data class MedicationKnowledge(
      * Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
      */
     @Serializable(with = MedicationKnowledgeRegulatorySubstitutionSerializer::class)
-    public class Substitution(
+    public data class Substitution(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2087,7 +2087,7 @@ public data class MedicationKnowledge(
 
     /** The maximum number of units of the medication that can be dispensed in a period. */
     @Serializable(with = MedicationKnowledgeRegulatoryMaxDispenseSerializer::class)
-    public class MaxDispense(
+    public data class MaxDispense(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2273,7 +2273,7 @@ public data class MedicationKnowledge(
    * being described.
    */
   @Serializable(with = MedicationKnowledgeDefinitionalSerializer::class)
-  public class Definitional(
+  public data class Definitional(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2344,7 +2344,7 @@ public data class MedicationKnowledge(
 
     /** Identifies a particular constituent of interest in the product. */
     @Serializable(with = MedicationKnowledgeDefinitionalIngredientSerializer::class)
-    public class Ingredient(
+    public data class Ingredient(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2505,7 +2505,7 @@ public data class MedicationKnowledge(
 
     /** Specifies descriptive properties of the medicine, such as color, shape, imprints, etc. */
     @Serializable(with = MedicationKnowledgeDefinitionalDrugCharacteristicSerializer::class)
-    public class DrugCharacteristic(
+    public data class DrugCharacteristic(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

@@ -237,7 +237,7 @@ public data class PackagedProductDefinition(
 
   /** The legal status of supply of the packaged item as classified by the regulator. */
   @Serializable(with = PackagedProductDefinitionLegalStatusOfSupplySerializer::class)
-  public class LegalStatusOfSupply(
+  public data class LegalStatusOfSupply(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -367,7 +367,7 @@ public data class PackagedProductDefinition(
    * medication manufactured item).
    */
   @Serializable(with = PackagedProductDefinitionPackagingSerializer::class)
-  public class Packaging(
+  public data class Packaging(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -472,7 +472,7 @@ public data class PackagedProductDefinition(
 
     /** General characteristics of this item. */
     @Serializable(with = PackagedProductDefinitionPackagingPropertySerializer::class)
-    public class Property(
+    public data class Property(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -628,7 +628,7 @@ public data class PackagedProductDefinition(
 
     /** The item(s) within the packaging. */
     @Serializable(with = PackagedProductDefinitionPackagingContainedItemSerializer::class)
-    public class ContainedItem(
+    public data class ContainedItem(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

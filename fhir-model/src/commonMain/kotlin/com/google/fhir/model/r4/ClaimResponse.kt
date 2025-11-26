@@ -331,7 +331,7 @@ public data class ClaimResponse(
    * a simple items or groups of sub-details.
    */
   @Serializable(with = ClaimResponseItemSerializer::class)
-  public class Item(
+  public data class Item(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -403,7 +403,7 @@ public data class ClaimResponse(
      * adjudication of this item.
      */
     @Serializable(with = ClaimResponseItemAdjudicationSerializer::class)
-    public class Adjudication(
+    public data class Adjudication(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -575,7 +575,7 @@ public data class ClaimResponse(
      * simple items.
      */
     @Serializable(with = ClaimResponseItemDetailSerializer::class)
-    public class Detail(
+    public data class Detail(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -636,7 +636,7 @@ public data class ClaimResponse(
 
       /** A sub-detail adjudication of a simple product or service. */
       @Serializable(with = ClaimResponseItemDetailSubDetailSerializer::class)
-      public class SubDetail(
+      public data class SubDetail(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -895,7 +895,7 @@ public data class ClaimResponse(
 
   /** The first-tier service adjudications for payor added product or service lines. */
   @Serializable(with = ClaimResponseAddItemSerializer::class)
-  public class AddItem(
+  public data class AddItem(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1040,7 +1040,7 @@ public data class ClaimResponse(
 
     /** The second-tier service adjudications for payor added services. */
     @Serializable(with = ClaimResponseAddItemDetailSerializer::class)
-    public class Detail(
+    public data class Detail(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1144,7 +1144,7 @@ public data class ClaimResponse(
 
       /** The third-tier service adjudications for payor added services. */
       @Serializable(with = ClaimResponseAddItemDetailSubDetailSerializer::class)
-      public class SubDetail(
+      public data class SubDetail(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1690,7 +1690,7 @@ public data class ClaimResponse(
 
   /** Categorized monetary totals for the adjudication. */
   @Serializable(with = ClaimResponseTotalSerializer::class)
-  public class Total(
+  public data class Total(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1815,7 +1815,7 @@ public data class ClaimResponse(
 
   /** Payment details for the adjudication of the claim. */
   @Serializable(with = ClaimResponsePaymentSerializer::class)
-  public class Payment(
+  public data class Payment(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1976,7 +1976,7 @@ public data class ClaimResponse(
 
   /** A note that describes or explains adjudication results in a human readable form. */
   @Serializable(with = ClaimResponseProcessNoteSerializer::class)
-  public class ProcessNote(
+  public data class ProcessNote(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2114,7 +2114,7 @@ public data class ClaimResponse(
    * the claim.
    */
   @Serializable(with = ClaimResponseInsuranceSerializer::class)
-  public class Insurance(
+  public data class Insurance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2294,7 +2294,7 @@ public data class ClaimResponse(
 
   /** Errors encountered during the processing of the adjudication. */
   @Serializable(with = ClaimResponseErrorSerializer::class)
-  public class Error(
+  public data class Error(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

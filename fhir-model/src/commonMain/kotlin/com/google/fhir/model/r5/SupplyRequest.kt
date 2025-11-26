@@ -215,7 +215,7 @@ public data class SupplyRequest(
 
   /** Specific parameters for the ordered item. For example, the size of the indicated item. */
   @Serializable(with = SupplyRequestParameterSerializer::class)
-  public class Parameter(
+  public data class Parameter(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

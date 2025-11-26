@@ -316,7 +316,7 @@ public data class AllergyIntolerance(
 
   /** Details about each adverse reaction event linked to exposure to the identified substance. */
   @Serializable(with = AllergyIntoleranceReactionSerializer::class)
-  public class Reaction(
+  public data class Reaction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

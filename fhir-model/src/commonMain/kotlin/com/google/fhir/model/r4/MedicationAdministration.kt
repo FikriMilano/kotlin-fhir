@@ -267,7 +267,7 @@ public data class MedicationAdministration(
 
   /** Indicates who or what performed the medication administration and how they were involved. */
   @Serializable(with = MedicationAdministrationPerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -382,7 +382,7 @@ public data class MedicationAdministration(
 
   /** Describes the medication dosage information details e.g. dose, rate, site, route, etc. */
   @Serializable(with = MedicationAdministrationDosageSerializer::class)
-  public class Dosage(
+  public data class Dosage(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

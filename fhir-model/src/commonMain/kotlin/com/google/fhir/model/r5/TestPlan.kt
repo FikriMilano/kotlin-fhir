@@ -367,7 +367,7 @@ public data class TestPlan(
 
   /** The required criteria to execute the test plan - e.g. preconditions, previous tests... */
   @Serializable(with = TestPlanDependencySerializer::class)
-  public class Dependency(
+  public data class Dependency(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -493,7 +493,7 @@ public data class TestPlan(
 
   /** The individual test cases that are part of this plan, when they they are made explicit. */
   @Serializable(with = TestPlanTestCaseSerializer::class)
-  public class TestCase(
+  public data class TestCase(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -569,7 +569,7 @@ public data class TestPlan(
 
     /** The required criteria to execute the test case - e.g. preconditions, previous tests. */
     @Serializable(with = TestPlanTestCaseDependencySerializer::class)
-    public class Dependency(
+    public data class Dependency(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -683,7 +683,7 @@ public data class TestPlan(
 
     /** The actual test to be executed. */
     @Serializable(with = TestPlanTestCaseTestRunSerializer::class)
-    public class TestRun(
+    public data class TestRun(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -739,7 +739,7 @@ public data class TestPlan(
 
       /** The test cases in a structured language e.g. gherkin, Postman, or FHIR TestScript. */
       @Serializable(with = TestPlanTestCaseTestRunScriptSerializer::class)
-      public class Script(
+      public data class Script(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -940,7 +940,7 @@ public data class TestPlan(
 
     /** The test data used in the test case. */
     @Serializable(with = TestPlanTestCaseTestDataSerializer::class)
-    public class TestData(
+    public data class TestData(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1091,7 +1091,7 @@ public data class TestPlan(
      * The test assertions - the expectations of test results from the execution of the test case.
      */
     @Serializable(with = TestPlanTestCaseAssertionSerializer::class)
-    public class Assertion(
+    public data class Assertion(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

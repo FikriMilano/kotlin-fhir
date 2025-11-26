@@ -272,7 +272,7 @@ public data class ClinicalImpression(
    * Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.
    */
   @Serializable(with = ClinicalImpressionFindingSerializer::class)
-  public class Finding(
+  public data class Finding(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

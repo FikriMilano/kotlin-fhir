@@ -219,7 +219,7 @@ public data class ArtifactAssessment(
 
   /** A component comment, classifier, or rating of the artifact. */
   @Serializable(with = ArtifactAssessmentContentSerializer::class)
-  public class Content(
+  public data class Content(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

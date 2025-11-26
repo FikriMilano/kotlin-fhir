@@ -235,7 +235,7 @@ public data class RequestGroup(
 
   /** The actions, if any, produced by the evaluation of the artifact. */
   @Serializable(with = RequestGroupActionSerializer::class)
-  public class Action(
+  public data class Action(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -365,7 +365,7 @@ public data class RequestGroup(
      * An expression that describes applicability criteria, or start/stop conditions for the action.
      */
     @Serializable(with = RequestGroupActionConditionSerializer::class)
-    public class Condition(
+    public data class Condition(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -502,7 +502,7 @@ public data class RequestGroup(
 
     /** A relationship to another action such as "before" or "30-60 minutes after start of". */
     @Serializable(with = RequestGroupActionRelatedActionSerializer::class)
-    public class RelatedAction(
+    public data class RelatedAction(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

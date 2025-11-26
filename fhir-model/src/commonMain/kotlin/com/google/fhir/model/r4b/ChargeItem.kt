@@ -317,7 +317,7 @@ public data class ChargeItem(
 
   /** Indicates who or what performed or participated in the charged service. */
   @Serializable(with = ChargeItemPerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

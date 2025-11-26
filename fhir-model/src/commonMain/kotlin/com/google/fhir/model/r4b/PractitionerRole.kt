@@ -221,7 +221,7 @@ public data class PractitionerRole(
    * and/or healthcareservice.
    */
   @Serializable(with = PractitionerRoleAvailableTimeSerializer::class)
-  public class AvailableTime(
+  public data class AvailableTime(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -368,7 +368,7 @@ public data class PractitionerRole(
    * provided reason.
    */
   @Serializable(with = PractitionerRoleNotAvailableSerializer::class)
-  public class NotAvailable(
+  public data class NotAvailable(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

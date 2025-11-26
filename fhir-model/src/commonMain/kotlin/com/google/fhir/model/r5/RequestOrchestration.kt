@@ -248,7 +248,7 @@ public data class RequestOrchestration(
 
   /** The actions, if any, produced by the evaluation of the artifact. */
   @Serializable(with = RequestOrchestrationActionSerializer::class)
-  public class Action(
+  public data class Action(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -453,7 +453,7 @@ public data class RequestOrchestration(
      * An expression that describes applicability criteria, or start/stop conditions for the action.
      */
     @Serializable(with = RequestOrchestrationActionConditionSerializer::class)
-    public class Condition(
+    public data class Condition(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -590,7 +590,7 @@ public data class RequestOrchestration(
 
     /** Defines input data requirements for the action. */
     @Serializable(with = RequestOrchestrationActionInputSerializer::class)
-    public class Input(
+    public data class Input(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -731,7 +731,7 @@ public data class RequestOrchestration(
 
     /** Defines the outputs of the action, if any. */
     @Serializable(with = RequestOrchestrationActionOutputSerializer::class)
-    public class Output(
+    public data class Output(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -872,7 +872,7 @@ public data class RequestOrchestration(
 
     /** A relationship to another action such as "before" or "30-60 minutes after start of". */
     @Serializable(with = RequestOrchestrationActionRelatedActionSerializer::class)
-    public class RelatedAction(
+    public data class RelatedAction(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1025,7 +1025,7 @@ public data class RequestOrchestration(
 
     /** The participant that should perform or be responsible for this action. */
     @Serializable(with = RequestOrchestrationActionParticipantSerializer::class)
-    public class Participant(
+    public data class Participant(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1208,7 +1208,7 @@ public data class RequestOrchestration(
      * that would contain the result.
      */
     @Serializable(with = RequestOrchestrationActionDynamicValueSerializer::class)
-    public class DynamicValue(
+    public data class DynamicValue(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

@@ -193,7 +193,7 @@ public data class SubstanceProtein(
    * times.
    */
   @Serializable(with = SubstanceProteinSubunitSerializer::class)
-  public class Subunit(
+  public data class Subunit(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -168,7 +168,7 @@ public data class Linkage(
    * as how the items should be evaluated within the collection of linked items.
    */
   @Serializable(with = LinkageItemSerializer::class)
-  public class Item(
+  public data class Item(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

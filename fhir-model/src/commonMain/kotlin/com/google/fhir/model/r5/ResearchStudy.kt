@@ -317,7 +317,7 @@ public data class ResearchStudy(
 
   /** Additional names for the study. */
   @Serializable(with = ResearchStudyLabelSerializer::class)
-  public class Label(
+  public data class Label(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -431,7 +431,7 @@ public data class ResearchStudy(
 
   /** Sponsors, collaborators, and other parties. */
   @Serializable(with = ResearchStudyAssociatedPartySerializer::class)
-  public class AssociatedParty(
+  public data class AssociatedParty(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -585,7 +585,7 @@ public data class ResearchStudy(
 
   /** Status of study with time for that status. */
   @Serializable(with = ResearchStudyProgressStatusSerializer::class)
-  public class ProgressStatus(
+  public data class ProgressStatus(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -712,7 +712,7 @@ public data class ResearchStudy(
 
   /** Target or actual group of participants enrolled in study. */
   @Serializable(with = ResearchStudyRecruitmentSerializer::class)
-  public class Recruitment(
+  public data class Recruitment(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -845,7 +845,7 @@ public data class ResearchStudy(
    * lot A at 40 degrees for 1 month}.
    */
   @Serializable(with = ResearchStudyComparisonGroupSerializer::class)
-  public class ComparisonGroup(
+  public data class ComparisonGroup(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1007,7 +1007,7 @@ public data class ResearchStudy(
    * the analysis of data collected during the study.
    */
   @Serializable(with = ResearchStudyObjectiveSerializer::class)
-  public class Objective(
+  public data class Objective(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1139,7 +1139,7 @@ public data class ResearchStudy(
    * traits or associations with exposures, risk factors or treatment.
    */
   @Serializable(with = ResearchStudyOutcomeMeasureSerializer::class)
-  public class OutcomeMeasure(
+  public data class OutcomeMeasure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

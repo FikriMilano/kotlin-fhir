@@ -398,7 +398,7 @@ public data class MessageDefinition(
    * Encounter for an admit message or two Account records for a merge.
    */
   @Serializable(with = MessageDefinitionFocusSerializer::class)
-  public class Focus(
+  public data class Focus(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -561,7 +561,7 @@ public data class MessageDefinition(
    * Indicates what types of messages may be sent as an application-level response to this message.
    */
   @Serializable(with = MessageDefinitionAllowedResponseSerializer::class)
-  public class AllowedResponse(
+  public data class AllowedResponse(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

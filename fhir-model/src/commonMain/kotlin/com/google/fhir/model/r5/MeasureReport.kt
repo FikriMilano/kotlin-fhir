@@ -280,7 +280,7 @@ public data class MeasureReport(
 
   /** The results of the calculation, one for each population group in the measure. */
   @Serializable(with = MeasureReportGroupSerializer::class)
-  public class Group(
+  public data class Group(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -360,7 +360,7 @@ public data class MeasureReport(
      * appropriate for the measure.
      */
     @Serializable(with = MeasureReportGroupPopulationSerializer::class)
-    public class Population(
+    public data class Population(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -547,7 +547,7 @@ public data class MeasureReport(
      * stratifier defined by the measure.
      */
     @Serializable(with = MeasureReportGroupStratifierSerializer::class)
-    public class Stratifier(
+    public data class Stratifier(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -617,7 +617,7 @@ public data class MeasureReport(
        * gender value.
        */
       @Serializable(with = MeasureReportGroupStratifierStratumSerializer::class)
-      public class Stratum(
+      public data class Stratum(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -689,7 +689,7 @@ public data class MeasureReport(
 
         /** A stratifier component value. */
         @Serializable(with = MeasureReportGroupStratifierStratumComponentSerializer::class)
-        public class Component(
+        public data class Component(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -862,7 +862,7 @@ public data class MeasureReport(
          * the measure.
          */
         @Serializable(with = MeasureReportGroupStratifierStratumPopulationSerializer::class)
-        public class Population(
+        public data class Population(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.

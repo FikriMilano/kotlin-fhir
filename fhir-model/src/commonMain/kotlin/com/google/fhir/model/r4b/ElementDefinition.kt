@@ -469,7 +469,7 @@ public data class ElementDefinition(
    * terminates the set).
    */
   @Serializable(with = ElementDefinitionSlicingSerializer::class)
-  public class Slicing(
+  public data class Slicing(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -542,7 +542,7 @@ public data class ElementDefinition(
      * matches based on the allowed values for those elements in each of the slices.
      */
     @Serializable(with = ElementDefinitionSlicingDiscriminatorSerializer::class)
-    public class Discriminator(
+    public data class Discriminator(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -701,7 +701,7 @@ public data class ElementDefinition(
    * definition of the element, it will be same.
    */
   @Serializable(with = ElementDefinitionBaseSerializer::class)
-  public class Base(
+  public data class Base(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -810,7 +810,7 @@ public data class ElementDefinition(
 
   /** The data type or resource that the value of this element is permitted to be. */
   @Serializable(with = ElementDefinitionTypeSerializer::class)
-  public class Type(
+  public data class Type(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -988,7 +988,7 @@ public data class ElementDefinition(
    * found in the element.
    */
   @Serializable(with = ElementDefinitionExampleSerializer::class)
-  public class Example(
+  public data class Example(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1406,7 +1406,7 @@ public data class ElementDefinition(
    * evaluated within the context of the instance.
    */
   @Serializable(with = ElementDefinitionConstraintSerializer::class)
-  public class Constraint(
+  public data class Constraint(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1580,7 +1580,7 @@ public data class ElementDefinition(
    * data types (string, uri).
    */
   @Serializable(with = ElementDefinitionBindingSerializer::class)
-  public class Binding(
+  public data class Binding(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1681,7 +1681,7 @@ public data class ElementDefinition(
    * Identifies a concept from an external specification that roughly corresponds to this element.
    */
   @Serializable(with = ElementDefinitionMappingSerializer::class)
-  public class Mapping(
+  public data class Mapping(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

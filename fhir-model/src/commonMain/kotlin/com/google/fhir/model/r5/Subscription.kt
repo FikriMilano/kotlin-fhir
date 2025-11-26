@@ -266,7 +266,7 @@ public data class Subscription(
    * met; otherwise it returns false (i.e., logical AND).
    */
   @Serializable(with = SubscriptionFilterBySerializer::class)
-  public class FilterBy(
+  public data class FilterBy(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -428,7 +428,7 @@ public data class Subscription(
 
   /** Channel-dependent information to send as part of the notification (e.g., HTTP Headers). */
   @Serializable(with = SubscriptionParameterSerializer::class)
-  public class Parameter(
+  public data class Parameter(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

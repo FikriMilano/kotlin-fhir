@@ -180,7 +180,7 @@ public data class SubstanceNucleicAcid(
    * by molecular weight; subunits that have identical sequences will be repeated multiple times.
    */
   @Serializable(with = SubstanceNucleicAcidSubunitSerializer::class)
-  public class Subunit(
+  public data class Subunit(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -272,7 +272,7 @@ public data class SubstanceNucleicAcid(
 
     /** The linkages between sugar residues will also be captured. */
     @Serializable(with = SubstanceNucleicAcidSubunitLinkageSerializer::class)
-    public class Linkage(
+    public data class Linkage(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -416,7 +416,7 @@ public data class SubstanceNucleicAcid(
 
     /** 5.3.6.8.1 Sugar ID (Mandatory). */
     @Serializable(with = SubstanceNucleicAcidSubunitSugarSerializer::class)
-    public class Sugar(
+    public data class Sugar(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

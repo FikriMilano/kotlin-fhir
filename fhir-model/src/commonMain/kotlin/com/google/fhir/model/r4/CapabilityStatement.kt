@@ -414,7 +414,7 @@ public data class CapabilityStatement(
    * describes the capabilities of a particular software version, independent of an installation.
    */
   @Serializable(with = CapabilityStatementSoftwareSerializer::class)
-  public class Software(
+  public data class Software(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -547,7 +547,7 @@ public data class CapabilityStatement(
    * i.e. a particular installation, rather than the capabilities of a software program.
    */
   @Serializable(with = CapabilityStatementImplementationSerializer::class)
-  public class Implementation(
+  public data class Implementation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -679,7 +679,7 @@ public data class CapabilityStatement(
 
   /** A definition of the restful capabilities of the solution, if any. */
   @Serializable(with = CapabilityStatementRestSerializer::class)
-  public class Rest(
+  public data class Rest(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -795,7 +795,7 @@ public data class CapabilityStatement(
      * to know.
      */
     @Serializable(with = CapabilityStatementRestSecuritySerializer::class)
-    public class Security(
+    public data class Security(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -928,7 +928,7 @@ public data class CapabilityStatement(
 
     /** A specification of the restful capabilities of the solution for a specific resource type. */
     @Serializable(with = CapabilityStatementRestResourceSerializer::class)
-    public class Resource(
+    public data class Resource(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1137,7 +1137,7 @@ public data class CapabilityStatement(
 
       /** Identifies a restful operation supported by the solution. */
       @Serializable(with = CapabilityStatementRestResourceInteractionSerializer::class)
-      public class Interaction(
+      public data class Interaction(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1261,7 +1261,7 @@ public data class CapabilityStatement(
        * ones defined in the specification, or additional ones defined for/by the implementation.
        */
       @Serializable(with = CapabilityStatementRestResourceSearchParamSerializer::class)
-      public class SearchParam(
+      public data class SearchParam(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1442,7 +1442,7 @@ public data class CapabilityStatement(
        * operation, and the parameters.
        */
       @Serializable(with = CapabilityStatementRestResourceOperationSerializer::class)
-      public class Operation(
+      public data class Operation(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1835,7 +1835,7 @@ public data class CapabilityStatement(
 
     /** A specification of restful operations supported by the system. */
     @Serializable(with = CapabilityStatementRestInteractionSerializer::class)
-    public class Interaction(
+    public data class Interaction(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2076,7 +2076,7 @@ public data class CapabilityStatement(
 
   /** A description of the messaging capabilities of the solution. */
   @Serializable(with = CapabilityStatementMessagingSerializer::class)
-  public class Messaging(
+  public data class Messaging(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2152,7 +2152,7 @@ public data class CapabilityStatement(
 
     /** An endpoint (network accessible address) to which messages and/or replies are to be sent. */
     @Serializable(with = CapabilityStatementMessagingEndpointSerializer::class)
-    public class Endpoint(
+    public data class Endpoint(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2271,7 +2271,7 @@ public data class CapabilityStatement(
 
     /** References to message definitions for messages this system can send or receive. */
     @Serializable(with = CapabilityStatementMessagingSupportedMessageSerializer::class)
-    public class SupportedMessage(
+    public data class SupportedMessage(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2470,7 +2470,7 @@ public data class CapabilityStatement(
 
   /** A document definition. */
   @Serializable(with = CapabilityStatementDocumentSerializer::class)
-  public class Document(
+  public data class Document(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

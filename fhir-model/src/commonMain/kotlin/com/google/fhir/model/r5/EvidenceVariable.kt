@@ -446,7 +446,7 @@ public data class EvidenceVariable(
    * semantics.
    */
   @Serializable(with = EvidenceVariableCharacteristicSerializer::class)
-  public class Characteristic(
+  public data class Characteristic(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -550,7 +550,7 @@ public data class EvidenceVariable(
 
     /** Defines the characteristic using both a type and value[x] elements. */
     @Serializable(with = EvidenceVariableCharacteristicDefinitionByTypeAndValueSerializer::class)
-    public class DefinitionByTypeAndValue(
+    public data class DefinitionByTypeAndValue(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -738,7 +738,7 @@ public data class EvidenceVariable(
 
     /** Defines the characteristic as a combination of two or more characteristics. */
     @Serializable(with = EvidenceVariableCharacteristicDefinitionByCombinationSerializer::class)
-    public class DefinitionByCombination(
+    public data class DefinitionByCombination(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -856,7 +856,7 @@ public data class EvidenceVariable(
 
     /** Timing in which the characteristic is determined. */
     @Serializable(with = EvidenceVariableCharacteristicTimeFromEventSerializer::class)
-    public class TimeFromEvent(
+    public data class TimeFromEvent(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1191,7 +1191,7 @@ public data class EvidenceVariable(
 
   /** A grouping for ordinal or polychotomous variables. */
   @Serializable(with = EvidenceVariableCategorySerializer::class)
-  public class Category(
+  public data class Category(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

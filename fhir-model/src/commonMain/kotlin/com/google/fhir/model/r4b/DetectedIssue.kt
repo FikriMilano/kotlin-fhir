@@ -220,7 +220,7 @@ public data class DetectedIssue(
    * such as a GuidanceResponse or MeasureReport.
    */
   @Serializable(with = DetectedIssueEvidenceSerializer::class)
-  public class Evidence(
+  public data class Evidence(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -344,7 +344,7 @@ public data class DetectedIssue(
    * of known mitigating factors that may reduce/eliminate the need for any action.
    */
   @Serializable(with = DetectedIssueMitigationSerializer::class)
-  public class Mitigation(
+  public data class Mitigation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -396,7 +396,7 @@ public data class Observation(
    * populations, two `referenceRange` elements would be used.
    */
   @Serializable(with = ObservationReferenceRangeSerializer::class)
-  public class ReferenceRange(
+  public data class ReferenceRange(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -603,7 +603,7 @@ public data class Observation(
    * component observations for genetics observations.
    */
   @Serializable(with = ObservationComponentSerializer::class)
-  public class Component(
+  public data class Component(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

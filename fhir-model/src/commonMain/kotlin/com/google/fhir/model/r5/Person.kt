@@ -242,7 +242,7 @@ public data class Person(
 
   /** A language which may be used to communicate with the person about his or her health. */
   @Serializable(with = PersonCommunicationSerializer::class)
-  public class Communication(
+  public data class Communication(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -381,7 +381,7 @@ public data class Person(
 
   /** Link to a resource that concerns the same actual person. */
   @Serializable(with = PersonLinkSerializer::class)
-  public class Link(
+  public data class Link(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

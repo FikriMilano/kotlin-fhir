@@ -174,7 +174,7 @@ public data class Permission(
 
   /** The asserted justification for using the data. */
   @Serializable(with = PermissionJustificationSerializer::class)
-  public class Justification(
+  public data class Justification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -304,7 +304,7 @@ public data class Permission(
 
   /** A set of rules. */
   @Serializable(with = PermissionRuleSerializer::class)
-  public class Rule(
+  public data class Rule(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -366,7 +366,7 @@ public data class Permission(
 
     /** A description or definition of which activities are allowed to be done on the data. */
     @Serializable(with = PermissionRuleDataSerializer::class)
-    public class Data(
+    public data class Data(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -442,7 +442,7 @@ public data class Permission(
 
       /** Explicit FHIR Resource references. */
       @Serializable(with = PermissionRuleDataResourceSerializer::class)
-      public class Resource(
+      public data class Resource(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -639,7 +639,7 @@ public data class Permission(
 
     /** A description or definition of which activities are allowed to be done on the data. */
     @Serializable(with = PermissionRuleActivitySerializer::class)
-    public class Activity(
+    public data class Activity(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

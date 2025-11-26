@@ -238,7 +238,7 @@ public data class DocumentManifest(
 
   /** Related identifiers or resources associated with the DocumentManifest. */
   @Serializable(with = DocumentManifestRelatedSerializer::class)
-  public class Related(
+  public data class Related(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

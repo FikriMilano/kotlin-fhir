@@ -399,7 +399,7 @@ public data class Appointment(
 
   /** List of participants involved in the appointment. */
   @Serializable(with = AppointmentParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -586,7 +586,7 @@ public data class Appointment(
    * appointments.
    */
   @Serializable(with = AppointmentRecurrenceTemplateSerializer::class)
-  public class RecurrenceTemplate(
+  public data class RecurrenceTemplate(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -678,7 +678,7 @@ public data class Appointment(
 
     /** Information about weekly recurring appointments. */
     @Serializable(with = AppointmentRecurrenceTemplateWeeklyTemplateSerializer::class)
-    public class WeeklyTemplate(
+    public data class WeeklyTemplate(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -846,7 +846,7 @@ public data class Appointment(
 
     /** Information about monthly recurring appointments. */
     @Serializable(with = AppointmentRecurrenceTemplateMonthlyTemplateSerializer::class)
-    public class MonthlyTemplate(
+    public data class MonthlyTemplate(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -993,7 +993,7 @@ public data class Appointment(
 
     /** Information about yearly recurring appointments. */
     @Serializable(with = AppointmentRecurrenceTemplateYearlyTemplateSerializer::class)
-    public class YearlyTemplate(
+    public data class YearlyTemplate(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

@@ -258,7 +258,7 @@ public data class Consent(
    * dereferencable to a computable policy of some form.
    */
   @Serializable(with = ConsentPolicyBasisSerializer::class)
-  public class PolicyBasis(
+  public data class PolicyBasis(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -389,7 +389,7 @@ public data class Consent(
    * patient, his/her family or another authorized person.
    */
   @Serializable(with = ConsentVerificationSerializer::class)
-  public class Verification(
+  public data class Verification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -544,7 +544,7 @@ public data class Consent(
    * access permissions.
    */
   @Serializable(with = ConsentProvisionSerializer::class)
-  public class Provision(
+  public data class Provision(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -683,7 +683,7 @@ public data class Consent(
      * property they share (e.g. 'admitting officers').
      */
     @Serializable(with = ConsentProvisionActorSerializer::class)
-    public class Actor(
+    public data class Actor(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -808,7 +808,7 @@ public data class Consent(
 
     /** The resources controlled by this provision if specific resources are referenced. */
     @Serializable(with = ConsentProvisionDataSerializer::class)
-    public class Data(
+    public data class Data(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

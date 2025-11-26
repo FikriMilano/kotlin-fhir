@@ -221,7 +221,7 @@ public data class Medication(
 
   /** Identifies a particular constituent of interest in the product. */
   @Serializable(with = MedicationIngredientSerializer::class)
-  public class Ingredient(
+  public data class Ingredient(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -379,7 +379,7 @@ public data class Medication(
 
   /** Information that only applies to packages (not products). */
   @Serializable(with = MedicationBatchSerializer::class)
-  public class Batch(
+  public data class Batch(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

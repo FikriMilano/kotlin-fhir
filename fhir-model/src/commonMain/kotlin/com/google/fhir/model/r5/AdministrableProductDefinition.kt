@@ -231,7 +231,7 @@ public data class AdministrableProductDefinition(
 
   /** Characteristics e.g. a product's onset of action. */
   @Serializable(with = AdministrableProductDefinitionPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -409,7 +409,7 @@ public data class AdministrableProductDefinition(
    * when the 'formOf' product already uses MedicinalProductDefinition.route (and vice versa).
    */
   @Serializable(with = AdministrableProductDefinitionRouteOfAdministrationSerializer::class)
-  public class RouteOfAdministration(
+  public data class RouteOfAdministration(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -490,7 +490,7 @@ public data class AdministrableProductDefinition(
     @Serializable(
       with = AdministrableProductDefinitionRouteOfAdministrationTargetSpeciesSerializer::class
     )
-    public class TargetSpecies(
+    public data class TargetSpecies(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -548,7 +548,7 @@ public data class AdministrableProductDefinition(
         with =
           AdministrableProductDefinitionRouteOfAdministrationTargetSpeciesWithdrawalPeriodSerializer::class
       )
-      public class WithdrawalPeriod(
+      public data class WithdrawalPeriod(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

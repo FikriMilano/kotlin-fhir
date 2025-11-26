@@ -417,7 +417,7 @@ public data class PlanDefinition(
    * meeting a process improvement objective, etc.
    */
   @Serializable(with = PlanDefinitionGoalSerializer::class)
-  public class Goal(
+  public data class Goal(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -499,7 +499,7 @@ public data class PlanDefinition(
 
     /** Indicates what should be done and within what timeframe. */
     @Serializable(with = PlanDefinitionGoalTargetSerializer::class)
-    public class Target(
+    public data class Target(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -759,7 +759,7 @@ public data class PlanDefinition(
 
   /** An action or group of actions to be taken as part of the plan. */
   @Serializable(with = PlanDefinitionActionSerializer::class)
-  public class Action(
+  public data class Action(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -961,7 +961,7 @@ public data class PlanDefinition(
      * An expression that describes applicability criteria or start/stop conditions for the action.
      */
     @Serializable(with = PlanDefinitionActionConditionSerializer::class)
-    public class Condition(
+    public data class Condition(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1096,7 +1096,7 @@ public data class PlanDefinition(
 
     /** A relationship to another action such as "before" or "30-60 minutes after start of". */
     @Serializable(with = PlanDefinitionActionRelatedActionSerializer::class)
-    public class RelatedAction(
+    public data class RelatedAction(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1242,7 +1242,7 @@ public data class PlanDefinition(
 
     /** Indicates who should participate in performing the action described. */
     @Serializable(with = PlanDefinitionActionParticipantSerializer::class)
-    public class Participant(
+    public data class Participant(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1360,7 +1360,7 @@ public data class PlanDefinition(
      * that would contain the result.
      */
     @Serializable(with = PlanDefinitionActionDynamicValueSerializer::class)
-    public class DynamicValue(
+    public data class DynamicValue(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

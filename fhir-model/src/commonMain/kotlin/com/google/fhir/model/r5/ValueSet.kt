@@ -485,7 +485,7 @@ public data class ValueSet(
    * the Content Logical Definition (CLD).
    */
   @Serializable(with = ValueSetComposeSerializer::class)
-  public class Compose(
+  public data class Compose(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -594,7 +594,7 @@ public data class ValueSet(
 
     /** Include one or more codes from a code system or other value set(s). */
     @Serializable(with = ValueSetComposeIncludeSerializer::class)
-    public class Include(
+    public data class Include(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -707,7 +707,7 @@ public data class ValueSet(
 
       /** Specifies a concept to be included or excluded. */
       @Serializable(with = ValueSetComposeIncludeConceptSerializer::class)
-      public class Concept(
+      public data class Concept(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -787,7 +787,7 @@ public data class ValueSet(
          * languages, aliases, specialized purposes, used for particular purposes, etc.
          */
         @Serializable(with = ValueSetComposeIncludeConceptDesignationSerializer::class)
-        public class Designation(
+        public data class Designation(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -1031,7 +1031,7 @@ public data class ValueSet(
        * filters are specified within the include, they SHALL all be true.
        */
       @Serializable(with = ValueSetComposeIncludeFilterSerializer::class)
-      public class Filter(
+      public data class Filter(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1416,7 +1416,7 @@ public data class ValueSet(
    * enumerated codes. This element holds the expansion, if it has been performed.
    */
   @Serializable(with = ValueSetExpansionSerializer::class)
-  public class Expansion(
+  public data class Expansion(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1542,7 +1542,7 @@ public data class ValueSet(
      * to pick the correct expansion.
      */
     @Serializable(with = ValueSetExpansionParameterSerializer::class)
-    public class Parameter(
+    public data class Parameter(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1722,7 +1722,7 @@ public data class ValueSet(
      * about a concept.
      */
     @Serializable(with = ValueSetExpansionPropertySerializer::class)
-    public class Property(
+    public data class Property(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1847,7 +1847,7 @@ public data class ValueSet(
 
     /** The codes that are contained in the value set expansion. */
     @Serializable(with = ValueSetExpansionContainsSerializer::class)
-    public class Contains(
+    public data class Contains(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1966,7 +1966,7 @@ public data class ValueSet(
 
       /** A property value for this concept. */
       @Serializable(with = ValueSetExpansionContainsPropertySerializer::class)
-      public class Property(
+      public data class Property(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -2023,7 +2023,7 @@ public data class ValueSet(
 
         /** A subproperty value for this concept. */
         @Serializable(with = ValueSetExpansionContainsPropertySubPropertySerializer::class)
-        public class SubProperty(
+        public data class SubProperty(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -2566,7 +2566,7 @@ public data class ValueSet(
    * further clarify the text in ValueSet.description.
    */
   @Serializable(with = ValueSetScopeSerializer::class)
-  public class Scope(
+  public data class Scope(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

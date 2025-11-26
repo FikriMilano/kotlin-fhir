@@ -386,7 +386,7 @@ public data class Encounter(
 
   /** The list of people responsible for providing the service. */
   @Serializable(with = EncounterParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -571,7 +571,7 @@ public data class Encounter(
 
   /** The list of medical reasons that are expected to be addressed during the episode of care. */
   @Serializable(with = EncounterReasonSerializer::class)
-  public class Reason(
+  public data class Reason(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -697,7 +697,7 @@ public data class Encounter(
 
   /** The list of diagnosis relevant to this encounter. */
   @Serializable(with = EncounterDiagnosisSerializer::class)
-  public class Diagnosis(
+  public data class Diagnosis(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -824,7 +824,7 @@ public data class Encounter(
    * relevant from the time of admittance until the time of discharge.
    */
   @Serializable(with = EncounterAdmissionSerializer::class)
-  public class Admission(
+  public data class Admission(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -972,7 +972,7 @@ public data class Encounter(
 
   /** List of locations where the patient has been during this encounter. */
   @Serializable(with = EncounterLocationSerializer::class)
-  public class Location(
+  public data class Location(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

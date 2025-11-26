@@ -166,7 +166,7 @@ public data class MedicinalProductIngredient(
 
   /** A specified substance that comprises this ingredient. */
   @Serializable(with = MedicinalProductIngredientSpecifiedSubstanceSerializer::class)
-  public class SpecifiedSubstance(
+  public data class SpecifiedSubstance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -232,7 +232,7 @@ public data class MedicinalProductIngredient(
      * pharmaceutical product.
      */
     @Serializable(with = MedicinalProductIngredientSpecifiedSubstanceStrengthSerializer::class)
-    public class Strength(
+    public data class Strength(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -315,7 +315,7 @@ public data class MedicinalProductIngredient(
         with =
           MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthSerializer::class
       )
-      public class ReferenceStrength(
+      public data class ReferenceStrength(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -605,7 +605,7 @@ public data class MedicinalProductIngredient(
 
   /** The ingredient substance. */
   @Serializable(with = MedicinalProductIngredientSubstanceSerializer::class)
-  public class Substance(
+  public data class Substance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

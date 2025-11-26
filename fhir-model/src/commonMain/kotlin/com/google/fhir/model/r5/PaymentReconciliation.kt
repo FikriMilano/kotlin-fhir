@@ -275,7 +275,7 @@ public data class PaymentReconciliation(
 
   /** Distribution of the payment amount for a previously acknowledged payable. */
   @Serializable(with = PaymentReconciliationAllocationSerializer::class)
-  public class Allocation(
+  public data class Allocation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -527,7 +527,7 @@ public data class PaymentReconciliation(
 
   /** A note that describes or explains the processing in a human readable form. */
   @Serializable(with = PaymentReconciliationProcessNoteSerializer::class)
-  public class ProcessNote(
+  public data class ProcessNote(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

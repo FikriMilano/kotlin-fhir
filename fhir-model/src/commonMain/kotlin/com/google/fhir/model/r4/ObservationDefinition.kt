@@ -219,7 +219,7 @@ public data class ObservationDefinition(
 
   /** Characteristics for quantitative results of this observation. */
   @Serializable(with = ObservationDefinitionQuantitativeDetailsSerializer::class)
-  public class QuantitativeDetails(
+  public data class QuantitativeDetails(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -372,7 +372,7 @@ public data class ObservationDefinition(
    * observations conforming to this ObservationDefinition.
    */
   @Serializable(with = ObservationDefinitionQualifiedIntervalSerializer::class)
-  public class QualifiedInterval(
+  public data class QualifiedInterval(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

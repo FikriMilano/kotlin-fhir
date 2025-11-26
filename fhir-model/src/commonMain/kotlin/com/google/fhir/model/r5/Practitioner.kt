@@ -254,7 +254,7 @@ public data class Practitioner(
    * practitioner to practice medicine within a certain locality.
    */
   @Serializable(with = PractitionerQualificationSerializer::class)
-  public class Qualification(
+  public data class Qualification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -387,7 +387,7 @@ public data class Practitioner(
    * a practitioner is able to communicate with patients (on a per Organization/Role basis).
    */
   @Serializable(with = PractitionerCommunicationSerializer::class)
-  public class Communication(
+  public data class Communication(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

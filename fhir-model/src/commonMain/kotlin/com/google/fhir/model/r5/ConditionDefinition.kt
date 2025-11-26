@@ -380,7 +380,7 @@ public data class ConditionDefinition(
 
   /** Observations particularly relevant to this condition. */
   @Serializable(with = ConditionDefinitionObservationSerializer::class)
-  public class Observation(
+  public data class Observation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -494,7 +494,7 @@ public data class ConditionDefinition(
 
   /** Medications particularly relevant for this condition. */
   @Serializable(with = ConditionDefinitionMedicationSerializer::class)
-  public class Medication(
+  public data class Medication(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -608,7 +608,7 @@ public data class ConditionDefinition(
 
   /** An observation that suggests that this condition applies. */
   @Serializable(with = ConditionDefinitionPreconditionSerializer::class)
-  public class Precondition(
+  public data class Precondition(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -750,7 +750,7 @@ public data class ConditionDefinition(
 
   /** Questionnaire for this condition. */
   @Serializable(with = ConditionDefinitionQuestionnaireSerializer::class)
-  public class Questionnaire(
+  public data class Questionnaire(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -861,7 +861,7 @@ public data class ConditionDefinition(
 
   /** Plan that is appropriate. */
   @Serializable(with = ConditionDefinitionPlanSerializer::class)
-  public class Plan(
+  public data class Plan(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

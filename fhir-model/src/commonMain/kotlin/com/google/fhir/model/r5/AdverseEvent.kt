@@ -312,7 +312,7 @@ public data class AdverseEvent(
 
   /** Indicates who or what participated in the adverse event and how they were involved. */
   @Serializable(with = AdverseEventParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -441,7 +441,7 @@ public data class AdverseEvent(
 
   /** Describes the entity that is suspected to have caused the adverse event. */
   @Serializable(with = AdverseEventSuspectEntitySerializer::class)
-  public class SuspectEntity(
+  public data class SuspectEntity(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -499,7 +499,7 @@ public data class AdverseEvent(
 
     /** Information on the possible cause of the event. */
     @Serializable(with = AdverseEventSuspectEntityCausalitySerializer::class)
-    public class Causality(
+    public data class Causality(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -715,7 +715,7 @@ public data class AdverseEvent(
    * event.
    */
   @Serializable(with = AdverseEventContributingFactorSerializer::class)
-  public class ContributingFactor(
+  public data class ContributingFactor(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -851,7 +851,7 @@ public data class AdverseEvent(
 
   /** Preventive actions that contributed to avoiding the adverse event. */
   @Serializable(with = AdverseEventPreventiveActionSerializer::class)
-  public class PreventiveAction(
+  public data class PreventiveAction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -984,7 +984,7 @@ public data class AdverseEvent(
    * harm.
    */
   @Serializable(with = AdverseEventMitigatingActionSerializer::class)
-  public class MitigatingAction(
+  public data class MitigatingAction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1120,7 +1120,7 @@ public data class AdverseEvent(
 
   /** Supporting information relevant to the event. */
   @Serializable(with = AdverseEventSupportingInfoSerializer::class)
-  public class SupportingInfo(
+  public data class SupportingInfo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

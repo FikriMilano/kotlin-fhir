@@ -231,7 +231,7 @@ public data class Organization(
 
   /** Contact for the organization for a certain purpose. */
   @Serializable(with = OrganizationContactSerializer::class)
-  public class Contact(
+  public data class Contact(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

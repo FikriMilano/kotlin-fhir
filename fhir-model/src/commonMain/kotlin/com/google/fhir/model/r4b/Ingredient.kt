@@ -198,7 +198,7 @@ public data class Ingredient(
    * be clear on the application of context relevant to their use case.
    */
   @Serializable(with = IngredientManufacturerSerializer::class)
-  public class Manufacturer(
+  public data class Manufacturer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -319,7 +319,7 @@ public data class Ingredient(
 
   /** The substance that comprises this ingredient. */
   @Serializable(with = IngredientSubstanceSerializer::class)
-  public class Substance(
+  public data class Substance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -384,7 +384,7 @@ public data class Ingredient(
      * single strength.
      */
     @Serializable(with = IngredientSubstanceStrengthSerializer::class)
-    public class Strength(
+    public data class Strength(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -485,7 +485,7 @@ public data class Ingredient(
        * strength are needed.
        */
       @Serializable(with = IngredientSubstanceStrengthReferenceStrengthSerializer::class)
-      public class ReferenceStrength(
+      public data class ReferenceStrength(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

@@ -336,7 +336,7 @@ public data class CarePlan(
    * education etc.
    */
   @Serializable(with = CarePlanActivitySerializer::class)
-  public class Activity(
+  public data class Activity(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

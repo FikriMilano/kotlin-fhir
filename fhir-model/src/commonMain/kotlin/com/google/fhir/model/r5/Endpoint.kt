@@ -246,7 +246,7 @@ public data class Endpoint(
 
   /** The set of payloads that are provided/available at this endpoint. */
   @Serializable(with = EndpointPayloadSerializer::class)
-  public class Payload(
+  public data class Payload(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

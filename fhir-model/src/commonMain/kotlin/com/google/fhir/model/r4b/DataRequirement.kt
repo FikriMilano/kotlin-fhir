@@ -131,7 +131,7 @@ public data class DataRequirement(
    * data, i.e. code filters are AND'ed, not OR'ed.
    */
   @Serializable(with = DataRequirementCodeFilterSerializer::class)
-  public class CodeFilter(
+  public data class CodeFilter(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -268,7 +268,7 @@ public data class DataRequirement(
    * date filters are AND'ed, not OR'ed.
    */
   @Serializable(with = DataRequirementDateFilterSerializer::class)
-  public class DateFilter(
+  public data class DateFilter(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -418,7 +418,7 @@ public data class DataRequirement(
 
   /** Specifies the order of the results to be returned. */
   @Serializable(with = DataRequirementSortSerializer::class)
-  public class Sort(
+  public data class Sort(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -196,7 +196,7 @@ public data class InventoryItem(
 
   /** The item name(s) - the brand name, or common name, functional name, generic name. */
   @Serializable(with = InventoryItemNameSerializer::class)
-  public class Name(
+  public data class Name(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -312,7 +312,7 @@ public data class InventoryItem(
 
   /** Organization(s) responsible for the product. */
   @Serializable(with = InventoryItemResponsibleOrganizationSerializer::class)
-  public class ResponsibleOrganization(
+  public data class ResponsibleOrganization(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -429,7 +429,7 @@ public data class InventoryItem(
 
   /** The descriptive characteristics of the inventory item. */
   @Serializable(with = InventoryItemDescriptionSerializer::class)
-  public class Description(
+  public data class Description(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -550,7 +550,7 @@ public data class InventoryItem(
 
   /** Association with other items or products. */
   @Serializable(with = InventoryItemAssociationSerializer::class)
-  public class Association(
+  public data class Association(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -682,7 +682,7 @@ public data class InventoryItem(
 
   /** The descriptive or identifying characteristics of the item. */
   @Serializable(with = InventoryItemCharacteristicSerializer::class)
-  public class Characteristic(
+  public data class Characteristic(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -895,7 +895,7 @@ public data class InventoryItem(
 
   /** Instances or occurrences of the product. */
   @Serializable(with = InventoryItemInstanceSerializer::class)
-  public class Instance(
+  public data class Instance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

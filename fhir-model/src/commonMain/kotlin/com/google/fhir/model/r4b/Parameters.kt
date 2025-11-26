@@ -90,7 +90,7 @@ public data class Parameters(
 
   /** A parameter passed to or received from the operation. */
   @Serializable(with = ParametersParameterSerializer::class)
-  public class Parameter(
+  public data class Parameter(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

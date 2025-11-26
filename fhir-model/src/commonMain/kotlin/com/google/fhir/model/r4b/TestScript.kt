@@ -378,7 +378,7 @@ public data class TestScript(
 
   /** An abstract server used in operations within this test script in the origin element. */
   @Serializable(with = TestScriptOriginSerializer::class)
-  public class Origin(
+  public data class Origin(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -522,7 +522,7 @@ public data class TestScript(
 
   /** An abstract server used in operations within this test script in the destination element. */
   @Serializable(with = TestScriptDestinationSerializer::class)
-  public class Destination(
+  public data class Destination(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -670,7 +670,7 @@ public data class TestScript(
    * being tested.
    */
   @Serializable(with = TestScriptMetadataSerializer::class)
-  public class Metadata(
+  public data class Metadata(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -739,7 +739,7 @@ public data class TestScript(
 
     /** A link to the FHIR specification that this test is covering. */
     @Serializable(with = TestScriptMetadataLinkSerializer::class)
-    public class Link(
+    public data class Link(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -855,7 +855,7 @@ public data class TestScript(
      * tested.
      */
     @Serializable(with = TestScriptMetadataCapabilitySerializer::class)
-    public class Capability(
+    public data class Capability(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1110,7 +1110,7 @@ public data class TestScript(
    * to execute.
    */
   @Serializable(with = TestScriptFixtureSerializer::class)
-  public class Fixture(
+  public data class Fixture(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1255,7 +1255,7 @@ public data class TestScript(
    * response headers.
    */
   @Serializable(with = TestScriptVariableSerializer::class)
-  public class Variable(
+  public data class Variable(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1499,7 +1499,7 @@ public data class TestScript(
 
   /** A series of required setup operations before tests are executed. */
   @Serializable(with = TestScriptSetupSerializer::class)
-  public class Setup(
+  public data class Setup(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1556,7 +1556,7 @@ public data class TestScript(
 
     /** Action would contain either an operation or an assertion. */
     @Serializable(with = TestScriptSetupActionSerializer::class)
-    public class Action(
+    public data class Action(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1618,7 +1618,7 @@ public data class TestScript(
 
       /** The operation to perform. */
       @Serializable(with = TestScriptSetupActionOperationSerializer::class)
-      public class Operation(
+      public data class Operation(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1843,7 +1843,7 @@ public data class TestScript(
 
         /** Header elements would be used to set HTTP headers. */
         @Serializable(with = TestScriptSetupActionOperationRequestHeaderSerializer::class)
-        public class RequestHeader(
+        public data class RequestHeader(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -2227,7 +2227,7 @@ public data class TestScript(
        * appropriately.
        */
       @Serializable(with = TestScriptSetupActionAssertSerializer::class)
-      public class Assert(
+      public data class Assert(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -2891,7 +2891,7 @@ public data class TestScript(
 
   /** A test in this script. */
   @Serializable(with = TestScriptTestSerializer::class)
-  public class Test(
+  public data class Test(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2954,7 +2954,7 @@ public data class TestScript(
 
     /** Action would contain either an operation or an assertion. */
     @Serializable(with = TestScriptTestActionSerializer::class)
-    public class Action(
+    public data class Action(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -3152,7 +3152,7 @@ public data class TestScript(
    * otherwise).
    */
   @Serializable(with = TestScriptTeardownSerializer::class)
-  public class Teardown(
+  public data class Teardown(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -3209,7 +3209,7 @@ public data class TestScript(
 
     /** The teardown action will only contain an operation. */
     @Serializable(with = TestScriptTeardownActionSerializer::class)
-    public class Action(
+    public data class Action(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

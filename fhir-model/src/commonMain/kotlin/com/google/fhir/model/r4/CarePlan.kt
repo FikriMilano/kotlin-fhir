@@ -323,7 +323,7 @@ public data class CarePlan(
    * lab tests to perform, self-monitoring, education, etc.
    */
   @Serializable(with = CarePlanActivitySerializer::class)
-  public class Activity(
+  public data class Activity(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -425,7 +425,7 @@ public data class CarePlan(
      * driven) that doesn't know about specific resources such as procedure etc.
      */
     @Serializable(with = CarePlanActivityDetailSerializer::class)
-    public class Detail(
+    public data class Detail(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

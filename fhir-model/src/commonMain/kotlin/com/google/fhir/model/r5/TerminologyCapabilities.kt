@@ -420,7 +420,7 @@ public data class TerminologyCapabilities(
    * installation.
    */
   @Serializable(with = TerminologyCapabilitiesSoftwareSerializer::class)
-  public class Software(
+  public data class Software(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -546,7 +546,7 @@ public data class TerminologyCapabilities(
    * statement - i.e. a particular installation, rather than the capabilities of a software program.
    */
   @Serializable(with = TerminologyCapabilitiesImplementationSerializer::class)
-  public class Implementation(
+  public data class Implementation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -669,7 +669,7 @@ public data class TerminologyCapabilities(
    * resource.
    */
   @Serializable(with = TerminologyCapabilitiesCodeSystemSerializer::class)
-  public class CodeSystem(
+  public data class CodeSystem(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -737,7 +737,7 @@ public data class TerminologyCapabilities(
 
     /** For the code system, a list of versions that are supported by the server. */
     @Serializable(with = TerminologyCapabilitiesCodeSystemVersionSerializer::class)
-    public class Version(
+    public data class Version(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -805,7 +805,7 @@ public data class TerminologyCapabilities(
 
       /** Filter Properties supported. */
       @Serializable(with = TerminologyCapabilitiesCodeSystemVersionFilterSerializer::class)
-      public class Filter(
+      public data class Filter(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1063,7 +1063,7 @@ public data class TerminologyCapabilities(
 
   /** Information about the [ValueSet/$expand](valueset-operation-expand.html) operation. */
   @Serializable(with = TerminologyCapabilitiesExpansionSerializer::class)
-  public class Expansion(
+  public data class Expansion(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1134,7 +1134,7 @@ public data class TerminologyCapabilities(
 
     /** Supported expansion parameter. */
     @Serializable(with = TerminologyCapabilitiesExpansionParameterSerializer::class)
-    public class Parameter(
+    public data class Parameter(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1326,7 +1326,7 @@ public data class TerminologyCapabilities(
    * operation.
    */
   @Serializable(with = TerminologyCapabilitiesValidateCodeSerializer::class)
-  public class ValidateCode(
+  public data class ValidateCode(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1434,7 +1434,7 @@ public data class TerminologyCapabilities(
    * Information about the [ConceptMap/$translate](conceptmap-operation-translate.html) operation.
    */
   @Serializable(with = TerminologyCapabilitiesTranslationSerializer::class)
-  public class Translation(
+  public data class Translation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1540,7 +1540,7 @@ public data class TerminologyCapabilities(
 
   /** Whether the $closure operation is supported. */
   @Serializable(with = TerminologyCapabilitiesClosureSerializer::class)
-  public class Closure(
+  public data class Closure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

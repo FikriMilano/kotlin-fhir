@@ -416,7 +416,7 @@ public data class Evidence(
 
   /** Evidence variable such as population, exposure, or outcome. */
   @Serializable(with = EvidenceVariableDefinitionSerializer::class)
-  public class VariableDefinition(
+  public data class VariableDefinition(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -561,7 +561,7 @@ public data class Evidence(
 
   /** Values and parameters for a single statistic. */
   @Serializable(with = EvidenceStatisticSerializer::class)
-  public class Statistic(
+  public data class Statistic(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -668,7 +668,7 @@ public data class Evidence(
 
     /** Number of samples in the statistic. */
     @Serializable(with = EvidenceStatisticSampleSizeSerializer::class)
-    public class SampleSize(
+    public data class SampleSize(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -803,7 +803,7 @@ public data class Evidence(
 
     /** A statistical attribute of the statistic such as a measure of heterogeneity. */
     @Serializable(with = EvidenceStatisticAttributeEstimateSerializer::class)
-    public class AttributeEstimate(
+    public data class AttributeEstimate(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -970,7 +970,7 @@ public data class Evidence(
 
     /** A component of the method to generate the statistic. */
     @Serializable(with = EvidenceStatisticModelCharacteristicSerializer::class)
-    public class ModelCharacteristic(
+    public data class ModelCharacteristic(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1034,7 +1034,7 @@ public data class Evidence(
 
       /** A variable adjusted for in the adjusted analysis. */
       @Serializable(with = EvidenceStatisticModelCharacteristicVariableSerializer::class)
-      public class Variable(
+      public data class Variable(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1355,7 +1355,7 @@ public data class Evidence(
 
   /** Assessment of certainty, confidence in the estimates, or quality of the evidence. */
   @Serializable(with = EvidenceCertaintySerializer::class)
-  public class Certainty(
+  public data class Certainty(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

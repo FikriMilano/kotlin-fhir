@@ -145,7 +145,7 @@ public data class OperationOutcome(
 
   /** An error, warning, or information message that results from a system action. */
   @Serializable(with = OperationOutcomeIssueSerializer::class)
-  public class Issue(
+  public data class Issue(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

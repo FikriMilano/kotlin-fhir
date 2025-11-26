@@ -377,7 +377,7 @@ public data class SearchParameter(
 
   /** Used to define the parts of a composite search parameter. */
   @Serializable(with = SearchParameterComponentSerializer::class)
-  public class Component(
+  public data class Component(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

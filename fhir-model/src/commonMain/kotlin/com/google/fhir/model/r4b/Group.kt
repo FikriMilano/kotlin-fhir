@@ -207,7 +207,7 @@ public data class Group(
 
   /** Identifies traits whose presence r absence is shared by members of the group. */
   @Serializable(with = GroupCharacteristicSerializer::class)
-  public class Characteristic(
+  public data class Characteristic(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -400,7 +400,7 @@ public data class Group(
 
   /** Identifies the resource instances that are members of the group. */
   @Serializable(with = GroupMemberSerializer::class)
-  public class Member(
+  public data class Member(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

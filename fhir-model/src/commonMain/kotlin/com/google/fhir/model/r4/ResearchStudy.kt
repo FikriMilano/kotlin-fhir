@@ -260,7 +260,7 @@ public data class ResearchStudy(
    * to drug A, wash-out, exposure to drug B, wash-out, follow-up.
    */
   @Serializable(with = ResearchStudyArmSerializer::class)
-  public class Arm(
+  public data class Arm(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -389,7 +389,7 @@ public data class ResearchStudy(
    * the analysis of data collected during the study.
    */
   @Serializable(with = ResearchStudyObjectiveSerializer::class)
-  public class Objective(
+  public data class Objective(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

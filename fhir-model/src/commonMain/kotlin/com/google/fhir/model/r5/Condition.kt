@@ -317,7 +317,7 @@ public data class Condition(
    * involved.
    */
   @Serializable(with = ConditionParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -440,7 +440,7 @@ public data class Condition(
    * Alzheimer's, or Parkinson disease.
    */
   @Serializable(with = ConditionStageSerializer::class)
-  public class Stage(
+  public data class Stage(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

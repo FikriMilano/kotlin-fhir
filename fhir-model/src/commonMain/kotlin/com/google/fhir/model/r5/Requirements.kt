@@ -355,7 +355,7 @@ public data class Requirements(
 
   /** The actual statement of requirement, in markdown format. */
   @Serializable(with = RequirementsStatementSerializer::class)
-  public class Statement(
+  public data class Statement(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

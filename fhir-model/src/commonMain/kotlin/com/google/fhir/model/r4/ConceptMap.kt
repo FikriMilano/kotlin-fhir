@@ -327,7 +327,7 @@ public data class ConceptMap(
 
   /** A group of mappings that all have the same source and target system. */
   @Serializable(with = ConceptMapGroupSerializer::class)
-  public class Group(
+  public data class Group(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -429,7 +429,7 @@ public data class ConceptMap(
 
     /** Mappings for an individual concept in the source to one or more concepts in the target. */
     @Serializable(with = ConceptMapGroupElementSerializer::class)
-    public class Element(
+    public data class Element(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -498,7 +498,7 @@ public data class ConceptMap(
 
       /** A concept from the target value set that this concept maps to. */
       @Serializable(with = ConceptMapGroupElementTargetSerializer::class)
-      public class Target(
+      public data class Target(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -591,7 +591,7 @@ public data class ConceptMap(
          * applicable if the specified element can be resolved, and it has the specified value.
          */
         @Serializable(with = ConceptMapGroupElementTargetDependsOnSerializer::class)
-        public class DependsOn(
+        public data class DependsOn(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -921,7 +921,7 @@ public data class ConceptMap(
      * equivalence = unmatched.
      */
     @Serializable(with = ConceptMapGroupUnmappedSerializer::class)
-    public class Unmapped(
+    public data class Unmapped(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

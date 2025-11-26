@@ -125,16 +125,16 @@ represent the data in Kotlin. These exceptions are listed below:
 
 Similarly, for more complex data structures in FHIR such as complex data types and FHIR resources,
 the library maps each StructureDefinition JSON file to a dedicated Kotlin `.kt` file, each
-containing a Kotlin class representing the StructureDefinition. BackboneElements in FHIR are
-represented as nested classes since they are never reused outside of the StructureDefinition. For
+containing a Kotlin data class representing the StructureDefinition. BackboneElements in FHIR are
+represented as nested data classes since they are never reused outside the StructureDefinition. For
 each occurrence of a choice type (e.g. in [R4](https://hl7.org/fhir/R4/formats.html#choice)), a
 single sealed interface is generated with a subclass for each type.
 
-| FHIR concept <img src="images/fhir.png" alt="kotlin" style="height: 1em"/> |                  Kotlin concept <img src="images/kotlin.png" alt="kotlin" style="height: 1em"/>                   |
+| FHIR concept <img src="images/fhir.png" alt="kotlin" style="height: 1em"/> | Kotlin concept <img src="images/kotlin.png" alt="kotlin" style="height: 1em"/>                                    |
 |----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | StructureDefinition JSON file (e.g. `StructureDefinition-Patient.json`)    | Kotlin .kt file (e.g. `Patient.kt`)                                                                               |
-| StructureDefinition (e.g. `Patient`)                                       | Kotlin class (e.g. `class Patient`)                                                                               |
-| BackboneElement (e.g. `Patient.contact`)                                   | Nested Kotlin class (e.g. `class Contact` nested under `Patient`)                                                 |
+| StructureDefinition (e.g. `Patient`)                                       | Kotlin data class (e.g. `data class Patient`)                                                                     |
+| BackboneElement (e.g. `Patient.contact`)                                   | Nested Kotlin data class (e.g. `data class Contact` nested under `Patient`)                                       |
 | Choice of data types (e.g. `Patient.deceased[x]`)                          | Sealed interface (e.g. `sealed interface Deceased` nested under `Patient` with subtypes `Boolean` and `DateTime`) |
 
 The generated FHIR resource classes are Kotlin

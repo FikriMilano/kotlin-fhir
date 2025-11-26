@@ -200,7 +200,7 @@ public data class NutritionProduct(
 
   /** The product's nutritional information expressed by the nutrients. */
   @Serializable(with = NutritionProductNutrientSerializer::class)
-  public class Nutrient(
+  public data class Nutrient(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -318,7 +318,7 @@ public data class NutritionProduct(
 
   /** Ingredients contained in this product. */
   @Serializable(with = NutritionProductIngredientSerializer::class)
-  public class Ingredient(
+  public data class Ingredient(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -431,7 +431,7 @@ public data class NutritionProduct(
 
   /** Specifies descriptive properties of the nutrition product. */
   @Serializable(with = NutritionProductProductCharacteristicSerializer::class)
-  public class ProductCharacteristic(
+  public data class ProductCharacteristic(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -611,7 +611,7 @@ public data class NutritionProduct(
    * instances or occurrences of the product.
    */
   @Serializable(with = NutritionProductInstanceSerializer::class)
-  public class Instance(
+  public data class Instance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

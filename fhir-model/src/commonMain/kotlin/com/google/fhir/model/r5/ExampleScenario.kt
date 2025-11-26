@@ -359,7 +359,7 @@ public data class ExampleScenario(
 
   /** A system or person who shares or receives an instance within the scenario. */
   @Serializable(with = ExampleScenarioActorSerializer::class)
-  public class Actor(
+  public data class Actor(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -482,7 +482,7 @@ public data class ExampleScenario(
 
   /** A single data collection that is shared as part of the scenario. */
   @Serializable(with = ExampleScenarioInstanceSerializer::class)
-  public class Instance(
+  public data class Instance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -575,7 +575,7 @@ public data class ExampleScenario(
 
     /** Represents the instance as it was at a specific time-point. */
     @Serializable(with = ExampleScenarioInstanceVersionSerializer::class)
-    public class Version(
+    public data class Version(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -720,7 +720,7 @@ public data class ExampleScenario(
      * contained in a bundle).
      */
     @Serializable(with = ExampleScenarioInstanceContainedInstanceSerializer::class)
-    public class ContainedInstance(
+    public data class ContainedInstance(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -967,7 +967,7 @@ public data class ExampleScenario(
 
   /** A group of operations that represents a significant step within a scenario. */
   @Serializable(with = ExampleScenarioProcessSerializer::class)
-  public class Process(
+  public data class Process(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1039,7 +1039,7 @@ public data class ExampleScenario(
 
     /** A significant action that occurs as part of the process. */
     @Serializable(with = ExampleScenarioProcessStepSerializer::class)
-    public class Step(
+    public data class Step(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1118,7 +1118,7 @@ public data class ExampleScenario(
 
       /** The step represents a single operation invoked on receiver by sender. */
       @Serializable(with = ExampleScenarioProcessStepOperationSerializer::class)
-      public class Operation(
+      public data class Operation(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1353,7 +1353,7 @@ public data class ExampleScenario(
        * operation. E.g. to represent non-happy-path/exceptional/atypical circumstances.
        */
       @Serializable(with = ExampleScenarioProcessStepAlternativeSerializer::class)
-      public class Alternative(
+      public data class Alternative(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

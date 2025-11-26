@@ -204,7 +204,7 @@ public data class BiologicallyDerivedProduct(
 
   /** How this product was collected. */
   @Serializable(with = BiologicallyDerivedProductCollectionSerializer::class)
-  public class Collection(
+  public data class Collection(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -357,7 +357,7 @@ public data class BiologicallyDerivedProduct(
    * Cells.
    */
   @Serializable(with = BiologicallyDerivedProductProcessingSerializer::class)
-  public class Processing(
+  public data class Processing(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -511,7 +511,7 @@ public data class BiologicallyDerivedProduct(
    * suitable for infusion.
    */
   @Serializable(with = BiologicallyDerivedProductManipulationSerializer::class)
-  public class Manipulation(
+  public data class Manipulation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -647,7 +647,7 @@ public data class BiologicallyDerivedProduct(
 
   /** Product storage. */
   @Serializable(with = BiologicallyDerivedProductStorageSerializer::class)
-  public class Storage(
+  public data class Storage(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

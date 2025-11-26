@@ -269,7 +269,7 @@ public data class QuestionnaireResponse(
 
   /** A group or question item from the original questionnaire for which answers are provided. */
   @Serializable(with = QuestionnaireResponseItemSerializer::class)
-  public class Item(
+  public data class Item(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -363,7 +363,7 @@ public data class QuestionnaireResponse(
 
     /** The respondent's answer(s) to the question. */
     @Serializable(with = QuestionnaireResponseItemAnswerSerializer::class)
-    public class Answer(
+    public data class Answer(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

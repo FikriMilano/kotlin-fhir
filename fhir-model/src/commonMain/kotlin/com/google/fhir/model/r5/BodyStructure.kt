@@ -192,7 +192,7 @@ public data class BodyStructure(
 
   /** The anatomical location(s) or region(s) of the specimen, lesion, or body structure. */
   @Serializable(with = BodyStructureIncludedStructureSerializer::class)
-  public class IncludedStructure(
+  public data class IncludedStructure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -261,7 +261,7 @@ public data class BodyStructure(
      * Body locations in relation to a specific body landmark (tatoo, scar, other body structure).
      */
     @Serializable(with = BodyStructureIncludedStructureBodyLandmarkOrientationSerializer::class)
-    public class BodyLandmarkOrientation(
+    public data class BodyLandmarkOrientation(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -331,7 +331,7 @@ public data class BodyStructure(
         with =
           BodyStructureIncludedStructureBodyLandmarkOrientationDistanceFromLandmarkSerializer::class
       )
-      public class DistanceFromLandmark(
+      public data class DistanceFromLandmark(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

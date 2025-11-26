@@ -178,7 +178,7 @@ public data class ManufacturedItemDefinition(
 
   /** General characteristics of this item. */
   @Serializable(with = ManufacturedItemDefinitionPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

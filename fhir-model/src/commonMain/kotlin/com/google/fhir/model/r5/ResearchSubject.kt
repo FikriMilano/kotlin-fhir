@@ -190,7 +190,7 @@ public data class ResearchSubject(
 
   /** The current state (status) of the subject and resons for status change where appropriate. */
   @Serializable(with = ResearchSubjectProgressSerializer::class)
-  public class Progress(
+  public data class Progress(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

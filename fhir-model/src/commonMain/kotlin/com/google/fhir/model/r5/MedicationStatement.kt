@@ -298,7 +298,7 @@ public data class MedicationStatement(
 
   /** Indicates whether the medication is or is not being consumed or administered. */
   @Serializable(with = MedicationStatementAdherenceSerializer::class)
-  public class Adherence(
+  public data class Adherence(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

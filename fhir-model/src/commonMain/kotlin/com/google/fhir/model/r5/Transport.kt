@@ -330,7 +330,7 @@ public data class Transport(
    * of the referenced request should be actioned.
    */
   @Serializable(with = TransportRestrictionSerializer::class)
-  public class Restriction(
+  public data class Restriction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -467,7 +467,7 @@ public data class Transport(
 
   /** Additional information that may be needed in the execution of the transport. */
   @Serializable(with = TransportInputSerializer::class)
-  public class Input(
+  public data class Input(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -947,7 +947,7 @@ public data class Transport(
 
   /** Outputs produced by the Transport. */
   @Serializable(with = TransportOutputSerializer::class)
-  public class Output(
+  public data class Output(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

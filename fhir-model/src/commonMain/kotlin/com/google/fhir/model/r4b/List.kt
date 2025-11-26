@@ -228,7 +228,7 @@ public data class List(
 
   /** Entries in this list. */
   @Serializable(with = ListEntrySerializer::class)
-  public class Entry(
+  public data class Entry(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

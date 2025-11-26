@@ -321,7 +321,7 @@ public data class Immunization(
 
   /** Indicates who performed the immunization event. */
   @Serializable(with = ImmunizationPerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -444,7 +444,7 @@ public data class Immunization(
 
   /** Indicates a patient's eligibility for a funding program. */
   @Serializable(with = ImmunizationProgramEligibilitySerializer::class)
-  public class ProgramEligibility(
+  public data class ProgramEligibility(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -555,7 +555,7 @@ public data class Immunization(
 
   /** Categorical data indicating that an adverse event is associated in time to an immunization. */
   @Serializable(with = ImmunizationReactionSerializer::class)
-  public class Reaction(
+  public data class Reaction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -678,7 +678,7 @@ public data class Immunization(
    * The protocol (set of recommendations) being followed by the provider who administered the dose.
    */
   @Serializable(with = ImmunizationProtocolAppliedSerializer::class)
-  public class ProtocolApplied(
+  public data class ProtocolApplied(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

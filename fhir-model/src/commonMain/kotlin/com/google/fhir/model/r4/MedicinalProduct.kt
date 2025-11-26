@@ -217,7 +217,7 @@ public data class MedicinalProduct(
 
   /** The product's name, including full name and possibly coded parts. */
   @Serializable(with = MedicinalProductNameSerializer::class)
-  public class Name(
+  public data class Name(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -275,7 +275,7 @@ public data class MedicinalProduct(
 
     /** Coding words or phrases of the name. */
     @Serializable(with = MedicinalProductNameNamePartSerializer::class)
-    public class NamePart(
+    public data class NamePart(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -386,7 +386,7 @@ public data class MedicinalProduct(
 
     /** Country where the name applies. */
     @Serializable(with = MedicinalProductNameCountryLanguageSerializer::class)
-    public class CountryLanguage(
+    public data class CountryLanguage(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -566,7 +566,7 @@ public data class MedicinalProduct(
 
   /** An operation applied to the product, for manufacturing or adminsitrative purpose. */
   @Serializable(with = MedicinalProductManufacturingBusinessOperationSerializer::class)
-  public class ManufacturingBusinessOperation(
+  public data class ManufacturingBusinessOperation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -711,7 +711,7 @@ public data class MedicinalProduct(
    * disease.
    */
   @Serializable(with = MedicinalProductSpecialDesignationSerializer::class)
-  public class SpecialDesignation(
+  public data class SpecialDesignation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

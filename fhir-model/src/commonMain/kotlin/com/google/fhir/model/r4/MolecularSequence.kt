@@ -226,7 +226,7 @@ public data class MolecularSequence(
    * analyzed.
    */
   @Serializable(with = MolecularSequenceReferenceSeqSerializer::class)
-  public class ReferenceSeq(
+  public data class ReferenceSeq(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -446,7 +446,7 @@ public data class MolecularSequence(
    * the assist of CIGAR string.
    */
   @Serializable(with = MolecularSequenceVariantSerializer::class)
-  public class Variant(
+  public data class Variant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -642,7 +642,7 @@ public data class MolecularSequence(
    * ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
    */
   @Serializable(with = MolecularSequenceQualitySerializer::class)
-  public class Quality(
+  public data class Quality(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -769,7 +769,7 @@ public data class MolecularSequence(
 
     /** Receiver Operator Characteristic (ROC) Curve to give sensitivity/specificity tradeoff. */
     @Serializable(with = MolecularSequenceQualityRocSerializer::class)
-    public class Roc(
+    public data class Roc(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1072,7 +1072,7 @@ public data class MolecularSequence(
    * records related with target's observedSeq.
    */
   @Serializable(with = MolecularSequenceRepositorySerializer::class)
-  public class Repository(
+  public data class Repository(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1231,7 +1231,7 @@ public data class MolecularSequence(
 
   /** Information about chromosome structure variation. */
   @Serializable(with = MolecularSequenceStructureVariantSerializer::class)
-  public class StructureVariant(
+  public data class StructureVariant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1296,7 +1296,7 @@ public data class MolecularSequence(
 
     /** Structural variant outer. */
     @Serializable(with = MolecularSequenceStructureVariantOuterSerializer::class)
-    public class Outer(
+    public data class Outer(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1424,7 +1424,7 @@ public data class MolecularSequence(
 
     /** Structural variant inner. */
     @Serializable(with = MolecularSequenceStructureVariantInnerSerializer::class)
-    public class Inner(
+    public data class Inner(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

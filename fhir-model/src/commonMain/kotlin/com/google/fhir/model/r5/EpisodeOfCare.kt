@@ -246,7 +246,7 @@ public data class EpisodeOfCare(
    * the history of the resource).
    */
   @Serializable(with = EpisodeOfCareStatusHistorySerializer::class)
-  public class StatusHistory(
+  public data class StatusHistory(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -357,7 +357,7 @@ public data class EpisodeOfCare(
 
   /** The list of medical reasons that are expected to be addressed during the episode of care. */
   @Serializable(with = EpisodeOfCareReasonSerializer::class)
-  public class Reason(
+  public data class Reason(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -483,7 +483,7 @@ public data class EpisodeOfCare(
 
   /** The list of medical conditions that were addressed during the episode of care. */
   @Serializable(with = EpisodeOfCareDiagnosisSerializer::class)
-  public class Diagnosis(
+  public data class Diagnosis(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

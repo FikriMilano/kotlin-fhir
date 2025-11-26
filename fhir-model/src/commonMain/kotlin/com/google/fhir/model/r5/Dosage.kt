@@ -176,7 +176,7 @@ public data class Dosage(
    * typical amount to be administered.
    */
   @Serializable(with = DosageDoseAndRateSerializer::class)
-  public class DoseAndRate(
+  public data class DoseAndRate(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

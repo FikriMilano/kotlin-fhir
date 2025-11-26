@@ -264,7 +264,7 @@ public data class DeviceRequest(
 
   /** Specific parameters for the ordered item. For example, the prism value for lenses. */
   @Serializable(with = DeviceRequestParameterSerializer::class)
-  public class Parameter(
+  public data class Parameter(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

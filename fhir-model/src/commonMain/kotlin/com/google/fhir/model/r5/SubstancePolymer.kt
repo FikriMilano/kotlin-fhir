@@ -178,7 +178,7 @@ public data class SubstancePolymer(
 
   /** Todo. */
   @Serializable(with = SubstancePolymerMonomerSetSerializer::class)
-  public class MonomerSet(
+  public data class MonomerSet(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -237,7 +237,7 @@ public data class SubstancePolymer(
 
     /** The starting materials - monomer(s) used in the synthesis of the polymer. */
     @Serializable(with = SubstancePolymerMonomerSetStartingMaterialSerializer::class)
-    public class StartingMaterial(
+    public data class StartingMaterial(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -432,7 +432,7 @@ public data class SubstancePolymer(
 
   /** Specifies and quantifies the repeated units and their configuration. */
   @Serializable(with = SubstancePolymerRepeatSerializer::class)
-  public class Repeat(
+  public data class Repeat(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -494,7 +494,7 @@ public data class SubstancePolymer(
 
     /** An SRU - Structural Repeat Unit. */
     @Serializable(with = SubstancePolymerRepeatRepeatUnitSerializer::class)
-    public class RepeatUnit(
+    public data class RepeatUnit(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -567,7 +567,7 @@ public data class SubstancePolymer(
        * block can be described.
        */
       @Serializable(with = SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisationSerializer::class)
-      public class DegreeOfPolymerisation(
+      public data class DegreeOfPolymerisation(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -699,7 +699,7 @@ public data class SubstancePolymer(
       @Serializable(
         with = SubstancePolymerRepeatRepeatUnitStructuralRepresentationSerializer::class
       )
-      public class StructuralRepresentation(
+      public data class StructuralRepresentation(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

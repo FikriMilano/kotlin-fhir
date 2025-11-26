@@ -287,7 +287,7 @@ public data class DocumentReference(
 
   /** Relationships that this document has with other document references that already exist. */
   @Serializable(with = DocumentReferenceRelatesToSerializer::class)
-  public class RelatesTo(
+  public data class RelatesTo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -411,7 +411,7 @@ public data class DocumentReference(
    * with a different format.
    */
   @Serializable(with = DocumentReferenceContentSerializer::class)
-  public class Content(
+  public data class Content(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -542,7 +542,7 @@ public data class DocumentReference(
 
   /** The clinical context in which the document was prepared. */
   @Serializable(with = DocumentReferenceContextSerializer::class)
-  public class Context(
+  public data class Context(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -510,7 +510,7 @@ public data class ExplanationOfBenefit(
    * services or for the same event.
    */
   @Serializable(with = ExplanationOfBenefitRelatedSerializer::class)
-  public class Related(
+  public data class Related(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -649,7 +649,7 @@ public data class ExplanationOfBenefit(
 
   /** Information code for an event with a corresponding date or period. */
   @Serializable(with = ExplanationOfBenefitEventSerializer::class)
-  public class Event(
+  public data class Event(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -791,7 +791,7 @@ public data class ExplanationOfBenefit(
    * policy.
    */
   @Serializable(with = ExplanationOfBenefitPayeeSerializer::class)
-  public class Payee(
+  public data class Payee(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -913,7 +913,7 @@ public data class ExplanationOfBenefit(
 
   /** The members of the team who provided the products and services. */
   @Serializable(with = ExplanationOfBenefitCareTeamSerializer::class)
-  public class CareTeam(
+  public data class CareTeam(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1068,7 +1068,7 @@ public data class ExplanationOfBenefit(
    * situation, prior or concurrent issues.
    */
   @Serializable(with = ExplanationOfBenefitSupportingInfoSerializer::class)
-  public class SupportingInfo(
+  public data class SupportingInfo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1317,7 +1317,7 @@ public data class ExplanationOfBenefit(
 
   /** Information about diagnoses relevant to the claim items. */
   @Serializable(with = ExplanationOfBenefitDiagnosisSerializer::class)
-  public class Diagnosis(
+  public data class Diagnosis(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1490,7 +1490,7 @@ public data class ExplanationOfBenefit(
 
   /** Procedures performed on the patient relevant to the billing items with the claim. */
   @Serializable(with = ExplanationOfBenefitProcedureSerializer::class)
-  public class Procedure(
+  public data class Procedure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1656,7 +1656,7 @@ public data class ExplanationOfBenefit(
    * the claim.
    */
   @Serializable(with = ExplanationOfBenefitInsuranceSerializer::class)
-  public class Insurance(
+  public data class Insurance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1817,7 +1817,7 @@ public data class ExplanationOfBenefit(
    * listed in the claim.
    */
   @Serializable(with = ExplanationOfBenefitAccidentSerializer::class)
-  public class Accident(
+  public data class Accident(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1980,7 +1980,7 @@ public data class ExplanationOfBenefit(
    * a simple items or groups of sub-details.
    */
   @Serializable(with = ExplanationOfBenefitItemSerializer::class)
-  public class Item(
+  public data class Item(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2169,7 +2169,7 @@ public data class ExplanationOfBenefit(
 
     /** Physical location where the service is performed or applies. */
     @Serializable(with = ExplanationOfBenefitItemBodySiteSerializer::class)
-    public class BodySite(
+    public data class BodySite(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2292,7 +2292,7 @@ public data class ExplanationOfBenefit(
 
     /** The high-level results of the adjudication if adjudication has been performed. */
     @Serializable(with = ExplanationOfBenefitItemReviewOutcomeSerializer::class)
-    public class ReviewOutcome(
+    public data class ReviewOutcome(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2457,7 +2457,7 @@ public data class ExplanationOfBenefit(
      * adjudication of this item.
      */
     @Serializable(with = ExplanationOfBenefitItemAdjudicationSerializer::class)
-    public class Adjudication(
+    public data class Adjudication(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2626,7 +2626,7 @@ public data class ExplanationOfBenefit(
 
     /** Second-tier of goods and services. */
     @Serializable(with = ExplanationOfBenefitItemDetailSerializer::class)
-    public class Detail(
+    public data class Detail(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2786,7 +2786,7 @@ public data class ExplanationOfBenefit(
 
       /** Third-tier of goods and services. */
       @Serializable(with = ExplanationOfBenefitItemDetailSubDetailSerializer::class)
-      public class SubDetail(
+      public data class SubDetail(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -3580,7 +3580,7 @@ public data class ExplanationOfBenefit(
 
   /** The first-tier service adjudications for payor added product or service lines. */
   @Serializable(with = ExplanationOfBenefitAddItemSerializer::class)
-  public class AddItem(
+  public data class AddItem(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -3753,7 +3753,7 @@ public data class ExplanationOfBenefit(
 
     /** Physical location where the service is performed or applies. */
     @Serializable(with = ExplanationOfBenefitAddItemBodySiteSerializer::class)
-    public class BodySite(
+    public data class BodySite(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -3876,7 +3876,7 @@ public data class ExplanationOfBenefit(
 
     /** The second-tier service adjudications for payor added services. */
     @Serializable(with = ExplanationOfBenefitAddItemDetailSerializer::class)
-    public class Detail(
+    public data class Detail(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -4013,7 +4013,7 @@ public data class ExplanationOfBenefit(
 
       /** The third-tier service adjudications for payor added services. */
       @Serializable(with = ExplanationOfBenefitAddItemDetailSubDetailSerializer::class)
-      public class SubDetail(
+      public data class SubDetail(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -4706,7 +4706,7 @@ public data class ExplanationOfBenefit(
 
   /** Categorized monetary totals for the adjudication. */
   @Serializable(with = ExplanationOfBenefitTotalSerializer::class)
-  public class Total(
+  public data class Total(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -4831,7 +4831,7 @@ public data class ExplanationOfBenefit(
 
   /** Payment details for the adjudication of the claim. */
   @Serializable(with = ExplanationOfBenefitPaymentSerializer::class)
-  public class Payment(
+  public data class Payment(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -4995,7 +4995,7 @@ public data class ExplanationOfBenefit(
 
   /** A note that describes or explains adjudication results in a human readable form. */
   @Serializable(with = ExplanationOfBenefitProcessNoteSerializer::class)
-  public class ProcessNote(
+  public data class ProcessNote(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -5131,7 +5131,7 @@ public data class ExplanationOfBenefit(
 
   /** Balance by Benefit Category. */
   @Serializable(with = ExplanationOfBenefitBenefitBalanceSerializer::class)
-  public class BenefitBalance(
+  public data class BenefitBalance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -5226,7 +5226,7 @@ public data class ExplanationOfBenefit(
 
     /** Benefits Used to date. */
     @Serializable(with = ExplanationOfBenefitBenefitBalanceFinancialSerializer::class)
-    public class Financial(
+    public data class Financial(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

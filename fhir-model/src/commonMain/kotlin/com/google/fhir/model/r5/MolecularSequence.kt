@@ -186,7 +186,7 @@ public data class MolecularSequence(
 
   /** A sequence defined relative to another sequence. */
   @Serializable(with = MolecularSequenceRelativeSerializer::class)
-  public class Relative(
+  public data class Relative(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -266,7 +266,7 @@ public data class MolecularSequence(
      * sequence analyzed.
      */
     @Serializable(with = MolecularSequenceRelativeStartingSequenceSerializer::class)
-    public class StartingSequence(
+    public data class StartingSequence(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -496,7 +496,7 @@ public data class MolecularSequence(
 
     /** Changes in sequence from the starting sequence. */
     @Serializable(with = MolecularSequenceRelativeEditSerializer::class)
-    public class Edit(
+    public data class Edit(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

@@ -256,7 +256,7 @@ public data class AdverseEvent(
 
   /** Describes the entity that is suspected to have caused the adverse event. */
   @Serializable(with = AdverseEventSuspectEntitySerializer::class)
-  public class SuspectEntity(
+  public data class SuspectEntity(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -314,7 +314,7 @@ public data class AdverseEvent(
 
     /** Information on the possible cause of the event. */
     @Serializable(with = AdverseEventSuspectEntityCausalitySerializer::class)
-    public class Causality(
+    public data class Causality(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

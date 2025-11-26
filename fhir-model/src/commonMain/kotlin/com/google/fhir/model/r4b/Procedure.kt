@@ -368,7 +368,7 @@ public data class Procedure(
 
   /** Limited to "real" people rather than equipment. */
   @Serializable(with = ProcedurePerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -497,7 +497,7 @@ public data class Procedure(
    * fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
    */
   @Serializable(with = ProcedureFocalDeviceSerializer::class)
-  public class FocalDevice(
+  public data class FocalDevice(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

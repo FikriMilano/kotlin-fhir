@@ -197,7 +197,7 @@ public data class ClinicalUseDefinition(
 
   /** Specifics for when this is a contraindication. */
   @Serializable(with = ClinicalUseDefinitionContraindicationSerializer::class)
-  public class Contraindication(
+  public data class Contraindication(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -271,7 +271,7 @@ public data class ClinicalUseDefinition(
      * as part of the contraindication.
      */
     @Serializable(with = ClinicalUseDefinitionContraindicationOtherTherapySerializer::class)
-    public class OtherTherapy(
+    public data class OtherTherapy(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -470,7 +470,7 @@ public data class ClinicalUseDefinition(
 
   /** Specifics for when this is an indication. */
   @Serializable(with = ClinicalUseDefinitionIndicationSerializer::class)
-  public class Indication(
+  public data class Indication(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -667,7 +667,7 @@ public data class ClinicalUseDefinition(
 
   /** Specifics for when this is an interaction. */
   @Serializable(with = ClinicalUseDefinitionInteractionSerializer::class)
-  public class Interaction(
+  public data class Interaction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -738,7 +738,7 @@ public data class ClinicalUseDefinition(
 
     /** The specific medication, food, substance or laboratory test that interacts. */
     @Serializable(with = ClinicalUseDefinitionInteractionInteractantSerializer::class)
-    public class Interactant(
+    public data class Interactant(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -947,7 +947,7 @@ public data class ClinicalUseDefinition(
    * product as treatment.
    */
   @Serializable(with = ClinicalUseDefinitionUndesirableEffectSerializer::class)
-  public class UndesirableEffect(
+  public data class UndesirableEffect(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1072,7 +1072,7 @@ public data class ClinicalUseDefinition(
    * drowsiness', or 'Get medical advice/attention if you feel unwell'.
    */
   @Serializable(with = ClinicalUseDefinitionWarningSerializer::class)
-  public class Warning(
+  public data class Warning(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

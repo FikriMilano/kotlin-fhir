@@ -475,7 +475,7 @@ public data class Citation(
 
   /** A human-readable display of key concepts to represent the citation. */
   @Serializable(with = CitationSummarySerializer::class)
-  public class Summary(
+  public data class Summary(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -588,7 +588,7 @@ public data class Citation(
 
   /** The assignment to an organizing scheme. */
   @Serializable(with = CitationClassificationSerializer::class)
-  public class Classification(
+  public data class Classification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -705,7 +705,7 @@ public data class Citation(
    * state.
    */
   @Serializable(with = CitationStatusDateSerializer::class)
-  public class StatusDate(
+  public data class StatusDate(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -833,7 +833,7 @@ public data class Citation(
 
   /** The article or artifact being described. */
   @Serializable(with = CitationCitedArtifactSerializer::class)
-  public class CitedArtifact(
+  public data class CitedArtifact(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -974,7 +974,7 @@ public data class Citation(
 
     /** The defined version of the cited artifact. */
     @Serializable(with = CitationCitedArtifactVersionSerializer::class)
-    public class Version(
+    public data class Version(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1102,7 +1102,7 @@ public data class Citation(
      * cited artifact.
      */
     @Serializable(with = CitationCitedArtifactStatusDateSerializer::class)
-    public class StatusDate(
+    public data class StatusDate(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1228,7 +1228,7 @@ public data class Citation(
 
     /** The title details of the article or artifact. */
     @Serializable(with = CitationCitedArtifactTitleSerializer::class)
-    public class Title(
+    public data class Title(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1351,7 +1351,7 @@ public data class Citation(
      * or other descriptive summaries.
      */
     @Serializable(with = CitationCitedArtifactAbstractSerializer::class)
-    public class Abstract(
+    public data class Abstract(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1488,7 +1488,7 @@ public data class Citation(
 
     /** The component of the article or artifact. */
     @Serializable(with = CitationCitedArtifactPartSerializer::class)
-    public class Part(
+    public data class Part(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1627,7 +1627,7 @@ public data class Citation(
 
     /** The artifact related to the cited artifact. */
     @Serializable(with = CitationCitedArtifactRelatesToSerializer::class)
-    public class RelatesTo(
+    public data class RelatesTo(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1851,7 +1851,7 @@ public data class Citation(
      * citations.
      */
     @Serializable(with = CitationCitedArtifactPublicationFormSerializer::class)
-    public class PublicationForm(
+    public data class PublicationForm(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1987,7 +1987,7 @@ public data class Citation(
 
       /** The collection the cited article or artifact is published in. */
       @Serializable(with = CitationCitedArtifactPublicationFormPublishedInSerializer::class)
-      public class PublishedIn(
+      public data class PublishedIn(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -2297,7 +2297,7 @@ public data class Citation(
 
     /** Used for any URL for the article or artifact cited. */
     @Serializable(with = CitationCitedArtifactWebLocationSerializer::class)
-    public class WebLocation(
+    public data class WebLocation(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2429,7 +2429,7 @@ public data class Citation(
 
     /** The assignment to an organizing scheme. */
     @Serializable(with = CitationCitedArtifactClassificationSerializer::class)
-    public class Classification(
+    public data class Classification(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2565,7 +2565,7 @@ public data class Citation(
      * specific contributions, and summary statements.
      */
     @Serializable(with = CitationCitedArtifactContributorshipSerializer::class)
-    public class Contributorship(
+    public data class Contributorship(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2640,7 +2640,7 @@ public data class Citation(
        * list.
        */
       @Serializable(with = CitationCitedArtifactContributorshipEntrySerializer::class)
-      public class Entry(
+      public data class Entry(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -2754,7 +2754,7 @@ public data class Citation(
         @Serializable(
           with = CitationCitedArtifactContributorshipEntryContributionInstanceSerializer::class
         )
-        public class ContributionInstance(
+        public data class ContributionInstance(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -2994,7 +2994,7 @@ public data class Citation(
        * each list member.
        */
       @Serializable(with = CitationCitedArtifactContributorshipSummarySerializer::class)
-      public class Summary(
+      public data class Summary(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

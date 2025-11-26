@@ -207,7 +207,7 @@ public data class RelatedPerson(
 
   /** A language which may be used to communicate with about the patient's health. */
   @Serializable(with = RelatedPersonCommunicationSerializer::class)
-  public class Communication(
+  public data class Communication(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

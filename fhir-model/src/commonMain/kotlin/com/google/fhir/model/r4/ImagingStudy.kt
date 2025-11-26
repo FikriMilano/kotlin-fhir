@@ -260,7 +260,7 @@ public data class ImagingStudy(
 
   /** Each study has one or more series of images or other content. */
   @Serializable(with = ImagingStudySeriesSerializer::class)
-  public class Series(
+  public data class Series(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -377,7 +377,7 @@ public data class ImagingStudy(
 
     /** Indicates who or what performed the series and how they were involved. */
     @Serializable(with = ImagingStudySeriesPerformerSerializer::class)
-    public class Performer(
+    public data class Performer(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -490,7 +490,7 @@ public data class ImagingStudy(
 
     /** A single SOP instance within the series, e.g. an image, or presentation state. */
     @Serializable(with = ImagingStudySeriesInstanceSerializer::class)
-    public class Instance(
+    public data class Instance(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

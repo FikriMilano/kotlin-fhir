@@ -205,7 +205,7 @@ public data class Person(
 
   /** Link to a resource that concerns the same actual person. */
   @Serializable(with = PersonLinkSerializer::class)
-  public class Link(
+  public data class Link(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

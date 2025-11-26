@@ -268,7 +268,7 @@ public data class NutritionIntake(
 
   /** What food or fluid product or item was consumed. */
   @Serializable(with = NutritionIntakeConsumedItemSerializer::class)
-  public class ConsumedItem(
+  public data class ConsumedItem(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -438,7 +438,7 @@ public data class NutritionIntake(
 
   /** Total nutrient amounts for the whole meal, product, serving, etc. */
   @Serializable(with = NutritionIntakeIngredientLabelSerializer::class)
-  public class IngredientLabel(
+  public data class IngredientLabel(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -555,7 +555,7 @@ public data class NutritionIntake(
 
   /** Who performed the intake and how they were involved. */
   @Serializable(with = NutritionIntakePerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

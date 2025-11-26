@@ -205,7 +205,7 @@ public data class MedicinalProductAuthorization(
 
   /** Authorization in areas within a country. */
   @Serializable(with = MedicinalProductAuthorizationJurisdictionalAuthorizationSerializer::class)
-  public class JurisdictionalAuthorization(
+  public data class JurisdictionalAuthorization(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -340,7 +340,7 @@ public data class MedicinalProductAuthorization(
 
   /** The regulatory procedure for granting or amending a marketing authorization. */
   @Serializable(with = MedicinalProductAuthorizationProcedureSerializer::class)
-  public class Procedure(
+  public data class Procedure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

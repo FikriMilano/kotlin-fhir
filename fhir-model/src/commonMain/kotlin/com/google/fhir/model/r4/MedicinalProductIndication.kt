@@ -178,7 +178,7 @@ public data class MedicinalProductIndication(
    * part of the indication.
    */
   @Serializable(with = MedicinalProductIndicationOtherTherapySerializer::class)
-  public class OtherTherapy(
+  public data class OtherTherapy(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

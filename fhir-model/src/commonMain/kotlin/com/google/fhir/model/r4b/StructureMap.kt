@@ -325,7 +325,7 @@ public data class StructureMap(
    * are converted, or the instances that are produced.
    */
   @Serializable(with = StructureMapStructureSerializer::class)
-  public class Structure(
+  public data class Structure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -458,7 +458,7 @@ public data class StructureMap(
 
   /** Organizes the mapping into manageable chunks for human review/ease of maintenance. */
   @Serializable(with = StructureMapGroupSerializer::class)
-  public class Group(
+  public data class Group(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -544,7 +544,7 @@ public data class StructureMap(
      * invoked.
      */
     @Serializable(with = StructureMapGroupInputSerializer::class)
-    public class Input(
+    public data class Input(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -669,7 +669,7 @@ public data class StructureMap(
 
     /** Transform Rule from source to target. */
     @Serializable(with = StructureMapGroupRuleSerializer::class)
-    public class Rule(
+    public data class Rule(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -735,7 +735,7 @@ public data class StructureMap(
 
       /** Source inputs to the mapping. */
       @Serializable(with = StructureMapGroupRuleSourceSerializer::class)
-      public class Source(
+      public data class Source(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1317,7 +1317,7 @@ public data class StructureMap(
 
       /** Content to create because of this mapping rule. */
       @Serializable(with = StructureMapGroupRuleTargetSerializer::class)
-      public class Target(
+      public data class Target(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1391,7 +1391,7 @@ public data class StructureMap(
 
         /** Parameters to the transform. */
         @Serializable(with = StructureMapGroupRuleTargetParameterSerializer::class)
-        public class Parameter(
+        public data class Parameter(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -1625,7 +1625,7 @@ public data class StructureMap(
 
       /** Which other rules to apply in the context of this rule. */
       @Serializable(with = StructureMapGroupRuleDependentSerializer::class)
-      public class Dependent(
+      public data class Dependent(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

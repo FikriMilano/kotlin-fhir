@@ -265,7 +265,7 @@ public data class Coverage(
 
   /** A suite of underwriter specific classifiers. */
   @Serializable(with = CoverageClassSerializer::class)
-  public class Class(
+  public data class Class(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -402,7 +402,7 @@ public data class Coverage(
    * the policy and may have been included on the health card.
    */
   @Serializable(with = CoverageCostToBeneficiarySerializer::class)
-  public class CostToBeneficiary(
+  public data class CostToBeneficiary(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -475,7 +475,7 @@ public data class Coverage(
      * periods.
      */
     @Serializable(with = CoverageCostToBeneficiaryExceptionSerializer::class)
-    public class Exception(
+    public data class Exception(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

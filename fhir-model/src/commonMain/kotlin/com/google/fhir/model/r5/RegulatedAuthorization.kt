@@ -229,7 +229,7 @@ public data class RegulatedAuthorization(
    * workgroup is seeking implementer feedback on its use (see link at bottom of page).
    */
   @Serializable(with = RegulatedAuthorizationCaseSerializer::class)
-  public class Case(
+  public data class Case(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

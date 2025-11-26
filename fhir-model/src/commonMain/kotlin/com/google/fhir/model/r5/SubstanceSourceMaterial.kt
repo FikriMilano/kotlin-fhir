@@ -244,7 +244,7 @@ public data class SubstanceSourceMaterial(
    * the Specified Substance Group 1 levels.
    */
   @Serializable(with = SubstanceSourceMaterialFractionDescriptionSerializer::class)
-  public class FractionDescription(
+  public data class FractionDescription(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -374,7 +374,7 @@ public data class SubstanceSourceMaterial(
    * taxonomy will be described for the Substance Name: ., Leaf.
    */
   @Serializable(with = SubstanceSourceMaterialOrganismSerializer::class)
-  public class Organism(
+  public data class Organism(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -459,7 +459,7 @@ public data class SubstanceSourceMaterial(
 
     /** 4.9.13.6.1 Author type (Conditional). */
     @Serializable(with = SubstanceSourceMaterialOrganismAuthorSerializer::class)
-    public class Author(
+    public data class Author(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -591,7 +591,7 @@ public data class SubstanceSourceMaterial(
 
     /** 4.9.13.8.1 Hybrid species maternal organism ID (Optional). */
     @Serializable(with = SubstanceSourceMaterialOrganismHybridSerializer::class)
-    public class Hybrid(
+    public data class Hybrid(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -748,7 +748,7 @@ public data class SubstanceSourceMaterial(
 
     /** 4.9.13.7.1 Kingdom (Conditional). */
     @Serializable(with = SubstanceSourceMaterialOrganismOrganismGeneralSerializer::class)
-    public class OrganismGeneral(
+    public data class OrganismGeneral(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -969,7 +969,7 @@ public data class SubstanceSourceMaterial(
 
   /** To do. */
   @Serializable(with = SubstanceSourceMaterialPartDescriptionSerializer::class)
-  public class PartDescription(
+  public data class PartDescription(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

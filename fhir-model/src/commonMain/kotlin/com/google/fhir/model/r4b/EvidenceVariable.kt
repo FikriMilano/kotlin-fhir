@@ -361,7 +361,7 @@ public data class EvidenceVariable(
    * applied with "and" semantics.
    */
   @Serializable(with = EvidenceVariableCharacteristicSerializer::class)
-  public class Characteristic(
+  public data class Characteristic(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -438,7 +438,7 @@ public data class EvidenceVariable(
 
     /** Indicates duration, period, or point of observation from the participant's study entry. */
     @Serializable(with = EvidenceVariableCharacteristicTimeFromStartSerializer::class)
-    public class TimeFromStart(
+    public data class TimeFromStart(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -693,7 +693,7 @@ public data class EvidenceVariable(
    * groupings allowed for the variable.
    */
   @Serializable(with = EvidenceVariableCategorySerializer::class)
-  public class Category(
+  public data class Category(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

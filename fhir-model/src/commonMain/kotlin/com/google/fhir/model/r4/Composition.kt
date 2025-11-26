@@ -284,7 +284,7 @@ public data class Composition(
 
   /** A participant who has attested to the accuracy of the composition/document. */
   @Serializable(with = CompositionAttesterSerializer::class)
-  public class Attester(
+  public data class Attester(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -407,7 +407,7 @@ public data class Composition(
    * exist.
    */
   @Serializable(with = CompositionRelatesToSerializer::class)
-  public class RelatesTo(
+  public data class RelatesTo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -551,7 +551,7 @@ public data class Composition(
 
   /** The clinical service, such as a colonoscopy or an appendectomy, being documented. */
   @Serializable(with = CompositionEventSerializer::class)
-  public class Event(
+  public data class Event(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -707,7 +707,7 @@ public data class Composition(
 
   /** The root of the sections that make up the composition. */
   @Serializable(with = CompositionSectionSerializer::class)
-  public class Section(
+  public data class Section(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

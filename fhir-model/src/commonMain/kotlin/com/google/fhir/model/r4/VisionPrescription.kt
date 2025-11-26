@@ -189,7 +189,7 @@ public data class VisionPrescription(
    * the fullfillment by certified professionals.
    */
   @Serializable(with = VisionPrescriptionLensSpecificationSerializer::class)
-  public class LensSpecification(
+  public data class LensSpecification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -293,7 +293,7 @@ public data class VisionPrescription(
 
     /** Allows for adjustment on two axis. */
     @Serializable(with = VisionPrescriptionLensSpecificationPrismSerializer::class)
-    public class Prism(
+    public data class Prism(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

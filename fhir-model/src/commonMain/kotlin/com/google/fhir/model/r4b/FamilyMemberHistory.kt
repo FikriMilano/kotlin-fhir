@@ -271,7 +271,7 @@ public data class FamilyMemberHistory(
    * nothing stopping multiple resources - one per condition.
    */
   @Serializable(with = FamilyMemberHistoryConditionSerializer::class)
-  public class Condition(
+  public data class Condition(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

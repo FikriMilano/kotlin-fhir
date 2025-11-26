@@ -408,7 +408,7 @@ public data class CodeSystem(
    * filter.
    */
   @Serializable(with = CodeSystemFilterSerializer::class)
-  public class Filter(
+  public data class Filter(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -540,7 +540,7 @@ public data class CodeSystem(
    * about a concept.
    */
   @Serializable(with = CodeSystemPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -687,7 +687,7 @@ public data class CodeSystem(
    * relationships are.
    */
   @Serializable(with = CodeSystemConceptSerializer::class)
-  public class Concept(
+  public data class Concept(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -774,7 +774,7 @@ public data class CodeSystem(
      * used for particular purposes, etc.
      */
     @Serializable(with = CodeSystemConceptDesignationSerializer::class)
-    public class Designation(
+    public data class Designation(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -912,7 +912,7 @@ public data class CodeSystem(
 
     /** A property value for this concept. */
     @Serializable(with = CodeSystemConceptPropertySerializer::class)
-    public class Property(
+    public data class Property(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

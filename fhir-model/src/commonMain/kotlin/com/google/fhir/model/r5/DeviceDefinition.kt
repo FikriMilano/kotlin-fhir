@@ -311,7 +311,7 @@ public data class DeviceDefinition(
    * it is sold, or for multiple jurisdictions it could have been sold.
    */
   @Serializable(with = DeviceDefinitionUdiDeviceIdentifierSerializer::class)
-  public class UdiDeviceIdentifier(
+  public data class UdiDeviceIdentifier(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -374,7 +374,7 @@ public data class DeviceDefinition(
 
     /** Indicates where and when the device is available on the market. */
     @Serializable(with = DeviceDefinitionUdiDeviceIdentifierMarketDistributionSerializer::class)
-    public class MarketDistribution(
+    public data class MarketDistribution(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -564,7 +564,7 @@ public data class DeviceDefinition(
    * example is the Basic UDI-DI in Europe.
    */
   @Serializable(with = DeviceDefinitionRegulatoryIdentifierSerializer::class)
-  public class RegulatoryIdentifier(
+  public data class RegulatoryIdentifier(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -686,7 +686,7 @@ public data class DeviceDefinition(
 
   /** The name or names of the device as given by the manufacturer. */
   @Serializable(with = DeviceDefinitionDeviceNameSerializer::class)
-  public class DeviceName(
+  public data class DeviceName(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -803,7 +803,7 @@ public data class DeviceDefinition(
 
   /** What kind of device or device system this is. */
   @Serializable(with = DeviceDefinitionClassificationSerializer::class)
-  public class Classification(
+  public data class Classification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -920,7 +920,7 @@ public data class DeviceDefinition(
    * communication, performance, process, measurement, or specialization standards.
    */
   @Serializable(with = DeviceDefinitionConformsToSerializer::class)
-  public class ConformsTo(
+  public data class ConformsTo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1066,7 +1066,7 @@ public data class DeviceDefinition(
 
   /** A device that is part (for example a component) of the present device. */
   @Serializable(with = DeviceDefinitionHasPartSerializer::class)
-  public class HasPart(
+  public data class HasPart(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1179,7 +1179,7 @@ public data class DeviceDefinition(
 
   /** Information about the packaging of the device, i.e. how the device is packaged. */
   @Serializable(with = DeviceDefinitionPackagingSerializer::class)
-  public class Packaging(
+  public data class Packaging(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1247,7 +1247,7 @@ public data class DeviceDefinition(
 
     /** An organization that distributes the packaged device. */
     @Serializable(with = DeviceDefinitionPackagingDistributorSerializer::class)
-    public class Distributor(
+    public data class Distributor(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1436,7 +1436,7 @@ public data class DeviceDefinition(
 
   /** The version of the device or software. */
   @Serializable(with = DeviceDefinitionVersionSerializer::class)
-  public class Version(
+  public data class Version(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1572,7 +1572,7 @@ public data class DeviceDefinition(
    * resolution, accuracy, and physical attributes.
    */
   @Serializable(with = DeviceDefinitionPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1759,7 +1759,7 @@ public data class DeviceDefinition(
    * device model to the focal device.
    */
   @Serializable(with = DeviceDefinitionLinkSerializer::class)
-  public class Link(
+  public data class Link(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1870,7 +1870,7 @@ public data class DeviceDefinition(
 
   /** A substance used to create the material(s) of which the device is made. */
   @Serializable(with = DeviceDefinitionMaterialSerializer::class)
-  public class Material(
+  public data class Material(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1998,7 +1998,7 @@ public data class DeviceDefinition(
 
   /** Information aimed at providing directions for the usage of this model of device. */
   @Serializable(with = DeviceDefinitionGuidelineSerializer::class)
-  public class Guideline(
+  public data class Guideline(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2177,7 +2177,7 @@ public data class DeviceDefinition(
 
   /** Tracking of latest field safety corrective action. */
   @Serializable(with = DeviceDefinitionCorrectiveActionSerializer::class)
-  public class CorrectiveAction(
+  public data class CorrectiveAction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2313,7 +2313,7 @@ public data class DeviceDefinition(
 
   /** Billing code or reference associated with the device. */
   @Serializable(with = DeviceDefinitionChargeItemSerializer::class)
-  public class ChargeItem(
+  public data class ChargeItem(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

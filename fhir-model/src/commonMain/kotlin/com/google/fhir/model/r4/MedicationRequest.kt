@@ -406,7 +406,7 @@ public data class MedicationRequest(
    * institutional or system support for completing the dispense details in the pharmacy department.
    */
   @Serializable(with = MedicationRequestDispenseRequestSerializer::class)
-  public class DispenseRequest(
+  public data class DispenseRequest(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -507,7 +507,7 @@ public data class MedicationRequest(
 
     /** Indicates the quantity or duration for the first dispense of the medication. */
     @Serializable(with = MedicationRequestDispenseRequestInitialFillSerializer::class)
-    public class InitialFill(
+    public data class InitialFill(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -733,7 +733,7 @@ public data class MedicationRequest(
    * prescriber's intent. If nothing is specified substitution may be done.
    */
   @Serializable(with = MedicationRequestSubstitutionSerializer::class)
-  public class Substitution(
+  public data class Substitution(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

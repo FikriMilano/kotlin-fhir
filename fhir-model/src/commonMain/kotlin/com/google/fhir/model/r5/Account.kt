@@ -260,7 +260,7 @@ public data class Account(
    * should they be applied to the account.
    */
   @Serializable(with = AccountCoverageSerializer::class)
-  public class Coverage(
+  public data class Coverage(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -397,7 +397,7 @@ public data class Account(
 
   /** The parties responsible for balancing the account if other payment options fall short. */
   @Serializable(with = AccountGuarantorSerializer::class)
-  public class Guarantor(
+  public data class Guarantor(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -526,7 +526,7 @@ public data class Account(
    * prior to processing to produce claim(s).
    */
   @Serializable(with = AccountDiagnosisSerializer::class)
-  public class Diagnosis(
+  public data class Diagnosis(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -682,7 +682,7 @@ public data class Account(
    * prior to processing to produce claim(s).
    */
   @Serializable(with = AccountProcedureSerializer::class)
-  public class Procedure(
+  public data class Procedure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -835,7 +835,7 @@ public data class Account(
 
   /** Other associated accounts related to this account. */
   @Serializable(with = AccountRelatedAccountSerializer::class)
-  public class RelatedAccount(
+  public data class RelatedAccount(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -953,7 +953,7 @@ public data class Account(
    * similar process.
    */
   @Serializable(with = AccountBalanceSerializer::class)
-  public class Balance(
+  public data class Balance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

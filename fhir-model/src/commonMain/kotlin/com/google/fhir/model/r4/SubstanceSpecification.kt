@@ -217,7 +217,7 @@ public data class SubstanceSpecification(
 
   /** Moiety, for structural modifications. */
   @Serializable(with = SubstanceSpecificationMoietySerializer::class)
-  public class Moiety(
+  public data class Moiety(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -388,7 +388,7 @@ public data class SubstanceSpecification(
 
   /** General specifications for this substance, including how it is related to other substances. */
   @Serializable(with = SubstanceSpecificationPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -582,7 +582,7 @@ public data class SubstanceSpecification(
 
   /** Structural information. */
   @Serializable(with = SubstanceSpecificationStructureSerializer::class)
-  public class Structure(
+  public data class Structure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -663,7 +663,7 @@ public data class SubstanceSpecification(
      * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
      */
     @Serializable(with = SubstanceSpecificationStructureIsotopeSerializer::class)
-    public class Isotope(
+    public data class Isotope(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -728,7 +728,7 @@ public data class SubstanceSpecification(
 
       /** The molecular weight or weight range (for proteins, polymers or nucleic acids). */
       @Serializable(with = SubstanceSpecificationStructureIsotopeMolecularWeightSerializer::class)
-      public class MolecularWeight(
+      public data class MolecularWeight(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -933,7 +933,7 @@ public data class SubstanceSpecification(
 
     /** Molecular structural representation. */
     @Serializable(with = SubstanceSpecificationStructureRepresentationSerializer::class)
-    public class Representation(
+    public data class Representation(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1147,7 +1147,7 @@ public data class SubstanceSpecification(
 
   /** Codes associated with the substance. */
   @Serializable(with = SubstanceSpecificationCodeSerializer::class)
-  public class Code(
+  public data class Code(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1282,7 +1282,7 @@ public data class SubstanceSpecification(
 
   /** Names applicable to this substance. */
   @Serializable(with = SubstanceSpecificationNameSerializer::class)
-  public class Name(
+  public data class Name(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1367,7 +1367,7 @@ public data class SubstanceSpecification(
 
     /** Details of the official nature of this name. */
     @Serializable(with = SubstanceSpecificationNameOfficialSerializer::class)
-    public class Official(
+    public data class Official(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1585,7 +1585,7 @@ public data class SubstanceSpecification(
 
   /** A link between this substance and another, with details of the relationship. */
   @Serializable(with = SubstanceSpecificationRelationshipSerializer::class)
-  public class Relationship(
+  public data class Relationship(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

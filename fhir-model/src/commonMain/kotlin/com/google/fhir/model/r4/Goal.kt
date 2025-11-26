@@ -264,7 +264,7 @@ public data class Goal(
 
   /** Indicates what should be done by when. */
   @Serializable(with = GoalTargetSerializer::class)
-  public class Target(
+  public data class Target(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

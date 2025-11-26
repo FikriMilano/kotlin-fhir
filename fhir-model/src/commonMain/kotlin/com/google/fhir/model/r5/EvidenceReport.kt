@@ -308,7 +308,7 @@ public data class EvidenceReport(
 
   /** Specifies the subject or focus of the report. Answers "What is this report about?". */
   @Serializable(with = EvidenceReportSubjectSerializer::class)
-  public class Subject(
+  public data class Subject(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -364,7 +364,7 @@ public data class EvidenceReport(
 
     /** Characteristic. */
     @Serializable(with = EvidenceReportSubjectCharacteristicSerializer::class)
-    public class Characteristic(
+    public data class Characteristic(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -610,7 +610,7 @@ public data class EvidenceReport(
    * exist.
    */
   @Serializable(with = EvidenceReportRelatesToSerializer::class)
-  public class RelatesTo(
+  public data class RelatesTo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -669,7 +669,7 @@ public data class EvidenceReport(
 
     /** The target composition/document of this relationship. */
     @Serializable(with = EvidenceReportRelatesToTargetSerializer::class)
-    public class Target(
+    public data class Target(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -859,7 +859,7 @@ public data class EvidenceReport(
 
   /** The root of the sections that make up the composition. */
   @Serializable(with = EvidenceReportSectionSerializer::class)
-  public class Section(
+  public data class Section(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

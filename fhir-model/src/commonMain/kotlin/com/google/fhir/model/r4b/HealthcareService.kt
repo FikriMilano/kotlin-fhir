@@ -304,7 +304,7 @@ public data class HealthcareService(
    * the service?
    */
   @Serializable(with = HealthcareServiceEligibilitySerializer::class)
-  public class Eligibility(
+  public data class Eligibility(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -437,7 +437,7 @@ public data class HealthcareService(
 
   /** A collection of times that the Service Site is available. */
   @Serializable(with = HealthcareServiceAvailableTimeSerializer::class)
-  public class AvailableTime(
+  public data class AvailableTime(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -583,7 +583,7 @@ public data class HealthcareService(
    * The HealthcareService is not available during this period of time due to the provided reason.
    */
   @Serializable(with = HealthcareServiceNotAvailableSerializer::class)
-  public class NotAvailable(
+  public data class NotAvailable(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

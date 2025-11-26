@@ -297,7 +297,7 @@ public data class Device(
    * it is sold, or for multiple jurisdictions it could have been sold.
    */
   @Serializable(with = DeviceUdiCarrierSerializer::class)
-  public class UdiCarrier(
+  public data class UdiCarrier(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -506,7 +506,7 @@ public data class Device(
    * DeviceDefinition.
    */
   @Serializable(with = DeviceDeviceNameSerializer::class)
-  public class DeviceName(
+  public data class DeviceName(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -626,7 +626,7 @@ public data class Device(
    * particular purpose, and used for the communication.
    */
   @Serializable(with = DeviceSpecializationSerializer::class)
-  public class Specialization(
+  public data class Specialization(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -739,7 +739,7 @@ public data class Device(
 
   /** The actual design of the device or software version running on the device. */
   @Serializable(with = DeviceVersionSerializer::class)
-  public class Version(
+  public data class Version(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -862,7 +862,7 @@ public data class Device(
    * time properties.
    */
   @Serializable(with = DevicePropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

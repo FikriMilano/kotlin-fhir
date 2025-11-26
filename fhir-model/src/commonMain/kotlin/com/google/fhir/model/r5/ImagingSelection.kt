@@ -264,7 +264,7 @@ public data class ImagingSelection(
 
   /** Selector of the instances – human or machine. */
   @Serializable(with = ImagingSelectionPerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -378,7 +378,7 @@ public data class ImagingSelection(
 
   /** Each imaging selection includes one or more selected DICOM SOP instances. */
   @Serializable(with = ImagingSelectionInstanceSerializer::class)
-  public class Instance(
+  public data class Instance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -482,7 +482,7 @@ public data class ImagingSelection(
      * subset element of type frame, the image region applies to all frames in the subset list.
      */
     @Serializable(with = ImagingSelectionInstanceImageRegion2DSerializer::class)
-    public class ImageRegion2D(
+    public data class ImageRegion2D(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -624,7 +624,7 @@ public data class ImagingSelection(
      * of 3D coordinates.
      */
     @Serializable(with = ImagingSelectionInstanceImageRegion3DSerializer::class)
-    public class ImageRegion3D(
+    public data class ImageRegion3D(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

@@ -324,7 +324,7 @@ public data class NutritionOrder(
 
   /** Diet given orally in contrast to enteral (tube) feeding. */
   @Serializable(with = NutritionOrderOralDietSerializer::class)
-  public class OralDiet(
+  public data class OralDiet(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -407,7 +407,7 @@ public data class NutritionOrder(
 
     /** Schedule information for an oral diet. */
     @Serializable(with = NutritionOrderOralDietScheduleSerializer::class)
-    public class Schedule(
+    public data class Schedule(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -547,7 +547,7 @@ public data class NutritionOrder(
      * fiber or sodium) required for the oral diet.
      */
     @Serializable(with = NutritionOrderOralDietNutrientSerializer::class)
-    public class Nutrient(
+    public data class Nutrient(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -664,7 +664,7 @@ public data class NutritionOrder(
      * various types of solid foods.
      */
     @Serializable(with = NutritionOrderOralDietTextureSerializer::class)
-    public class Texture(
+    public data class Texture(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -889,7 +889,7 @@ public data class NutritionOrder(
    * diet.
    */
   @Serializable(with = NutritionOrderSupplementSerializer::class)
-  public class Supplement(
+  public data class Supplement(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -962,7 +962,7 @@ public data class NutritionOrder(
 
     /** Schedule information for a supplement. */
     @Serializable(with = NutritionOrderSupplementScheduleSerializer::class)
-    public class Schedule(
+    public data class Schedule(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1183,7 +1183,7 @@ public data class NutritionOrder(
    * delivers nutrition distal to the oral cavity.
    */
   @Serializable(with = NutritionOrderEnteralFormulaSerializer::class)
-  public class EnteralFormula(
+  public data class EnteralFormula(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1293,7 +1293,7 @@ public data class NutritionOrder(
 
     /** Indicates modular components to be provided in addition or mixed with the base formula. */
     @Serializable(with = NutritionOrderEnteralFormulaAdditiveSerializer::class)
-    public class Additive(
+    public data class Additive(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1429,7 +1429,7 @@ public data class NutritionOrder(
      * hours.
      */
     @Serializable(with = NutritionOrderEnteralFormulaAdministrationSerializer::class)
-    public class Administration(
+    public data class Administration(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1497,7 +1497,7 @@ public data class NutritionOrder(
 
       /** Schedule information for an enteral formula. */
       @Serializable(with = NutritionOrderEnteralFormulaAdministrationScheduleSerializer::class)
-      public class Schedule(
+      public data class Schedule(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

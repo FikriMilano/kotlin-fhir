@@ -479,7 +479,7 @@ public data class ObservationDefinition(
    * observations.
    */
   @Serializable(with = ObservationDefinitionQualifiedValueSerializer::class)
-  public class QualifiedValue(
+  public data class QualifiedValue(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -717,7 +717,7 @@ public data class ObservationDefinition(
    * Some observations have multiple component observations, expressed as separate code value pairs.
    */
   @Serializable(with = ObservationDefinitionComponentSerializer::class)
-  public class Component(
+  public data class Component(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

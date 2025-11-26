@@ -324,7 +324,7 @@ public data class HealthcareService(
    * the service?
    */
   @Serializable(with = HealthcareServiceEligibilitySerializer::class)
-  public class Eligibility(
+  public data class Eligibility(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -288,7 +288,7 @@ public data class FamilyMemberHistory(
    * how they were involved.
    */
   @Serializable(with = FamilyMemberHistoryParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -415,7 +415,7 @@ public data class FamilyMemberHistory(
    * nothing stopping multiple resources - one per condition.
    */
   @Serializable(with = FamilyMemberHistoryConditionSerializer::class)
-  public class Condition(
+  public data class Condition(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -613,7 +613,7 @@ public data class FamilyMemberHistory(
    * nothing stopping multiple resources - one per procedure.
    */
   @Serializable(with = FamilyMemberHistoryProcedureSerializer::class)
-  public class Procedure(
+  public data class Procedure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -170,7 +170,7 @@ public data class MedicinalProductPackaged(
 
   /** Batch numbering. */
   @Serializable(with = MedicinalProductPackagedBatchIdentifierSerializer::class)
-  public class BatchIdentifier(
+  public data class BatchIdentifier(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -283,7 +283,7 @@ public data class MedicinalProductPackaged(
 
   /** A packaging item, as a contained for medicine, possibly with other packaging items within. */
   @Serializable(with = MedicinalProductPackagedPackageItemSerializer::class)
-  public class PackageItem(
+  public data class PackageItem(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

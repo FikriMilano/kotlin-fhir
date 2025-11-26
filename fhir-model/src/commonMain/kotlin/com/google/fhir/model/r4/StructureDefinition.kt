@@ -424,7 +424,7 @@ public data class StructureDefinition(
 
   /** An external specification that the content is mapped to. */
   @Serializable(with = StructureDefinitionMappingSerializer::class)
-  public class Mapping(
+  public data class Mapping(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -579,7 +579,7 @@ public data class StructureDefinition(
    * Identifies the types of resource or data type elements to which the extension can be applied.
    */
   @Serializable(with = StructureDefinitionContextSerializer::class)
-  public class Context(
+  public data class Context(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -697,7 +697,7 @@ public data class StructureDefinition(
    * considering the base StructureDefinition.
    */
   @Serializable(with = StructureDefinitionSnapshotSerializer::class)
-  public class Snapshot(
+  public data class Snapshot(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -806,7 +806,7 @@ public data class StructureDefinition(
    * differences that it applies.
    */
   @Serializable(with = StructureDefinitionDifferentialSerializer::class)
-  public class Differential(
+  public data class Differential(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -395,7 +395,7 @@ public data class Claim(
    * services or for the same event.
    */
   @Serializable(with = ClaimRelatedSerializer::class)
-  public class Related(
+  public data class Related(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -537,7 +537,7 @@ public data class Claim(
    * policy.
    */
   @Serializable(with = ClaimPayeeSerializer::class)
-  public class Payee(
+  public data class Payee(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -658,7 +658,7 @@ public data class Claim(
 
   /** Information code for an event with a corresponding date or period. */
   @Serializable(with = ClaimEventSerializer::class)
-  public class Event(
+  public data class Event(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -797,7 +797,7 @@ public data class Claim(
 
   /** The members of the team who provided the products and services. */
   @Serializable(with = ClaimCareTeamSerializer::class)
-  public class CareTeam(
+  public data class CareTeam(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -952,7 +952,7 @@ public data class Claim(
    * situation, prior or concurrent issues.
    */
   @Serializable(with = ClaimSupportingInfoSerializer::class)
-  public class SupportingInfo(
+  public data class SupportingInfo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1197,7 +1197,7 @@ public data class Claim(
 
   /** Information about diagnoses relevant to the claim items. */
   @Serializable(with = ClaimDiagnosisSerializer::class)
-  public class Diagnosis(
+  public data class Diagnosis(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1370,7 +1370,7 @@ public data class Claim(
 
   /** Procedures performed on the patient relevant to the billing items with the claim. */
   @Serializable(with = ClaimProcedureSerializer::class)
-  public class Procedure(
+  public data class Procedure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1544,7 +1544,7 @@ public data class Claim(
    * the claim.
    */
   @Serializable(with = ClaimInsuranceSerializer::class)
-  public class Insurance(
+  public data class Insurance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1767,7 +1767,7 @@ public data class Claim(
    * listed in the claim.
    */
   @Serializable(with = ClaimAccidentSerializer::class)
-  public class Accident(
+  public data class Accident(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1929,7 +1929,7 @@ public data class Claim(
    * simple items or groups of sub-details.
    */
   @Serializable(with = ClaimItemSerializer::class)
-  public class Item(
+  public data class Item(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -2114,7 +2114,7 @@ public data class Claim(
 
     /** Physical location where the service is performed or applies. */
     @Serializable(with = ClaimItemBodySiteSerializer::class)
-    public class BodySite(
+    public data class BodySite(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2240,7 +2240,7 @@ public data class Claim(
      * are simple items.
      */
     @Serializable(with = ClaimItemDetailSerializer::class)
-    public class Detail(
+    public data class Detail(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -2394,7 +2394,7 @@ public data class Claim(
        * which are simple items.
        */
       @Serializable(with = ClaimItemDetailSubDetailSerializer::class)
-      public class SubDetail(
+      public data class SubDetail(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

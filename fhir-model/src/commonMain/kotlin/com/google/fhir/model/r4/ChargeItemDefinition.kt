@@ -360,7 +360,7 @@ public data class ChargeItemDefinition(
 
   /** Expressions that describe applicability criteria for the billing code. */
   @Serializable(with = ChargeItemDefinitionApplicabilitySerializer::class)
-  public class Applicability(
+  public data class Applicability(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -516,7 +516,7 @@ public data class ChargeItemDefinition(
    * are established for the group, then all properties always apply.
    */
   @Serializable(with = ChargeItemDefinitionPropertyGroupSerializer::class)
-  public class PropertyGroup(
+  public data class PropertyGroup(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -590,7 +590,7 @@ public data class ChargeItemDefinition(
      * how the prices have been calculated.
      */
     @Serializable(with = ChargeItemDefinitionPropertyGroupPriceComponentSerializer::class)
-    public class PriceComponent(
+    public data class PriceComponent(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

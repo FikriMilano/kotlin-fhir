@@ -377,7 +377,7 @@ public data class RiskEvidenceSynthesis(
 
   /** A description of the size of the sample involved in the synthesis. */
   @Serializable(with = RiskEvidenceSynthesisSampleSizeSerializer::class)
-  public class SampleSize(
+  public data class SampleSize(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -498,7 +498,7 @@ public data class RiskEvidenceSynthesis(
 
   /** The estimated risk of the outcome. */
   @Serializable(with = RiskEvidenceSynthesisRiskEstimateSerializer::class)
-  public class RiskEstimate(
+  public data class RiskEstimate(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -569,7 +569,7 @@ public data class RiskEvidenceSynthesis(
 
     /** A description of the precision of the estimate for the effect. */
     @Serializable(with = RiskEvidenceSynthesisRiskEstimatePrecisionEstimateSerializer::class)
-    public class PrecisionEstimate(
+    public data class PrecisionEstimate(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -775,7 +775,7 @@ public data class RiskEvidenceSynthesis(
 
   /** A description of the certainty of the risk estimate. */
   @Serializable(with = RiskEvidenceSynthesisCertaintySerializer::class)
-  public class Certainty(
+  public data class Certainty(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -835,7 +835,7 @@ public data class RiskEvidenceSynthesis(
 
     /** A description of a component of the overall certainty. */
     @Serializable(with = RiskEvidenceSynthesisCertaintyCertaintySubcomponentSerializer::class)
-    public class CertaintySubcomponent(
+    public data class CertaintySubcomponent(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

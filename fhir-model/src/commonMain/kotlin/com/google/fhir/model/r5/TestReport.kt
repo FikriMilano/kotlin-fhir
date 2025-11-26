@@ -222,7 +222,7 @@ public data class TestReport(
 
   /** A participant in the test execution, either the execution engine, a client, or a server. */
   @Serializable(with = TestReportParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -340,7 +340,7 @@ public data class TestReport(
 
   /** The results of the series of required setup operations before the tests were executed. */
   @Serializable(with = TestReportSetupSerializer::class)
-  public class Setup(
+  public data class Setup(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -397,7 +397,7 @@ public data class TestReport(
 
     /** Action would contain either an operation or an assertion. */
     @Serializable(with = TestReportSetupActionSerializer::class)
-    public class Action(
+    public data class Action(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -453,7 +453,7 @@ public data class TestReport(
 
       /** The operation performed. */
       @Serializable(with = TestReportSetupActionOperationSerializer::class)
-      public class Operation(
+      public data class Operation(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -573,7 +573,7 @@ public data class TestReport(
 
       /** The results of the assertion performed on the previous operations. */
       @Serializable(with = TestReportSetupActionAssertSerializer::class)
-      public class Assert(
+      public data class Assert(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -642,7 +642,7 @@ public data class TestReport(
          * Links or references providing traceability to the testing requirements for this assert.
          */
         @Serializable(with = TestReportSetupActionAssertRequirementSerializer::class)
-        public class Requirement(
+        public data class Requirement(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -965,7 +965,7 @@ public data class TestReport(
 
   /** A test executed from the test script. */
   @Serializable(with = TestReportTestSerializer::class)
-  public class Test(
+  public data class Test(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1028,7 +1028,7 @@ public data class TestReport(
 
     /** Action would contain either an operation or an assertion. */
     @Serializable(with = TestReportTestActionSerializer::class)
-    public class Action(
+    public data class Action(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1214,7 +1214,7 @@ public data class TestReport(
    * (successfully or otherwise).
    */
   @Serializable(with = TestReportTeardownSerializer::class)
-  public class Teardown(
+  public data class Teardown(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1271,7 +1271,7 @@ public data class TestReport(
 
     /** The teardown action will only contain an operation. */
     @Serializable(with = TestReportTeardownActionSerializer::class)
-    public class Action(
+    public data class Action(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

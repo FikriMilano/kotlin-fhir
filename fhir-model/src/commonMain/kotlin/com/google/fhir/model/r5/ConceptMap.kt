@@ -489,7 +489,7 @@ public data class ConceptMap(
    * source -> target.
    */
   @Serializable(with = ConceptMapPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -638,7 +638,7 @@ public data class ConceptMap(
    * field (or vice versa).
    */
   @Serializable(with = ConceptMapAdditionalAttributeSerializer::class)
-  public class AdditionalAttribute(
+  public data class AdditionalAttribute(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -797,7 +797,7 @@ public data class ConceptMap(
 
   /** A group of mappings that all have the same source and target system. */
   @Serializable(with = ConceptMapGroupSerializer::class)
-  public class Group(
+  public data class Group(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -884,7 +884,7 @@ public data class ConceptMap(
 
     /** Mappings for an individual concept in the source to one or more concepts in the target. */
     @Serializable(with = ConceptMapGroupElementSerializer::class)
-    public class Element(
+    public data class Element(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -971,7 +971,7 @@ public data class ConceptMap(
 
       /** A concept from the target value set that this concept maps to. */
       @Serializable(with = ConceptMapGroupElementTargetSerializer::class)
-      public class Target(
+      public data class Target(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1072,7 +1072,7 @@ public data class ConceptMap(
 
         /** A property value for this source -> target mapping. */
         @Serializable(with = ConceptMapGroupElementTargetPropertySerializer::class)
-        public class Property(
+        public data class Property(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -1248,7 +1248,7 @@ public data class ConceptMap(
          * value.
          */
         @Serializable(with = ConceptMapGroupElementTargetDependsOnSerializer::class)
-        public class DependsOn(
+        public data class DependsOn(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.
@@ -1629,7 +1629,7 @@ public data class ConceptMap(
      * ConceptMap.group.element.target.valueSet is empty.
      */
     @Serializable(with = ConceptMapGroupUnmappedSerializer::class)
-    public class Unmapped(
+    public data class Unmapped(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

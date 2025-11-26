@@ -318,7 +318,7 @@ public data class MedicationDispense(
 
   /** Indicates who or what performed the event. */
   @Serializable(with = MedicationDispensePerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -448,7 +448,7 @@ public data class MedicationDispense(
    * nothing is specified, substitution was not done.
    */
   @Serializable(with = MedicationDispenseSubstitutionSerializer::class)
-  public class Substitution(
+  public data class Substitution(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

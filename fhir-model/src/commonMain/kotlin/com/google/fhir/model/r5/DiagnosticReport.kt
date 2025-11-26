@@ -327,7 +327,7 @@ public data class DiagnosticReport(
    * report not included in the results already included in the report.
    */
   @Serializable(with = DiagnosticReportSupportingInfoSerializer::class)
-  public class SupportingInfo(
+  public data class SupportingInfo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -442,7 +442,7 @@ public data class DiagnosticReport(
    * specimens (i.e. slides of interest).
    */
   @Serializable(with = DiagnosticReportMediaSerializer::class)
-  public class Media(
+  public data class Media(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

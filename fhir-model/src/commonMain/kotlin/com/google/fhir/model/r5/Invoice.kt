@@ -261,7 +261,7 @@ public data class Invoice(
 
   /** Indicates who or what performed or participated in the charged service. */
   @Serializable(with = InvoiceParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -385,7 +385,7 @@ public data class Invoice(
    * such.ofType(date), code and amount are found in the referenced ChargeItem resource.
    */
   @Serializable(with = InvoiceLineItemSerializer::class)
-  public class LineItem(
+  public data class LineItem(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

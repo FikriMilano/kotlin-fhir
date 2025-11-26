@@ -602,7 +602,7 @@ public data class ActivityDefinition(
 
   /** Indicates who should participate in performing the action described. */
   @Serializable(with = ActivityDefinitionParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -754,7 +754,7 @@ public data class ActivityDefinition(
    * on the request resource that would contain the result.
    */
   @Serializable(with = ActivityDefinitionDynamicValueSerializer::class)
-  public class DynamicValue(
+  public data class DynamicValue(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

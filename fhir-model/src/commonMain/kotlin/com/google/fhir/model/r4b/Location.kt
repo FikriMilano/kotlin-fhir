@@ -253,7 +253,7 @@ public data class Location(
    * same co-ordinate system used in KML).
    */
   @Serializable(with = LocationPositionSerializer::class)
-  public class Position(
+  public data class Position(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -389,7 +389,7 @@ public data class Location(
 
   /** What days/times during a week is this location usually open. */
   @Serializable(with = LocationHoursOfOperationSerializer::class)
-  public class HoursOfOperation(
+  public data class HoursOfOperation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

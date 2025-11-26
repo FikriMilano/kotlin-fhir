@@ -205,7 +205,7 @@ public data class SupplyDelivery(
 
   /** The item that is being delivered or has been supplied. */
   @Serializable(with = SupplyDeliverySuppliedItemSerializer::class)
-  public class SuppliedItem(
+  public data class SuppliedItem(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

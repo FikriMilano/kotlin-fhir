@@ -193,7 +193,7 @@ public data class Bundle(
 
   /** A series of links that provide context to this bundle. */
   @Serializable(with = BundleLinkSerializer::class)
-  public class Link(
+  public data class Link(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -313,7 +313,7 @@ public data class Bundle(
    * (transactions and history only).
    */
   @Serializable(with = BundleEntrySerializer::class)
-  public class Entry(
+  public data class Entry(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -415,7 +415,7 @@ public data class Bundle(
 
     /** Information about the search process that lead to the creation of this entry. */
     @Serializable(with = BundleEntrySearchSerializer::class)
-    public class Search(
+    public data class Search(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -565,7 +565,7 @@ public data class Bundle(
      * the entry.
      */
     @Serializable(with = BundleEntryRequestSerializer::class)
-    public class Request(
+    public data class Request(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -753,7 +753,7 @@ public data class Bundle(
      * history.
      */
     @Serializable(with = BundleEntryResponseSerializer::class)
-    public class Response(
+    public data class Response(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

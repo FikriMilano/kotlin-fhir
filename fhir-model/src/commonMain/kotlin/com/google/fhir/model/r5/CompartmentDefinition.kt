@@ -318,7 +318,7 @@ public data class CompartmentDefinition(
 
   /** Information about how a resource is related to the compartment. */
   @Serializable(with = CompartmentDefinitionResourceSerializer::class)
-  public class Resource(
+  public data class Resource(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -252,7 +252,7 @@ public data class DeviceDefinition(
    * it is sold, or for multiple jurisdictions it could have been sold.
    */
   @Serializable(with = DeviceDefinitionUdiDeviceIdentifierSerializer::class)
-  public class UdiDeviceIdentifier(
+  public data class UdiDeviceIdentifier(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -376,7 +376,7 @@ public data class DeviceDefinition(
 
   /** A name given to the device to identify it. */
   @Serializable(with = DeviceDefinitionDeviceNameSerializer::class)
-  public class DeviceName(
+  public data class DeviceName(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -496,7 +496,7 @@ public data class DeviceDefinition(
    * particular purpose, and used for the communication.
    */
   @Serializable(with = DeviceDefinitionSpecializationSerializer::class)
-  public class Specialization(
+  public data class Specialization(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -609,7 +609,7 @@ public data class DeviceDefinition(
 
   /** Device capabilities. */
   @Serializable(with = DeviceDefinitionCapabilitySerializer::class)
-  public class Capability(
+  public data class Capability(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -725,7 +725,7 @@ public data class DeviceDefinition(
    * time properties.
    */
   @Serializable(with = DeviceDefinitionPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -845,7 +845,7 @@ public data class DeviceDefinition(
 
   /** A substance used to create the material(s) of which the device is made. */
   @Serializable(with = DeviceDefinitionMaterialSerializer::class)
-  public class Material(
+  public data class Material(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

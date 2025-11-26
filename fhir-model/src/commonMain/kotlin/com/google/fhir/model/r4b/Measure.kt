@@ -478,7 +478,7 @@ public data class Measure(
 
   /** A group of population criteria for the measure. */
   @Serializable(with = MeasureGroupSerializer::class)
-  public class Group(
+  public data class Group(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -547,7 +547,7 @@ public data class Measure(
 
     /** A population criteria for the measure. */
     @Serializable(with = MeasureGroupPopulationSerializer::class)
-    public class Population(
+    public data class Population(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -688,7 +688,7 @@ public data class Measure(
      * expression defined within a referenced library or a valid FHIR Resource Path.
      */
     @Serializable(with = MeasureGroupStratifierSerializer::class)
-    public class Stratifier(
+    public data class Stratifier(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -768,7 +768,7 @@ public data class Measure(
        * Path.
        */
       @Serializable(with = MeasureGroupStratifierComponentSerializer::class)
-      public class Component(
+      public data class Component(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -1060,7 +1060,7 @@ public data class Measure(
    * CQL expression within a referenced library, or a valid FHIR Resource Path.
    */
   @Serializable(with = MeasureSupplementalDataSerializer::class)
-  public class SupplementalData(
+  public data class SupplementalData(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

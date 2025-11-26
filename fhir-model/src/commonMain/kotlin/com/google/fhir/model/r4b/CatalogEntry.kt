@@ -195,7 +195,7 @@ public data class CatalogEntry(
 
   /** Used for example, to point to a substance, or to a device used to administer a medication. */
   @Serializable(with = CatalogEntryRelatedEntrySerializer::class)
-  public class RelatedEntry(
+  public data class RelatedEntry(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

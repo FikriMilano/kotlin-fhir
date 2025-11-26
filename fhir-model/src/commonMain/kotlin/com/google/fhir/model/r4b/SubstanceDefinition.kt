@@ -229,7 +229,7 @@ public data class SubstanceDefinition(
 
   /** Moiety, for structural modifications. */
   @Serializable(with = SubstanceDefinitionMoietySerializer::class)
-  public class Moiety(
+  public data class Moiety(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -415,7 +415,7 @@ public data class SubstanceDefinition(
 
   /** General specifications for this substance. */
   @Serializable(with = SubstanceDefinitionPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -571,7 +571,7 @@ public data class SubstanceDefinition(
 
   /** The molecular weight or weight range (for proteins, polymers or nucleic acids). */
   @Serializable(with = SubstanceDefinitionMolecularWeightSerializer::class)
-  public class MolecularWeight(
+  public data class MolecularWeight(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -705,7 +705,7 @@ public data class SubstanceDefinition(
 
   /** Structural information. */
   @Serializable(with = SubstanceDefinitionStructureSerializer::class)
-  public class Structure(
+  public data class Structure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -785,7 +785,7 @@ public data class SubstanceDefinition(
 
     /** A depiction of the structure or characterization of the substance. */
     @Serializable(with = SubstanceDefinitionStructureRepresentationSerializer::class)
-    public class Representation(
+    public data class Representation(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1017,7 +1017,7 @@ public data class SubstanceDefinition(
 
   /** Codes associated with the substance. */
   @Serializable(with = SubstanceDefinitionCodeSerializer::class)
-  public class Code(
+  public data class Code(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1152,7 +1152,7 @@ public data class SubstanceDefinition(
 
   /** Names applicable to this substance. */
   @Serializable(with = SubstanceDefinitionNameSerializer::class)
-  public class Name(
+  public data class Name(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1237,7 +1237,7 @@ public data class SubstanceDefinition(
 
     /** Details of the official nature of this name. */
     @Serializable(with = SubstanceDefinitionNameOfficialSerializer::class)
-    public class Official(
+    public data class Official(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1455,7 +1455,7 @@ public data class SubstanceDefinition(
 
   /** A link between this substance and another, with details of the relationship. */
   @Serializable(with = SubstanceDefinitionRelationshipSerializer::class)
-  public class Relationship(
+  public data class Relationship(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1674,7 +1674,7 @@ public data class SubstanceDefinition(
 
   /** Material or taxonomic/anatomical source for the substance. */
   @Serializable(with = SubstanceDefinitionSourceMaterialSerializer::class)
-  public class SourceMaterial(
+  public data class SourceMaterial(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

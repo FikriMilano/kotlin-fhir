@@ -266,6 +266,7 @@ class ModelFileSpecGenerator(val codegenContext: CodegenContext) {
         val backboneElementClassName = enclosingModelClassName.nestedClass(name)
         addType(
           TypeSpec.classBuilder(name)
+            .addModifiers(KModifier.DATA)
             .addAnnotation(
               AnnotationSpec.builder(Serializable::class)
                 .addMember("with = %T::class", backboneElementClassName.toSerializerClassName())

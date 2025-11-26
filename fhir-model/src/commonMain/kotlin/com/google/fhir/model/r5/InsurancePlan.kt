@@ -228,7 +228,7 @@ public data class InsurancePlan(
 
   /** Details about the coverage offered by the insurance product. */
   @Serializable(with = InsurancePlanCoverageSerializer::class)
-  public class Coverage(
+  public data class Coverage(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -292,7 +292,7 @@ public data class InsurancePlan(
 
     /** Specific benefits under this type of coverage. */
     @Serializable(with = InsurancePlanCoverageBenefitSerializer::class)
-    public class Benefit(
+    public data class Benefit(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -350,7 +350,7 @@ public data class InsurancePlan(
 
       /** The specific limits on the benefit. */
       @Serializable(with = InsurancePlanCoverageBenefitLimitSerializer::class)
-      public class Limit(
+      public data class Limit(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -612,7 +612,7 @@ public data class InsurancePlan(
 
   /** Details about an insurance plan. */
   @Serializable(with = InsurancePlanPlanSerializer::class)
-  public class Plan(
+  public data class Plan(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -687,7 +687,7 @@ public data class InsurancePlan(
 
     /** Overall costs associated with the plan. */
     @Serializable(with = InsurancePlanPlanGeneralCostSerializer::class)
-    public class GeneralCost(
+    public data class GeneralCost(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -815,7 +815,7 @@ public data class InsurancePlan(
 
     /** Costs associated with the coverage provided by the product. */
     @Serializable(with = InsurancePlanPlanSpecificCostSerializer::class)
-    public class SpecificCost(
+    public data class SpecificCost(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -873,7 +873,7 @@ public data class InsurancePlan(
 
       /** List of the specific benefits under this category of benefit. */
       @Serializable(with = InsurancePlanPlanSpecificCostBenefitSerializer::class)
-      public class Benefit(
+      public data class Benefit(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -931,7 +931,7 @@ public data class InsurancePlan(
 
         /** List of the costs associated with a specific benefit. */
         @Serializable(with = InsurancePlanPlanSpecificCostBenefitCostSerializer::class)
-        public class Cost(
+        public data class Cost(
           /**
            * Unique id for the element within a resource (for internal references). This may be any
            * string value that does not contain spaces.

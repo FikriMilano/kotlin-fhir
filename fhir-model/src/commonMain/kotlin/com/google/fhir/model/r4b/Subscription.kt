@@ -187,7 +187,7 @@ public data class Subscription(
 
   /** Details where to send notifications when resources are received that meet the criteria. */
   @Serializable(with = SubscriptionChannelSerializer::class)
-  public class Channel(
+  public data class Channel(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

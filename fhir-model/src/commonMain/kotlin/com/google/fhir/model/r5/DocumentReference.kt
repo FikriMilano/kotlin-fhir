@@ -343,7 +343,7 @@ public data class DocumentReference(
 
   /** A participant who has authenticated the accuracy of the document. */
   @Serializable(with = DocumentReferenceAttesterSerializer::class)
-  public class Attester(
+  public data class Attester(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -463,7 +463,7 @@ public data class DocumentReference(
 
   /** Relationships that this document has with other document references that already exist. */
   @Serializable(with = DocumentReferenceRelatesToSerializer::class)
-  public class RelatesTo(
+  public data class RelatesTo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -587,7 +587,7 @@ public data class DocumentReference(
    * must all represent the same document in different format, or attachment metadata.
    */
   @Serializable(with = DocumentReferenceContentSerializer::class)
-  public class Content(
+  public data class Content(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -657,7 +657,7 @@ public data class DocumentReference(
      * document conforms to beyond the base format indicated in the mimeType.
      */
     @Serializable(with = DocumentReferenceContentProfileSerializer::class)
-    public class Profile(
+    public data class Profile(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

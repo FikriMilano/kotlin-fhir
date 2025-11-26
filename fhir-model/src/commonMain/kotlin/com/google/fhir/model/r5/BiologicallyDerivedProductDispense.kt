@@ -202,7 +202,7 @@ public data class BiologicallyDerivedProductDispense(
 
   /** Indicates who or what performed an action. */
   @Serializable(with = BiologicallyDerivedProductDispensePerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

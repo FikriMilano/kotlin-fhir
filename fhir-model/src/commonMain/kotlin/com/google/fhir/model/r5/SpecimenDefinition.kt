@@ -371,7 +371,7 @@ public data class SpecimenDefinition(
 
   /** Specimen conditioned in a container as expected by the testing laboratory. */
   @Serializable(with = SpecimenDefinitionTypeTestedSerializer::class)
-  public class TypeTested(
+  public data class TypeTested(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -456,7 +456,7 @@ public data class SpecimenDefinition(
 
     /** The specimen's container. */
     @Serializable(with = SpecimenDefinitionTypeTestedContainerSerializer::class)
-    public class Container(
+    public data class Container(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -540,7 +540,7 @@ public data class SpecimenDefinition(
        * specimen. Examples: Formalin, Citrate, EDTA.
        */
       @Serializable(with = SpecimenDefinitionTypeTestedContainerAdditiveSerializer::class)
-      public class Additive(
+      public data class Additive(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -793,7 +793,7 @@ public data class SpecimenDefinition(
      * interval, prior the testing process.
      */
     @Serializable(with = SpecimenDefinitionTypeTestedHandlingSerializer::class)
-    public class Handling(
+    public data class Handling(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

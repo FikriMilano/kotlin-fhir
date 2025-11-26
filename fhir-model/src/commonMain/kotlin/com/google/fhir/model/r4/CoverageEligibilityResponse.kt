@@ -242,7 +242,7 @@ public data class CoverageEligibilityResponse(
 
   /** Financial instruments for reimbursement for the health care products and services. */
   @Serializable(with = CoverageEligibilityResponseInsuranceSerializer::class)
-  public class Insurance(
+  public data class Insurance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -314,7 +314,7 @@ public data class CoverageEligibilityResponse(
      * Benefits and optionally current balances, and authorization details by category or service.
      */
     @Serializable(with = CoverageEligibilityResponseInsuranceItemSerializer::class)
-    public class Item(
+    public data class Item(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -449,7 +449,7 @@ public data class CoverageEligibilityResponse(
 
       /** Benefits used to date. */
       @Serializable(with = CoverageEligibilityResponseInsuranceItemBenefitSerializer::class)
-      public class Benefit(
+      public data class Benefit(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.
@@ -860,7 +860,7 @@ public data class CoverageEligibilityResponse(
 
   /** Errors encountered during the processing of the request. */
   @Serializable(with = CoverageEligibilityResponseErrorSerializer::class)
-  public class Error(
+  public data class Error(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

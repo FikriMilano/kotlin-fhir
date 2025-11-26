@@ -227,7 +227,7 @@ public data class Specimen(
 
   /** Details concerning the specimen collection. */
   @Serializable(with = SpecimenCollectionSerializer::class)
-  public class Collection(
+  public data class Collection(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -460,7 +460,7 @@ public data class Specimen(
 
   /** Details concerning processing and processing steps for the specimen. */
   @Serializable(with = SpecimenProcessingSerializer::class)
-  public class Processing(
+  public data class Processing(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -619,7 +619,7 @@ public data class Specimen(
    * tray in rack is not addressed here.
    */
   @Serializable(with = SpecimenContainerSerializer::class)
-  public class Container(
+  public data class Container(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

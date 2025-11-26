@@ -293,7 +293,7 @@ public data class Communication(
 
   /** Text, attachment(s), or resource(s) that was communicated to the recipient. */
   @Serializable(with = CommunicationPayloadSerializer::class)
-  public class Payload(
+  public data class Payload(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

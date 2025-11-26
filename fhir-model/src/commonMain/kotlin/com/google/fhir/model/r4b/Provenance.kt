@@ -231,7 +231,7 @@ public data class Provenance(
    * responsibility for the activity taking place.
    */
   @Serializable(with = ProvenanceAgentSerializer::class)
-  public class Agent(
+  public data class Agent(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -392,7 +392,7 @@ public data class Provenance(
 
   /** An entity used in this activity. */
   @Serializable(with = ProvenanceEntitySerializer::class)
-  public class Entity(
+  public data class Entity(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

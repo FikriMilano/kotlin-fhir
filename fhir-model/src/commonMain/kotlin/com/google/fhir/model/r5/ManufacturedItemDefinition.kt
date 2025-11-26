@@ -193,7 +193,7 @@ public data class ManufacturedItemDefinition(
 
   /** General characteristics of this item. */
   @Serializable(with = ManufacturedItemDefinitionPropertySerializer::class)
-  public class Property(
+  public data class Property(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -363,7 +363,7 @@ public data class ManufacturedItemDefinition(
    * from the ingredients that are part of its chemical makeup.
    */
   @Serializable(with = ManufacturedItemDefinitionComponentSerializer::class)
-  public class Component(
+  public data class Component(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -443,7 +443,7 @@ public data class ManufacturedItemDefinition(
      * primarily stated (for which see Ingredient.for or ManufacturedItemDefinition.ingredient).
      */
     @Serializable(with = ManufacturedItemDefinitionComponentConstituentSerializer::class)
-    public class Constituent(
+    public data class Constituent(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

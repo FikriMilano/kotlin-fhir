@@ -180,7 +180,7 @@ public data class InventoryReport(
 
   /** An inventory listing section (grouped by any of the attributes). */
   @Serializable(with = InventoryReportInventoryListingSerializer::class)
-  public class InventoryListing(
+  public data class InventoryListing(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -242,7 +242,7 @@ public data class InventoryReport(
 
     /** The item or items in this listing. */
     @Serializable(with = InventoryReportInventoryListingItemSerializer::class)
-    public class Item(
+    public data class Item(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

@@ -222,7 +222,7 @@ public data class Practitioner(
    * authorizing the practitioner to practice medicine within a certian locality.
    */
   @Serializable(with = PractitionerQualificationSerializer::class)
-  public class Qualification(
+  public data class Qualification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

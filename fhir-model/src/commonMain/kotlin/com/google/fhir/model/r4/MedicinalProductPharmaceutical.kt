@@ -169,7 +169,7 @@ public data class MedicinalProductPharmaceutical(
 
   /** Characteristics e.g. a products onset of action. */
   @Serializable(with = MedicinalProductPharmaceuticalCharacteristicsSerializer::class)
-  public class Characteristics(
+  public data class Characteristics(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -282,7 +282,7 @@ public data class MedicinalProductPharmaceutical(
 
   /** The path by which the pharmaceutical product is taken into or makes contact with the body. */
   @Serializable(with = MedicinalProductPharmaceuticalRouteOfAdministrationSerializer::class)
-  public class RouteOfAdministration(
+  public data class RouteOfAdministration(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -369,7 +369,7 @@ public data class MedicinalProductPharmaceutical(
     @Serializable(
       with = MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesSerializer::class
     )
-    public class TargetSpecies(
+    public data class TargetSpecies(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -427,7 +427,7 @@ public data class MedicinalProductPharmaceutical(
         with =
           MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriodSerializer::class
       )
-      public class WithdrawalPeriod(
+      public data class WithdrawalPeriod(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

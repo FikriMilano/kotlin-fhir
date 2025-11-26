@@ -64,7 +64,7 @@ public data class Availability(
 
   /** Times the {item} is available. */
   @Serializable(with = AvailabilityAvailableTimeSerializer::class)
-  public class AvailableTime(
+  public data class AvailableTime(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -167,7 +167,7 @@ public data class Availability(
 
   /** Not available during this time due to provided reason. */
   @Serializable(with = AvailabilityNotAvailableTimeSerializer::class)
-  public class NotAvailableTime(
+  public data class NotAvailableTime(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

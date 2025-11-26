@@ -394,7 +394,7 @@ public data class EffectEvidenceSynthesis(
 
   /** A description of the size of the sample involved in the synthesis. */
   @Serializable(with = EffectEvidenceSynthesisSampleSizeSerializer::class)
-  public class SampleSize(
+  public data class SampleSize(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -515,7 +515,7 @@ public data class EffectEvidenceSynthesis(
 
   /** A description of the results for each exposure considered in the effect estimate. */
   @Serializable(with = EffectEvidenceSynthesisResultsByExposureSerializer::class)
-  public class ResultsByExposure(
+  public data class ResultsByExposure(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -642,7 +642,7 @@ public data class EffectEvidenceSynthesis(
 
   /** The estimated effect of the exposure variant. */
   @Serializable(with = EffectEvidenceSynthesisEffectEstimateSerializer::class)
-  public class EffectEstimate(
+  public data class EffectEstimate(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -710,7 +710,7 @@ public data class EffectEvidenceSynthesis(
 
     /** A description of the precision of the estimate for the effect. */
     @Serializable(with = EffectEvidenceSynthesisEffectEstimatePrecisionEstimateSerializer::class)
-    public class PrecisionEstimate(
+    public data class PrecisionEstimate(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -912,7 +912,7 @@ public data class EffectEvidenceSynthesis(
 
   /** A description of the certainty of the effect estimate. */
   @Serializable(with = EffectEvidenceSynthesisCertaintySerializer::class)
-  public class Certainty(
+  public data class Certainty(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -972,7 +972,7 @@ public data class EffectEvidenceSynthesis(
 
     /** A description of a component of the overall certainty. */
     @Serializable(with = EffectEvidenceSynthesisCertaintyCertaintySubcomponentSerializer::class)
-    public class CertaintySubcomponent(
+    public data class CertaintySubcomponent(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

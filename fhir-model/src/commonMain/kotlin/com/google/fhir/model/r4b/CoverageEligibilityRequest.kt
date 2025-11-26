@@ -238,7 +238,7 @@ public data class CoverageEligibilityRequest(
    * situation, prior or concurrent issues.
    */
   @Serializable(with = CoverageEligibilityRequestSupportingInfoSerializer::class)
-  public class SupportingInfo(
+  public data class SupportingInfo(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -374,7 +374,7 @@ public data class CoverageEligibilityRequest(
 
   /** Financial instruments for reimbursement for the health care products and services. */
   @Serializable(with = CoverageEligibilityRequestInsuranceSerializer::class)
-  public class Insurance(
+  public data class Insurance(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -531,7 +531,7 @@ public data class CoverageEligibilityRequest(
    * to service delivery may be required by the payor.
    */
   @Serializable(with = CoverageEligibilityRequestItemSerializer::class)
-  public class Item(
+  public data class Item(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -631,7 +631,7 @@ public data class CoverageEligibilityRequest(
 
     /** Patient diagnosis for which care is sought. */
     @Serializable(with = CoverageEligibilityRequestItemDiagnosisSerializer::class)
-    public class Diagnosis(
+    public data class Diagnosis(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

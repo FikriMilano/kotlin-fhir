@@ -311,7 +311,7 @@ public data class Patient(
 
   /** A contact party (e.g. guardian, partner, friend) for the patient. */
   @Serializable(with = PatientContactSerializer::class)
-  public class Contact(
+  public data class Contact(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -488,7 +488,7 @@ public data class Patient(
 
   /** A language which may be used to communicate with the patient about his or her health. */
   @Serializable(with = PatientCommunicationSerializer::class)
-  public class Communication(
+  public data class Communication(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -627,7 +627,7 @@ public data class Patient(
 
   /** Link to a Patient or RelatedPerson resource that concerns the same actual individual. */
   @Serializable(with = PatientLinkSerializer::class)
-  public class Link(
+  public data class Link(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

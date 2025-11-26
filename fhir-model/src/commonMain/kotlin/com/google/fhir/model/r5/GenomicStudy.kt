@@ -196,7 +196,7 @@ public data class GenomicStudy(
 
   /** The details about a specific analysis that was performed in this GenomicStudy. */
   @Serializable(with = GenomicStudyAnalysisSerializer::class)
-  public class Analysis(
+  public data class Analysis(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -315,7 +315,7 @@ public data class GenomicStudy(
 
     /** Inputs for the analysis event. */
     @Serializable(with = GenomicStudyAnalysisInputSerializer::class)
-    public class Input(
+    public data class Input(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -460,7 +460,7 @@ public data class GenomicStudy(
 
     /** Outputs for the analysis event. */
     @Serializable(with = GenomicStudyAnalysisOutputSerializer::class)
-    public class Output(
+    public data class Output(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -574,7 +574,7 @@ public data class GenomicStudy(
 
     /** Performer for the analysis event. */
     @Serializable(with = GenomicStudyAnalysisPerformerSerializer::class)
-    public class Performer(
+    public data class Performer(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -696,7 +696,7 @@ public data class GenomicStudy(
      * Devices used for the analysis (e.g., instruments, software), with settings and parameters.
      */
     @Serializable(with = GenomicStudyAnalysisDeviceSerializer::class)
-    public class Device(
+    public data class Device(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

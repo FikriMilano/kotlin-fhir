@@ -209,7 +209,7 @@ public data class DeviceMetric(
 
   /** Describes the calibrations that have been performed or that are required to be performed. */
   @Serializable(with = DeviceMetricCalibrationSerializer::class)
-  public class Calibration(
+  public data class Calibration(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

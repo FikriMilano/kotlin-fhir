@@ -229,7 +229,7 @@ public data class MessageHeader(
 
   /** The destination application which the message is intended for. */
   @Serializable(with = MessageHeaderDestinationSerializer::class)
-  public class Destination(
+  public data class Destination(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -402,7 +402,7 @@ public data class MessageHeader(
 
   /** The source application from which this message originated. */
   @Serializable(with = MessageHeaderSourceSerializer::class)
-  public class Source(
+  public data class Source(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -585,7 +585,7 @@ public data class MessageHeader(
    * is a response.
    */
   @Serializable(with = MessageHeaderResponseSerializer::class)
-  public class Response(
+  public data class Response(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

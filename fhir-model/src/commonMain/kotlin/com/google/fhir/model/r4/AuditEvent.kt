@@ -233,7 +233,7 @@ public data class AuditEvent(
 
   /** An actor taking an active role in the event or activity that is logged. */
   @Serializable(with = AuditEventAgentSerializer::class)
-  public class Agent(
+  public data class Agent(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -353,7 +353,7 @@ public data class AuditEvent(
      * Logical network location for application activity, if the activity has a network location.
      */
     @Serializable(with = AuditEventAgentNetworkSerializer::class)
-    public class Network(
+    public data class Network(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -605,7 +605,7 @@ public data class AuditEvent(
 
   /** The system that is reporting the event. */
   @Serializable(with = AuditEventSourceSerializer::class)
-  public class Source(
+  public data class Source(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -731,7 +731,7 @@ public data class AuditEvent(
 
   /** Specific instances of data or objects that have been accessed. */
   @Serializable(with = AuditEventEntitySerializer::class)
-  public class Entity(
+  public data class Entity(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -837,7 +837,7 @@ public data class AuditEvent(
 
     /** Tagged value pairs for conveying additional information about the entity. */
     @Serializable(with = AuditEventEntityDetailSerializer::class)
-    public class Detail(
+    public data class Detail(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

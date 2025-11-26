@@ -290,7 +290,7 @@ public data class GraphDefinition(
 
   /** Links this graph makes rules about. */
   @Serializable(with = GraphDefinitionLinkSerializer::class)
-  public class Link(
+  public data class Link(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -364,7 +364,7 @@ public data class GraphDefinition(
 
     /** Potential target for the link. */
     @Serializable(with = GraphDefinitionLinkTargetSerializer::class)
-    public class Target(
+    public data class Target(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -433,7 +433,7 @@ public data class GraphDefinition(
 
       /** Compartment Consistency Rules. */
       @Serializable(with = GraphDefinitionLinkTargetCompartmentSerializer::class)
-      public class Compartment(
+      public data class Compartment(
         /**
          * Unique id for the element within a resource (for internal references). This may be any
          * string value that does not contain spaces.

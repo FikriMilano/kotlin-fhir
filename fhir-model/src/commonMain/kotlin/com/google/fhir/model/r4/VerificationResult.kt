@@ -192,7 +192,7 @@ public data class VerificationResult(
 
   /** Information about the primary source(s) involved in validation. */
   @Serializable(with = VerificationResultPrimarySourceSerializer::class)
-  public class PrimarySource(
+  public data class PrimarySource(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -361,7 +361,7 @@ public data class VerificationResult(
 
   /** Information about the entity attesting to information. */
   @Serializable(with = VerificationResultAttestationSerializer::class)
-  public class Attestation(
+  public data class Attestation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -529,7 +529,7 @@ public data class VerificationResult(
 
   /** Information about the entity validating information. */
   @Serializable(with = VerificationResultValidatorSerializer::class)
-  public class Validator(
+  public data class Validator(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -106,7 +106,7 @@ public data class Timing(
 
   /** A set of rules that describe when the event is scheduled. */
   @Serializable(with = TimingRepeatSerializer::class)
-  public class Repeat(
+  public data class Repeat(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

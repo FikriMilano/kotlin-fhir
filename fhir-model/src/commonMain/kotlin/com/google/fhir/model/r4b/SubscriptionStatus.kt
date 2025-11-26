@@ -175,7 +175,7 @@ public data class SubscriptionStatus(
 
   /** Detailed information about events relevant to this subscription notification. */
   @Serializable(with = SubscriptionStatusNotificationEventSerializer::class)
-  public class NotificationEvent(
+  public data class NotificationEvent(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -297,7 +297,7 @@ public data class Appointment(
 
   /** List of participants involved in the appointment. */
   @Serializable(with = AppointmentParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

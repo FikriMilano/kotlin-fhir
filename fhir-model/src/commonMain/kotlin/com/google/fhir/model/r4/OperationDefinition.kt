@@ -393,7 +393,7 @@ public data class OperationDefinition(
 
   /** The parameters for the operation/query. */
   @Serializable(with = OperationDefinitionParameterSerializer::class)
-  public class Parameter(
+  public data class Parameter(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -514,7 +514,7 @@ public data class OperationDefinition(
 
     /** Binds to a value set if this parameter is coded (code, Coding, CodeableConcept). */
     @Serializable(with = OperationDefinitionParameterBindingSerializer::class)
-    public class Binding(
+    public data class Binding(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -650,7 +650,7 @@ public data class OperationDefinition(
      * resolve to this resource.
      */
     @Serializable(with = OperationDefinitionParameterReferencedFromSerializer::class)
-    public class ReferencedFrom(
+    public data class ReferencedFrom(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -911,7 +911,7 @@ public data class OperationDefinition(
    * code generators when generating overloaded parameter sets for this operation.
    */
   @Serializable(with = OperationDefinitionOverloadSerializer::class)
-  public class Overload(
+  public data class Overload(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

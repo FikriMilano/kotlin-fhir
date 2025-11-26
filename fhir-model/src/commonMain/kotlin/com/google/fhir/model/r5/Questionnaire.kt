@@ -418,7 +418,7 @@ public data class Questionnaire(
 
   /** A particular question, question grouping or display text that is part of the questionnaire. */
   @Serializable(with = QuestionnaireItemSerializer::class)
-  public class Item(
+  public data class Item(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -686,7 +686,7 @@ public data class Questionnaire(
      * captured) when the specified condition is true.
      */
     @Serializable(with = QuestionnaireItemEnableWhenSerializer::class)
-    public class EnableWhen(
+    public data class EnableWhen(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -903,7 +903,7 @@ public data class Questionnaire(
 
     /** One of the permitted answers for the question. */
     @Serializable(with = QuestionnaireItemAnswerOptionSerializer::class)
-    public class AnswerOption(
+    public data class AnswerOption(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1079,7 +1079,7 @@ public data class Questionnaire(
      * questionnaire for user input.
      */
     @Serializable(with = QuestionnaireItemInitialSerializer::class)
-    public class Initial(
+    public data class Initial(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

@@ -264,7 +264,7 @@ public data class NamingSystem(
 
   /** Indicates how the system may be identified when referenced in electronic exchange. */
   @Serializable(with = NamingSystemUniqueIdSerializer::class)
-  public class UniqueId(
+  public data class UniqueId(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -215,7 +215,7 @@ public data class Account(
    * should they be applied to the account.
    */
   @Serializable(with = AccountCoverageSerializer::class)
-  public class Coverage(
+  public data class Coverage(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -352,7 +352,7 @@ public data class Account(
 
   /** The parties responsible for balancing the account if other payment options fall short. */
   @Serializable(with = AccountGuarantorSerializer::class)
-  public class Guarantor(
+  public data class Guarantor(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

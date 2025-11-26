@@ -108,7 +108,7 @@ public data class SubstanceAmount(
 
   /** Reference range of possible or expected values. */
   @Serializable(with = SubstanceAmountReferenceRangeSerializer::class)
-  public class ReferenceRange(
+  public data class ReferenceRange(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

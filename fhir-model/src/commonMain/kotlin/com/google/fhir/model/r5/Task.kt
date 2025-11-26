@@ -374,7 +374,7 @@ public data class Task(
 
   /** The entity who performed the requested task. */
   @Serializable(with = TaskPerformerSerializer::class)
-  public class Performer(
+  public data class Performer(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -491,7 +491,7 @@ public data class Task(
    * referenced request should be actioned.
    */
   @Serializable(with = TaskRestrictionSerializer::class)
-  public class Restriction(
+  public data class Restriction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -646,7 +646,7 @@ public data class Task(
 
   /** Additional information that may be needed in the execution of the task. */
   @Serializable(with = TaskInputSerializer::class)
-  public class Input(
+  public data class Input(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1126,7 +1126,7 @@ public data class Task(
 
   /** Outputs produced by the Task. */
   @Serializable(with = TaskOutputSerializer::class)
-  public class Output(
+  public data class Output(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -316,7 +316,7 @@ public data class Encounter(
    * to read through the historical versions of the resource, or even have the server store them.
    */
   @Serializable(with = EncounterStatusHistorySerializer::class)
-  public class StatusHistory(
+  public data class StatusHistory(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -434,7 +434,7 @@ public data class Encounter(
    * emergency to inpatient.
    */
   @Serializable(with = EncounterClassHistorySerializer::class)
-  public class ClassHistory(
+  public data class ClassHistory(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -545,7 +545,7 @@ public data class Encounter(
 
   /** The list of people responsible for providing the service. */
   @Serializable(with = EncounterParticipantSerializer::class)
-  public class Participant(
+  public data class Participant(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -688,7 +688,7 @@ public data class Encounter(
 
   /** The list of diagnosis relevant to this encounter. */
   @Serializable(with = EncounterDiagnosisSerializer::class)
-  public class Diagnosis(
+  public data class Diagnosis(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -826,7 +826,7 @@ public data class Encounter(
 
   /** Details about the admission to a healthcare service. */
   @Serializable(with = EncounterHospitalizationSerializer::class)
-  public class Hospitalization(
+  public data class Hospitalization(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1005,7 +1005,7 @@ public data class Encounter(
 
   /** List of locations where the patient has been during this encounter. */
   @Serializable(with = EncounterLocationSerializer::class)
-  public class Location(
+  public data class Location(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

@@ -162,7 +162,7 @@ public data class SubstanceReferenceInformation(
 
   /** Todo. */
   @Serializable(with = SubstanceReferenceInformationGeneSerializer::class)
-  public class Gene(
+  public data class Gene(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -283,7 +283,7 @@ public data class SubstanceReferenceInformation(
 
   /** Todo. */
   @Serializable(with = SubstanceReferenceInformationGeneElementSerializer::class)
-  public class GeneElement(
+  public data class GeneElement(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -404,7 +404,7 @@ public data class SubstanceReferenceInformation(
 
   /** Todo. */
   @Serializable(with = SubstanceReferenceInformationClassificationSerializer::class)
-  public class Classification(
+  public data class Classification(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -532,7 +532,7 @@ public data class SubstanceReferenceInformation(
 
   /** Todo. */
   @Serializable(with = SubstanceReferenceInformationTargetSerializer::class)
-  public class Target(
+  public data class Target(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

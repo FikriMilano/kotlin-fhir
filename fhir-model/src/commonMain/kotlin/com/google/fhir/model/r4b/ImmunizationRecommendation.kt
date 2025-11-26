@@ -166,7 +166,7 @@ public data class ImmunizationRecommendation(
 
   /** Vaccine administration recommendations. */
   @Serializable(with = ImmunizationRecommendationRecommendationSerializer::class)
-  public class Recommendation(
+  public data class Recommendation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -277,7 +277,7 @@ public data class ImmunizationRecommendation(
      * administer, etc.
      */
     @Serializable(with = ImmunizationRecommendationRecommendationDateCriterionSerializer::class)
-    public class DateCriterion(
+    public data class DateCriterion(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

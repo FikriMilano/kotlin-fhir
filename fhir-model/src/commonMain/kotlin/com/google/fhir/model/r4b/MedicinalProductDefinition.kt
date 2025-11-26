@@ -303,7 +303,7 @@ public data class MedicinalProductDefinition(
 
   /** A product specific contact, person (in a role), or an organization. */
   @Serializable(with = MedicinalProductDefinitionContactSerializer::class)
-  public class Contact(
+  public data class Contact(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -421,7 +421,7 @@ public data class MedicinalProductDefinition(
 
   /** The product's name, including full name and possibly coded parts. */
   @Serializable(with = MedicinalProductDefinitionNameSerializer::class)
-  public class Name(
+  public data class Name(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -482,7 +482,7 @@ public data class MedicinalProductDefinition(
 
     /** Coding words or phrases of the name. */
     @Serializable(with = MedicinalProductDefinitionNameNamePartSerializer::class)
-    public class NamePart(
+    public data class NamePart(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -593,7 +593,7 @@ public data class MedicinalProductDefinition(
 
     /** Country and jurisdiction where the name applies, and associated language. */
     @Serializable(with = MedicinalProductDefinitionNameCountryLanguageSerializer::class)
-    public class CountryLanguage(
+    public data class CountryLanguage(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -786,7 +786,7 @@ public data class MedicinalProductDefinition(
    * virtual product.
    */
   @Serializable(with = MedicinalProductDefinitionCrossReferenceSerializer::class)
-  public class CrossReference(
+  public data class CrossReference(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -908,7 +908,7 @@ public data class MedicinalProductDefinition(
    * medicinal product.
    */
   @Serializable(with = MedicinalProductDefinitionOperationSerializer::class)
-  public class Operation(
+  public data class Operation(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1059,7 +1059,7 @@ public data class MedicinalProductDefinition(
    * "parallel import".
    */
   @Serializable(with = MedicinalProductDefinitionCharacteristicSerializer::class)
-  public class Characteristic(
+  public data class Characteristic(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

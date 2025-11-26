@@ -424,7 +424,7 @@ public data class ServiceRequest(
    * how the bandage should be applied.
    */
   @Serializable(with = ServiceRequestOrderDetailSerializer::class)
-  public class OrderDetail(
+  public data class OrderDetail(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -479,7 +479,7 @@ public data class ServiceRequest(
 
     /** The parameter details for the service being requested. */
     @Serializable(with = ServiceRequestOrderDetailParameterSerializer::class)
-    public class Parameter(
+    public data class Parameter(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -720,7 +720,7 @@ public data class ServiceRequest(
 
   /** Instructions in terms that are understood by the patient or consumer. */
   @Serializable(with = ServiceRequestPatientInstructionSerializer::class)
-  public class PatientInstruction(
+  public data class PatientInstruction(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.

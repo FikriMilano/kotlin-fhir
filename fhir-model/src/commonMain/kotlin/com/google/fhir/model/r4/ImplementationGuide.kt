@@ -360,7 +360,7 @@ public data class ImplementationGuide(
    * guide uses value sets, profiles etc.defined in other implementation guides.
    */
   @Serializable(with = ImplementationGuideDependsOnSerializer::class)
-  public class DependsOn(
+  public data class DependsOn(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -500,7 +500,7 @@ public data class ImplementationGuide(
 
   /** A set of profiles that all resources covered by this implementation guide must conform to. */
   @Serializable(with = ImplementationGuideGlobalSerializer::class)
-  public class Global(
+  public data class Global(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -623,7 +623,7 @@ public data class ImplementationGuide(
 
   /** The information needed by an IG publisher tool to publish the whole implementation guide. */
   @Serializable(with = ImplementationGuideDefinitionSerializer::class)
-  public class Definition(
+  public data class Definition(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -702,7 +702,7 @@ public data class ImplementationGuide(
 
     /** A logical group of resources. Logical groups can be used when building pages. */
     @Serializable(with = ImplementationGuideDefinitionGroupingSerializer::class)
-    public class Grouping(
+    public data class Grouping(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -825,7 +825,7 @@ public data class ImplementationGuide(
      * any kind of resource can be included as an example resource.
      */
     @Serializable(with = ImplementationGuideDefinitionResourceSerializer::class)
-    public class Resource(
+    public data class Resource(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1071,7 +1071,7 @@ public data class ImplementationGuide(
      * page.
      */
     @Serializable(with = ImplementationGuideDefinitionPageSerializer::class)
-    public class Page(
+    public data class Page(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1240,7 +1240,7 @@ public data class ImplementationGuide(
 
     /** Defines how IG is built by tools. */
     @Serializable(with = ImplementationGuideDefinitionParameterSerializer::class)
-    public class Parameter(
+    public data class Parameter(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1357,7 +1357,7 @@ public data class ImplementationGuide(
 
     /** A template for building resources. */
     @Serializable(with = ImplementationGuideDefinitionTemplateSerializer::class)
-    public class Template(
+    public data class Template(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1560,7 +1560,7 @@ public data class ImplementationGuide(
 
   /** Information about an assembled implementation guide, created by the publication tooling. */
   @Serializable(with = ImplementationGuideManifestSerializer::class)
-  public class Manifest(
+  public data class Manifest(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
@@ -1635,7 +1635,7 @@ public data class ImplementationGuide(
      * any kind of resource can be included as an example resource.
      */
     @Serializable(with = ImplementationGuideManifestResourceSerializer::class)
-    public class Resource(
+    public data class Resource(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.
@@ -1814,7 +1814,7 @@ public data class ImplementationGuide(
 
     /** Information about a page within the IG. */
     @Serializable(with = ImplementationGuideManifestPageSerializer::class)
-    public class Page(
+    public data class Page(
       /**
        * Unique id for the element within a resource (for internal references). This may be any
        * string value that does not contain spaces.

@@ -236,7 +236,7 @@ public data class DeviceUsage(
 
   /** This indicates how or if the device is being used. */
   @Serializable(with = DeviceUsageAdherenceSerializer::class)
-  public class Adherence(
+  public data class Adherence(
     /**
      * Unique id for the element within a resource (for internal references). This may be any string
      * value that does not contain spaces.
