@@ -21,6 +21,7 @@ import com.google.fhir.codegen.primitives.EnumerationFileSpecGenerator
 import com.google.fhir.codegen.primitives.FhirDateFileSpecGenerator
 import com.google.fhir.codegen.primitives.FhirDateTimeFileSpecGenerator
 import com.google.fhir.codegen.primitives.LocalTimeSerializerFileSpecGenerator
+import com.google.fhir.codegen.schema.SearchParameterDefinition
 import com.google.fhir.codegen.schema.StructureDefinition
 import com.google.fhir.codegen.schema.capitalized
 import com.google.fhir.codegen.schema.urlPart
@@ -120,6 +121,19 @@ abstract class FhirCodegenTask : DefaultTask() {
         }
         .toList()
 
+    // Load search parameter definitions and group by resource type
+    val searchParamsByResource =
+      corePackageFiles.files
+        .asSequence()
+        .flatMap { file ->
+          file.walkTopDown().filter {
+            it.isFile && it.name.matches("SearchParameter-.*\\.json".toRegex())
+          }
+        }
+        .map { json.decodeFromString<SearchParameterDefinition>(it.readText(Charsets.UTF_8)) }
+        .flatMap { searchParam -> searchParam.base.map { resource -> resource to searchParam } }
+        .groupBy({ it.first }, { it.second })
+
     val baseClasses =
       structureDefinitions.mapNotNullTo(hashSetOf()) {
         it.baseDefinition?.substringAfterLast('/')?.capitalized()
@@ -127,7 +141,7 @@ abstract class FhirCodegenTask : DefaultTask() {
 
     val packageName = this.packageName.get()
 
-    val fhirCodegen = FhirCodegen(packageName, valueSetMap, baseClasses)
+    val fhirCodegen = FhirCodegen(packageName, valueSetMap, baseClasses, searchParamsByResource)
 
     structureDefinitions
       .flatMap { fhirCodegen.generateFileSpecs(it) }

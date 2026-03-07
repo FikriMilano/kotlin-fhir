@@ -17,6 +17,7 @@
 package com.google.fhir.codegen
 
 import com.google.fhir.codegen.schema.Element
+import com.google.fhir.codegen.schema.SearchParameterDefinition
 import com.google.fhir.codegen.schema.StructureDefinition
 import com.google.fhir.codegen.schema.Type
 import com.google.fhir.codegen.schema.backboneElements
@@ -47,7 +48,10 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /** Generates a [FileSpec] for a model class. */
-class ModelFileSpecGenerator(val codegenContext: CodegenContext) {
+class ModelFileSpecGenerator(
+  val codegenContext: CodegenContext,
+  private val searchParamsByResource: Map<String, List<SearchParameterDefinition>> = emptyMap(),
+) {
 
   fun generate(structureDefinition: StructureDefinition): FileSpec {
     // Nested enums are all created inside the enclosing parent class for reusability
@@ -163,6 +167,39 @@ class ModelFileSpecGenerator(val codegenContext: CodegenContext) {
               enumClassesMap.putIfAbsent(enumClassName, typeSpec)
             },
           )
+
+          // Add companion object with search parameter constants for concrete resource types
+          if (
+            structureDefinition.kind == StructureDefinition.Kind.RESOURCE &&
+              !structureDefinition.abstract
+          ) {
+            val searchParams = searchParamsByResource[structureDefinitionName].orEmpty()
+            if (searchParams.isNotEmpty()) {
+              addType(
+                TypeSpec.companionObjectBuilder()
+                  .apply {
+                    searchParams
+                      .sortedBy { it.code }
+                      .distinctBy { it.code }
+                      .forEach { searchParam ->
+                        addProperty(
+                          PropertySpec.builder(
+                              searchParam.code.toSearchParamConstantName(),
+                              searchParam.toSearchParamClassName(),
+                            )
+                            .initializer(
+                              "%T(%S)",
+                              searchParam.toSearchParamClassName(),
+                              searchParam.code,
+                            )
+                            .build()
+                        )
+                      }
+                  }
+                  .build()
+              )
+            }
+          }
 
           if (structureDefinition.kind == StructureDefinition.Kind.PRIMITIVE_TYPE) {
             addToElementFunction(
@@ -698,3 +735,50 @@ private fun TypeSpec.Builder.addDataTypeFunction(type: Type, sealedInterfaceClas
       )
       .build()
   )
+
+private val searchParamPackage = "com.google.fhir.model"
+
+/** Kotlin reserved words that need backtick-escaping when used as identifiers. */
+private val kotlinReservedWords =
+  setOf(
+    "class",
+    "in",
+    "is",
+    "as",
+    "fun",
+    "val",
+    "var",
+    "when",
+    "for",
+    "if",
+    "else",
+    "do",
+    "while",
+    "return",
+    "object",
+    "type",
+  )
+
+/**
+ * Converts a search parameter code (e.g., "general-practitioner") to a Kotlin constant name (e.g.,
+ * "GENERAL_PRACTITIONER").
+ */
+private fun String.toSearchParamConstantName(): String {
+  val name = replace("-", "_").uppercase()
+  return if (name.lowercase() in kotlinReservedWords) "`$name`" else name
+}
+
+/** Maps a [SearchParameterDefinition] type string to the corresponding [SearchParam] class name. */
+private fun SearchParameterDefinition.toSearchParamClassName(): ClassName =
+  when (type) {
+    "number" -> ClassName(searchParamPackage, "NumberSearchParam")
+    "date" -> ClassName(searchParamPackage, "DateSearchParam")
+    "string" -> ClassName(searchParamPackage, "StringSearchParam")
+    "token" -> ClassName(searchParamPackage, "TokenSearchParam")
+    "reference" -> ClassName(searchParamPackage, "ReferenceSearchParam")
+    "composite" -> ClassName(searchParamPackage, "CompositeSearchParam")
+    "quantity" -> ClassName(searchParamPackage, "QuantitySearchParam")
+    "uri" -> ClassName(searchParamPackage, "UriSearchParam")
+    "special" -> ClassName(searchParamPackage, "SpecialSearchParam")
+    else -> ClassName(searchParamPackage, "SpecialSearchParam")
+  }

@@ -16,6 +16,7 @@
 
 package com.google.fhir.codegen
 
+import com.google.fhir.codegen.schema.SearchParameterDefinition
 import com.google.fhir.codegen.schema.StructureDefinition
 import com.google.fhir.codegen.schema.serializableWithCustomSerializer
 import com.google.fhir.codegen.schema.valueset.ValueSet
@@ -44,6 +45,7 @@ class FhirCodegen(
   packageName: String,
   valueSetMap: Map<String, ValueSet>,
   baseClassesSet: HashSet<String>,
+  private val searchParamsByResource: Map<String, List<SearchParameterDefinition>> = emptyMap(),
 ) {
 
   private val codegenContext =
@@ -53,7 +55,7 @@ class FhirCodegen(
       baseClassNameSet = baseClassesSet,
     )
 
-  private val modelFileSpecGenerator = ModelFileSpecGenerator(codegenContext)
+  private val modelFileSpecGenerator = ModelFileSpecGenerator(codegenContext, searchParamsByResource)
   private val surrogateFileSpecGenerator = SurrogateFileSpecGenerator(codegenContext)
   private val serializerFileSpecGenerator = SerializerFileSpecGenerator(codegenContext)
   private val enumFileSpecGenerator = EnumFileSpecGenerator(codegenContext)
