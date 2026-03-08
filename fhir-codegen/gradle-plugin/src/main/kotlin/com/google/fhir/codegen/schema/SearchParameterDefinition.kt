@@ -27,7 +27,7 @@ data class SearchParameterDefinition(
   /** The parameter name used in search URLs (e.g., "name", "birthdate"). */
   val code: String,
   /** The resource type(s) this search parameter applies to (e.g., ["Patient"]). */
-  val base: List<String>,
+  val base: List<String> = emptyList(),
   /** The search parameter type (e.g., "string", "token", "date", "reference"). */
   val type: String,
 )
