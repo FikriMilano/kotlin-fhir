@@ -182,16 +182,14 @@ class ModelFileSpecGenerator(
                       .sortedBy { it.code }
                       .distinctBy { it.code }
                       .forEach { searchParam ->
+                        val className =
+                          searchParam.toSearchParamClassName(codegenContext.packageName)
                         addProperty(
                           PropertySpec.builder(
                               searchParam.code.toSearchParamConstantName(),
-                              searchParam.toSearchParamClassName(),
+                              className,
                             )
-                            .initializer(
-                              "%T(%S)",
-                              searchParam.toSearchParamClassName(),
-                              searchParam.code,
-                            )
+                            .initializer("%T(%S)", className, searchParam.code)
                             .build()
                         )
                       }
@@ -736,8 +734,6 @@ private fun TypeSpec.Builder.addDataTypeFunction(type: Type, sealedInterfaceClas
       .build()
   )
 
-private val searchParamPackage = "com.google.fhir.model"
-
 /** Kotlin reserved words that need backtick-escaping when used as identifiers. */
 private val kotlinReservedWords =
   setOf(
@@ -769,16 +765,16 @@ private fun String.toSearchParamConstantName(): String {
 }
 
 /** Maps a [SearchParameterDefinition] type string to the corresponding [SearchParam] class name. */
-private fun SearchParameterDefinition.toSearchParamClassName(): ClassName =
+private fun SearchParameterDefinition.toSearchParamClassName(packageName: String): ClassName =
   when (type) {
-    "number" -> ClassName(searchParamPackage, "NumberSearchParam")
-    "date" -> ClassName(searchParamPackage, "DateSearchParam")
-    "string" -> ClassName(searchParamPackage, "StringSearchParam")
-    "token" -> ClassName(searchParamPackage, "TokenSearchParam")
-    "reference" -> ClassName(searchParamPackage, "ReferenceSearchParam")
-    "composite" -> ClassName(searchParamPackage, "CompositeSearchParam")
-    "quantity" -> ClassName(searchParamPackage, "QuantitySearchParam")
-    "uri" -> ClassName(searchParamPackage, "UriSearchParam")
-    "special" -> ClassName(searchParamPackage, "SpecialSearchParam")
-    else -> ClassName(searchParamPackage, "SpecialSearchParam")
+    "number" -> ClassName(packageName, "NumberSearchParam")
+    "date" -> ClassName(packageName, "DateSearchParam")
+    "string" -> ClassName(packageName, "StringSearchParam")
+    "token" -> ClassName(packageName, "TokenSearchParam")
+    "reference" -> ClassName(packageName, "ReferenceSearchParam")
+    "composite" -> ClassName(packageName, "CompositeSearchParam")
+    "quantity" -> ClassName(packageName, "QuantitySearchParam")
+    "uri" -> ClassName(packageName, "UriSearchParam")
+    "special" -> ClassName(packageName, "SpecialSearchParam")
+    else -> ClassName(packageName, "SpecialSearchParam")
   }
