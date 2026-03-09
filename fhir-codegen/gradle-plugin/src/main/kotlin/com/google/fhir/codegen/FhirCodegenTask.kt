@@ -170,5 +170,7 @@ abstract class FhirCodegenTask : DefaultTask() {
     LocalTimeSerializerFileSpecGenerator.generate(serializersPackageName).writeTo(outputDir)
 
     FhirJsonTransformerFileSpecGenerator.generate(packageName).writeTo(outputDir)
+
+    SearchParamFileSpecGenerator.generate(packageName).writeTo(outputDir)
   }
 }
