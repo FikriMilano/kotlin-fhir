@@ -222,6 +222,33 @@ The following FHIR value sets are excluded from Kotlin enum generation.
 | [`http://hl7.org/fhir/ValueSet/all-languages`](http://hl7.org/fhir/ValueSet/all-languages) | This value set cannot be expanded because of the way it is defined - it has an infinite number of members | `R4`, `R4B`, `R5`   |
 | [`http://hl7.org/fhir/ValueSet/use-context`](http://hl7.org/fhir/ValueSet/use-context)     | This value set has >3800 codes when expanded; generated enum class code cannot compile.                   | `R4`, `R4B`, `R5`   |
 
+### Search Parameters
+
+The codegen reads `SearchParameter-*.json` files from the FHIR core packages and generates typed search parameter constants on each concrete resource's companion object. This provides compile-time safe, discoverable access to FHIR search parameters.
+
+A `SearchParam` sealed interface is generated in each version package with concrete classes for each FHIR search parameter type:
+
+| FHIR search parameter type | Kotlin class |
+|:---------------------------|:-------------|
+| number                     | `NumberSearchParam` |
+| date                       | `DateSearchParam` |
+| string                     | `StringSearchParam` |
+| token                      | `TokenSearchParam` |
+| reference                  | `ReferenceSearchParam` |
+| composite                  | `CompositeSearchParam` |
+| quantity                   | `QuantitySearchParam` |
+| uri                        | `UriSearchParam` |
+| special                    | `SpecialSearchParam` |
+
+Each concrete resource class has a companion object with search parameter constants. For example, `Patient` has:
+
+```kotlin
+Patient.NAME        // StringSearchParam("name")
+Patient.BIRTHDATE   // DateSearchParam("birthdate")
+Patient.ACTIVE      // TokenSearchParam("active")
+Patient.GENERAL_PRACTITIONER  // ReferenceSearchParam("general-practitioner")
+```
+
 ## Serialization and deserialization
 
 The [Kotlin serialization](https://github.com/Kotlin/kotlinx.serialization) library is used for JSON
@@ -409,7 +436,7 @@ Kotlin code is generated for StructureDefinitions in the following FHIR packages
 > bindings (e.g. in [R4](https://hl7.org/fhir/R4/terminologies.html#binding)) in
 > StructureDefinitions are not represented in the generated code
 > - CapabilityStatements, CodeSystems, ConceptMaps, NamingSystems, OperationDefinitions,
-> SearchParameters, and ValueSets
+> and ValueSets
 
 ### FHIR codegen
 
@@ -608,6 +635,12 @@ executed:
    - Conversion to builder: Convert the object into a builder using `toBuilder()` function.
    - Conversion to resource: Build a new FHIR resource object using `build()` function
    - Verification: The reconstructed object from the builder is equal to the original object.
+4. Search parameter test:
+   - Loads the source `SearchParameter-*.json` files as ground truth.
+   - For each concrete resource across R4, R4B, and R5, uses JVM reflection to verify:
+     - Count: the companion object has exactly the right number of search param constants.
+     - Name: each constant's `paramName` matches the `code` from the JSON definition.
+     - Type: each constant's class matches the expected type (e.g., `"date"` to `DateSearchParam`).
 
 [^7]: There are several exceptions. The FHIR specification allows for some variability in data
 representation, which may lead to differences between the original and newly serialized JSON. For
