@@ -16,6 +16,7 @@
 
 package com.google.fhir.codegen
 
+import com.google.fhir.codegen.schema.SearchParameterDefinition
 import com.google.fhir.codegen.schema.StructureDefinition
 import com.google.fhir.codegen.schema.capitalized
 import com.google.fhir.codegen.schema.valueset.ValueSet
@@ -28,6 +29,7 @@ data class CodegenContext(
   val packageName: String,
   val valueSetMap: Map<String, ValueSet>,
   val baseClassNameSet: HashSet<String>,
+  val searchParamsByResource: Map<String, List<SearchParameterDefinition>> = emptyMap(),
 ) {
   fun getModelClassName(structureDefinition: StructureDefinition) =
     ClassName(packageName, structureDefinition.name.capitalized())

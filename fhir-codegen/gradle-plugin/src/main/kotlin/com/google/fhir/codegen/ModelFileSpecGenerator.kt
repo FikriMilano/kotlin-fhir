@@ -50,7 +50,6 @@ import kotlinx.serialization.Serializable
 /** Generates a [FileSpec] for a model class. */
 class ModelFileSpecGenerator(
   val codegenContext: CodegenContext,
-  private val searchParamsByResource: Map<String, List<SearchParameterDefinition>> = emptyMap(),
 ) {
 
   fun generate(structureDefinition: StructureDefinition): FileSpec {
@@ -173,7 +172,7 @@ class ModelFileSpecGenerator(
             structureDefinition.kind == StructureDefinition.Kind.RESOURCE &&
               !structureDefinition.abstract
           ) {
-            val searchParams = searchParamsByResource[structureDefinitionName].orEmpty()
+            val searchParams = codegenContext.searchParamsByResource[structureDefinitionName].orEmpty()
             if (searchParams.isNotEmpty()) {
               addType(
                 TypeSpec.companionObjectBuilder()

@@ -45,7 +45,7 @@ class FhirCodegen(
   packageName: String,
   valueSetMap: Map<String, ValueSet>,
   baseClassesSet: HashSet<String>,
-  private val searchParamsByResource: Map<String, List<SearchParameterDefinition>> = emptyMap(),
+  searchParamsByResource: Map<String, List<SearchParameterDefinition>> = emptyMap(),
 ) {
 
   private val codegenContext =
@@ -53,10 +53,10 @@ class FhirCodegen(
       packageName = packageName,
       valueSetMap = valueSetMap,
       baseClassNameSet = baseClassesSet,
+      searchParamsByResource = searchParamsByResource,
     )
 
-  private val modelFileSpecGenerator =
-    ModelFileSpecGenerator(codegenContext, searchParamsByResource)
+  private val modelFileSpecGenerator = ModelFileSpecGenerator(codegenContext)
   private val surrogateFileSpecGenerator = SurrogateFileSpecGenerator(codegenContext)
   private val serializerFileSpecGenerator = SerializerFileSpecGenerator(codegenContext)
   private val enumFileSpecGenerator = EnumFileSpecGenerator(codegenContext)
