@@ -16,6 +16,7 @@
 
 package com.google.fhir.codegen
 
+import com.google.fhir.codegen.schema.capitalized
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
@@ -26,17 +27,7 @@ import com.squareup.kotlinpoet.TypeSpec
 /** Generates a `SearchParam.kt` file with the sealed interface and concrete search param types. */
 object SearchParamFileSpecGenerator {
   private val searchParamTypes =
-    listOf(
-      "Number" to "number",
-      "Date" to "date",
-      "String" to "string",
-      "Token" to "token",
-      "Reference" to "reference",
-      "Composite" to "composite",
-      "Quantity" to "quantity",
-      "Uri" to "uri",
-      "Special" to "special",
-    )
+    listOf("number", "date", "string", "token", "reference", "composite", "quantity", "uri", "special")
 
   fun generate(packageName: String): FileSpec {
     return FileSpec.builder(packageName, "SearchParam")
@@ -53,7 +44,8 @@ object SearchParamFileSpecGenerator {
           .build()
       )
       .apply {
-        for ((name, fhirType) in searchParamTypes) {
+        for (fhirType in searchParamTypes) {
+          val name = fhirType.capitalized()
           addType(
             TypeSpec.classBuilder("${name}SearchParam")
               .addModifiers(KModifier.PUBLIC)
