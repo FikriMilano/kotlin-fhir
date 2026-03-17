@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2728,6 +2728,23 @@ public data class DeviceDefinition(
         correctiveAction = correctiveAction?.build(),
         chargeItem = chargeItem.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val DEVICE_NAME: StringSearchParam = StringSearchParam("device-name")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val MANUFACTURER: ReferenceSearchParam = ReferenceSearchParam("manufacturer")
+
+    public val ORGANIZATION: ReferenceSearchParam = ReferenceSearchParam("organization")
+
+    public val SPECIFICATION: TokenSearchParam = TokenSearchParam("specification")
+
+    public val SPECIFICATION_VERSION: CompositeSearchParam =
+      CompositeSearchParam("specification-version")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
   }
 
   /** Regulatory Identifier type */

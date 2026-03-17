@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1151,6 +1151,61 @@ public data class NamingSystem(
         usage = usage?.build(),
         uniqueId = uniqueId.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CONTACT: StringSearchParam = StringSearchParam("contact")
+
+    public val CONTEXT: TokenSearchParam = TokenSearchParam("context")
+
+    public val CONTEXT_QUANTITY: QuantitySearchParam = QuantitySearchParam("context-quantity")
+
+    public val CONTEXT_TYPE: TokenSearchParam = TokenSearchParam("context-type")
+
+    public val CONTEXT_TYPE_QUANTITY: CompositeSearchParam =
+      CompositeSearchParam("context-type-quantity")
+
+    public val CONTEXT_TYPE_VALUE: CompositeSearchParam = CompositeSearchParam("context-type-value")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val DERIVED_FROM: ReferenceSearchParam = ReferenceSearchParam("derived-from")
+
+    public val DESCRIPTION: StringSearchParam = StringSearchParam("description")
+
+    public val EFFECTIVE: DateSearchParam = DateSearchParam("effective")
+
+    public val ID_TYPE: TokenSearchParam = TokenSearchParam("id-type")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val JURISDICTION: TokenSearchParam = TokenSearchParam("jurisdiction")
+
+    public val KIND: TokenSearchParam = TokenSearchParam("kind")
+
+    public val NAME: StringSearchParam = StringSearchParam("name")
+
+    public val PERIOD: DateSearchParam = DateSearchParam("period")
+
+    public val PREDECESSOR: ReferenceSearchParam = ReferenceSearchParam("predecessor")
+
+    public val PUBLISHER: StringSearchParam = StringSearchParam("publisher")
+
+    public val RESPONSIBLE: StringSearchParam = StringSearchParam("responsible")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val TELECOM: TokenSearchParam = TokenSearchParam("telecom")
+
+    public val TOPIC: TokenSearchParam = TokenSearchParam("topic")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
+
+    public val URL: UriSearchParam = UriSearchParam("url")
+
+    public val VALUE: StringSearchParam = StringSearchParam("value")
+
+    public val VERSION: TokenSearchParam = TokenSearchParam("version")
   }
 
   /** Identifies the style of unique identifier used to identify a namespace. */

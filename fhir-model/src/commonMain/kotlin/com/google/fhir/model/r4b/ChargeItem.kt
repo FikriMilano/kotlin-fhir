@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -798,6 +798,44 @@ public data class ChargeItem(
         note = note.map { it.build() },
         supportingInformation = supportingInformation.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ACCOUNT: ReferenceSearchParam = ReferenceSearchParam("account")
+
+    public val CODE: TokenSearchParam = TokenSearchParam("code")
+
+    public val CONTEXT: ReferenceSearchParam = ReferenceSearchParam("context")
+
+    public val ENTERED_DATE: DateSearchParam = DateSearchParam("entered-date")
+
+    public val ENTERER: ReferenceSearchParam = ReferenceSearchParam("enterer")
+
+    public val FACTOR_OVERRIDE: NumberSearchParam = NumberSearchParam("factor-override")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val OCCURRENCE: DateSearchParam = DateSearchParam("occurrence")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PERFORMER_ACTOR: ReferenceSearchParam = ReferenceSearchParam("performer-actor")
+
+    public val PERFORMER_FUNCTION: TokenSearchParam = TokenSearchParam("performer-function")
+
+    public val PERFORMING_ORGANIZATION: ReferenceSearchParam =
+      ReferenceSearchParam("performing-organization")
+
+    public val PRICE_OVERRIDE: QuantitySearchParam = QuantitySearchParam("price-override")
+
+    public val QUANTITY: QuantitySearchParam = QuantitySearchParam("quantity")
+
+    public val REQUESTING_ORGANIZATION: ReferenceSearchParam =
+      ReferenceSearchParam("requesting-organization")
+
+    public val SERVICE: ReferenceSearchParam = ReferenceSearchParam("service")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
   }
 
   /** Codes identifying the lifecycle stage of a ChargeItem. */

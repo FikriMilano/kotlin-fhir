@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -941,6 +941,14 @@ public data class SpecimenDefinition(
         collection = collection.map { it.build() },
         typeTested = typeTested.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CONTAINER: TokenSearchParam = TokenSearchParam("container")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
   }
 
   /** Degree of preference of a type of conditioned specimen. */

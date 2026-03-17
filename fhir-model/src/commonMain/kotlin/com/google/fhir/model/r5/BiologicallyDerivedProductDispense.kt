@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -508,6 +508,18 @@ public data class BiologicallyDerivedProductDispense(
         note = note.map { it.build() },
         usageInstruction = usageInstruction?.build(),
       )
+  }
+
+  public companion object {
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PERFORMER: ReferenceSearchParam = ReferenceSearchParam("performer")
+
+    public val PRODUCT: ReferenceSearchParam = ReferenceSearchParam("product")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
   }
 
   /** BiologicallyDerivedProductDispense Status Codes */

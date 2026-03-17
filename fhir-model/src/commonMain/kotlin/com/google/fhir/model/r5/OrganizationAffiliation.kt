@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -409,5 +409,37 @@ public data class OrganizationAffiliation(
         contact = contact.map { it.build() },
         endpoint = endpoint.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ACTIVE: TokenSearchParam = TokenSearchParam("active")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val EMAIL: TokenSearchParam = TokenSearchParam("email")
+
+    public val ENDPOINT: ReferenceSearchParam = ReferenceSearchParam("endpoint")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val LOCATION: ReferenceSearchParam = ReferenceSearchParam("location")
+
+    public val NETWORK: ReferenceSearchParam = ReferenceSearchParam("network")
+
+    public val PARTICIPATING_ORGANIZATION: ReferenceSearchParam =
+      ReferenceSearchParam("participating-organization")
+
+    public val PHONE: TokenSearchParam = TokenSearchParam("phone")
+
+    public val PRIMARY_ORGANIZATION: ReferenceSearchParam =
+      ReferenceSearchParam("primary-organization")
+
+    public val ROLE: TokenSearchParam = TokenSearchParam("role")
+
+    public val SERVICE: ReferenceSearchParam = ReferenceSearchParam("service")
+
+    public val SPECIALTY: TokenSearchParam = TokenSearchParam("specialty")
+
+    public val TELECOM: TokenSearchParam = TokenSearchParam("telecom")
   }
 }

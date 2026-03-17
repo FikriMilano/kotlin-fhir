@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -713,6 +713,24 @@ public data class PaymentReconciliation(
         formCode = formCode?.build(),
         processNote = processNote.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CREATED: DateSearchParam = DateSearchParam("created")
+
+    public val DISPOSITION: StringSearchParam = StringSearchParam("disposition")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val OUTCOME: TokenSearchParam = TokenSearchParam("outcome")
+
+    public val PAYMENT_ISSUER: ReferenceSearchParam = ReferenceSearchParam("payment-issuer")
+
+    public val REQUEST: ReferenceSearchParam = ReferenceSearchParam("request")
+
+    public val REQUESTOR: ReferenceSearchParam = ReferenceSearchParam("requestor")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
   }
 
   /** This value set includes Status codes. */

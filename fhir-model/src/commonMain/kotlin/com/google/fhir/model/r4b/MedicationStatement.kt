@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -596,6 +596,30 @@ public data class MedicationStatement(
         note = note.map { it.build() },
         dosage = dosage.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CATEGORY: TokenSearchParam = TokenSearchParam("category")
+
+    public val CODE: TokenSearchParam = TokenSearchParam("code")
+
+    public val CONTEXT: ReferenceSearchParam = ReferenceSearchParam("context")
+
+    public val EFFECTIVE: DateSearchParam = DateSearchParam("effective")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val MEDICATION: ReferenceSearchParam = ReferenceSearchParam("medication")
+
+    public val PART_OF: ReferenceSearchParam = ReferenceSearchParam("part-of")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val SOURCE: ReferenceSearchParam = ReferenceSearchParam("source")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
   }
 
   /** MedicationStatement Status Codes */

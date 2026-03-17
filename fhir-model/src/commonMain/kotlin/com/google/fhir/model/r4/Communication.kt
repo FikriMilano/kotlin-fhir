@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -717,6 +717,39 @@ public data class Communication(
         payload = payload.map { it.build() },
         note = note.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val BASED_ON: ReferenceSearchParam = ReferenceSearchParam("based-on")
+
+    public val CATEGORY: TokenSearchParam = TokenSearchParam("category")
+
+    public val ENCOUNTER: ReferenceSearchParam = ReferenceSearchParam("encounter")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INSTANTIATES_CANONICAL: ReferenceSearchParam =
+      ReferenceSearchParam("instantiates-canonical")
+
+    public val INSTANTIATES_URI: UriSearchParam = UriSearchParam("instantiates-uri")
+
+    public val MEDIUM: TokenSearchParam = TokenSearchParam("medium")
+
+    public val PART_OF: ReferenceSearchParam = ReferenceSearchParam("part-of")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val RECEIVED: DateSearchParam = DateSearchParam("received")
+
+    public val RECIPIENT: ReferenceSearchParam = ReferenceSearchParam("recipient")
+
+    public val SENDER: ReferenceSearchParam = ReferenceSearchParam("sender")
+
+    public val SENT: DateSearchParam = DateSearchParam("sent")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
   }
 
   /** Codes identifying the lifecycle stage of an event. */

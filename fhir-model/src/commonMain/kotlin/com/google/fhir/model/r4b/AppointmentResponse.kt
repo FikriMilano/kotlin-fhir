@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -387,6 +387,22 @@ public data class AppointmentResponse(
         participantStatus = participantStatus,
         comment = comment?.build(),
       )
+  }
+
+  public companion object {
+    public val ACTOR: ReferenceSearchParam = ReferenceSearchParam("actor")
+
+    public val APPOINTMENT: ReferenceSearchParam = ReferenceSearchParam("appointment")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val LOCATION: ReferenceSearchParam = ReferenceSearchParam("location")
+
+    public val PART_STATUS: TokenSearchParam = TokenSearchParam("part-status")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PRACTITIONER: ReferenceSearchParam = ReferenceSearchParam("practitioner")
   }
 
   /** The Participation status of an appointment. */

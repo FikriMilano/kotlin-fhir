@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -759,6 +759,47 @@ public data class DeviceRequest(
         note = note.map { it.build() },
         relevantHistory = relevantHistory.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val AUTHORED_ON: DateSearchParam = DateSearchParam("authored-on")
+
+    public val BASED_ON: ReferenceSearchParam = ReferenceSearchParam("based-on")
+
+    public val CODE: TokenSearchParam = TokenSearchParam("code")
+
+    public val DEVICE: ReferenceSearchParam = ReferenceSearchParam("device")
+
+    public val ENCOUNTER: ReferenceSearchParam = ReferenceSearchParam("encounter")
+
+    public val EVENT_DATE: DateSearchParam = DateSearchParam("event-date")
+
+    public val GROUP_IDENTIFIER: TokenSearchParam = TokenSearchParam("group-identifier")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INSTANTIATES_CANONICAL: ReferenceSearchParam =
+      ReferenceSearchParam("instantiates-canonical")
+
+    public val INSTANTIATES_URI: UriSearchParam = UriSearchParam("instantiates-uri")
+
+    public val INSURANCE: ReferenceSearchParam = ReferenceSearchParam("insurance")
+
+    public val INTENT: TokenSearchParam = TokenSearchParam("intent")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PERFORMER: ReferenceSearchParam = ReferenceSearchParam("performer")
+
+    public val PERFORMER_CODE: TokenSearchParam = TokenSearchParam("performer-code")
+
+    public val PRIOR_REQUEST: ReferenceSearchParam = ReferenceSearchParam("prior-request")
+
+    public val REQUESTER: ReferenceSearchParam = ReferenceSearchParam("requester")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
   }
 
   /** Codes identifying the lifecycle stage of a request. */

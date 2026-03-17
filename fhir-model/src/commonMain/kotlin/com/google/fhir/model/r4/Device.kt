@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1266,6 +1266,34 @@ public data class Device(
         safety = safety.map { it.build() },
         parent = parent?.build(),
       )
+  }
+
+  public companion object {
+    public val DEVICE_NAME: StringSearchParam = StringSearchParam("device-name")
+
+    public val DIN: TokenSearchParam = TokenSearchParam("din")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val LOCATION: ReferenceSearchParam = ReferenceSearchParam("location")
+
+    public val MANUFACTURER: StringSearchParam = StringSearchParam("manufacturer")
+
+    public val MODEL: StringSearchParam = StringSearchParam("model")
+
+    public val ORGANIZATION: ReferenceSearchParam = ReferenceSearchParam("organization")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
+
+    public val UDI_CARRIER: StringSearchParam = StringSearchParam("udi-carrier")
+
+    public val UDI_DI: StringSearchParam = StringSearchParam("udi-di")
+
+    public val URL: UriSearchParam = UriSearchParam("url")
   }
 
   /** Codes to identify how UDI data was entered. */

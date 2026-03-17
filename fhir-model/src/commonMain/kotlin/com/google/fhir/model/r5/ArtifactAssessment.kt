@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -656,6 +656,12 @@ public data class ArtifactAssessment(
         workflowStatus = workflowStatus,
         disposition = disposition,
       )
+  }
+
+  public companion object {
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
   }
 
   /** The type of information contained in a component of an artifact assessment. */

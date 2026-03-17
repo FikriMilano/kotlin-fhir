@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -757,6 +757,24 @@ public data class Goal(
         outcomeCode = outcomeCode.map { it.build() },
         outcomeReference = outcomeReference.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ACHIEVEMENT_STATUS: TokenSearchParam = TokenSearchParam("achievement-status")
+
+    public val CATEGORY: TokenSearchParam = TokenSearchParam("category")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val LIFECYCLE_STATUS: TokenSearchParam = TokenSearchParam("lifecycle-status")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val START_DATE: DateSearchParam = DateSearchParam("start-date")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
+
+    public val TARGET_DATE: DateSearchParam = DateSearchParam("target-date")
   }
 
   /**

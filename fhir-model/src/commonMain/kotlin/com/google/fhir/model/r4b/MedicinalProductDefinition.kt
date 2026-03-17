@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1511,5 +1511,31 @@ public data class MedicinalProductDefinition(
         operation = operation.map { it.build() },
         characteristic = characteristic.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CHARACTERISTIC: TokenSearchParam = TokenSearchParam("characteristic")
+
+    public val CHARACTERISTIC_TYPE: TokenSearchParam = TokenSearchParam("characteristic-type")
+
+    public val CONTACT: ReferenceSearchParam = ReferenceSearchParam("contact")
+
+    public val DOMAIN: TokenSearchParam = TokenSearchParam("domain")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INGREDIENT: TokenSearchParam = TokenSearchParam("ingredient")
+
+    public val MASTER_FILE: ReferenceSearchParam = ReferenceSearchParam("master-file")
+
+    public val NAME: StringSearchParam = StringSearchParam("name")
+
+    public val NAME_LANGUAGE: TokenSearchParam = TokenSearchParam("name-language")
+
+    public val PRODUCT_CLASSIFICATION: TokenSearchParam = TokenSearchParam("product-classification")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
   }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -714,6 +714,29 @@ public data class Medication(
         batch = batch?.build(),
         definition = definition?.build(),
       )
+  }
+
+  public companion object {
+    public val CODE: TokenSearchParam = TokenSearchParam("code")
+
+    public val EXPIRATION_DATE: DateSearchParam = DateSearchParam("expiration-date")
+
+    public val FORM: TokenSearchParam = TokenSearchParam("form")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INGREDIENT: ReferenceSearchParam = ReferenceSearchParam("ingredient")
+
+    public val INGREDIENT_CODE: TokenSearchParam = TokenSearchParam("ingredient-code")
+
+    public val LOT_NUMBER: TokenSearchParam = TokenSearchParam("lot-number")
+
+    public val MARKETINGAUTHORIZATIONHOLDER: ReferenceSearchParam =
+      ReferenceSearchParam("marketingauthorizationholder")
+
+    public val SERIAL_NUMBER: TokenSearchParam = TokenSearchParam("serial-number")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
   }
 
   /** Medication Status Codes */

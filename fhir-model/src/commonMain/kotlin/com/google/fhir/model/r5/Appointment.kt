@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1600,6 +1600,51 @@ public data class Appointment(
         occurrenceChanged = occurrenceChanged?.build(),
         recurrenceTemplate = recurrenceTemplate.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ACTOR: ReferenceSearchParam = ReferenceSearchParam("actor")
+
+    public val APPOINTMENT_TYPE: TokenSearchParam = TokenSearchParam("appointment-type")
+
+    public val BASED_ON: ReferenceSearchParam = ReferenceSearchParam("based-on")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val GROUP: ReferenceSearchParam = ReferenceSearchParam("group")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val LOCATION: ReferenceSearchParam = ReferenceSearchParam("location")
+
+    public val PART_STATUS: TokenSearchParam = TokenSearchParam("part-status")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PRACTITIONER: ReferenceSearchParam = ReferenceSearchParam("practitioner")
+
+    public val REASON_CODE: TokenSearchParam = TokenSearchParam("reason-code")
+
+    public val REASON_REFERENCE: ReferenceSearchParam = ReferenceSearchParam("reason-reference")
+
+    public val REQUESTED_PERIOD: DateSearchParam = DateSearchParam("requested-period")
+
+    public val SERVICE_CATEGORY: TokenSearchParam = TokenSearchParam("service-category")
+
+    public val SERVICE_TYPE: TokenSearchParam = TokenSearchParam("service-type")
+
+    public val SERVICE_TYPE_REFERENCE: ReferenceSearchParam =
+      ReferenceSearchParam("service-type-reference")
+
+    public val SLOT: ReferenceSearchParam = ReferenceSearchParam("slot")
+
+    public val SPECIALTY: TokenSearchParam = TokenSearchParam("specialty")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
+
+    public val SUPPORTING_INFO: ReferenceSearchParam = ReferenceSearchParam("supporting-info")
   }
 
   /** The Participation status of an appointment. */

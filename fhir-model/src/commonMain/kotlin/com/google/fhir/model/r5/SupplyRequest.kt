@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -599,6 +599,24 @@ public data class SupplyRequest(
         deliverFrom = deliverFrom?.build(),
         deliverTo = deliverTo?.build(),
       )
+  }
+
+  public companion object {
+    public val CATEGORY: TokenSearchParam = TokenSearchParam("category")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val REQUESTER: ReferenceSearchParam = ReferenceSearchParam("requester")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
+
+    public val SUPPLIER: ReferenceSearchParam = ReferenceSearchParam("supplier")
   }
 
   /** Status of the supply request. */

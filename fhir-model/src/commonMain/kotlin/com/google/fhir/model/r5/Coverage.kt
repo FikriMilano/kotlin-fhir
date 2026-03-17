@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1138,6 +1138,34 @@ public data class Coverage(
         contract = contract.map { it.build() },
         insurancePlan = insurancePlan?.build(),
       )
+  }
+
+  public companion object {
+    public val BENEFICIARY: ReferenceSearchParam = ReferenceSearchParam("beneficiary")
+
+    public val CLASS_TYPE: TokenSearchParam = TokenSearchParam("class-type")
+
+    public val CLASS_VALUE: TokenSearchParam = TokenSearchParam("class-value")
+
+    public val DEPENDENT: StringSearchParam = StringSearchParam("dependent")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INSURER: ReferenceSearchParam = ReferenceSearchParam("insurer")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PAYMENTBY_PARTY: ReferenceSearchParam = ReferenceSearchParam("paymentby-party")
+
+    public val POLICY_HOLDER: ReferenceSearchParam = ReferenceSearchParam("policy-holder")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBSCRIBER: ReferenceSearchParam = ReferenceSearchParam("subscriber")
+
+    public val SUBSCRIBERID: TokenSearchParam = TokenSearchParam("subscriberid")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
   }
 
   /** This value set includes Status codes. */

@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -519,6 +519,20 @@ public data class Subscription(
         error = error?.build(),
         channel = channel.build(),
       )
+  }
+
+  public companion object {
+    public val CONTACT: TokenSearchParam = TokenSearchParam("contact")
+
+    public val CRITERIA: StringSearchParam = StringSearchParam("criteria")
+
+    public val PAYLOAD: TokenSearchParam = TokenSearchParam("payload")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
+
+    public val URL: UriSearchParam = UriSearchParam("url")
   }
 
   /** The type of method used to execute a subscription. */

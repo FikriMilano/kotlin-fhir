@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1532,6 +1532,56 @@ public data class Device(
         safety = safety.map { it.build() },
         parent = parent?.build(),
       )
+  }
+
+  public companion object {
+    public val BIOLOGICAL_SOURCE_EVENT: TokenSearchParam =
+      TokenSearchParam("biological-source-event")
+
+    public val CODE: TokenSearchParam = TokenSearchParam("code")
+
+    public val CODE_VALUE_CONCEPT: CompositeSearchParam = CompositeSearchParam("code-value-concept")
+
+    public val DEFINITION: ReferenceSearchParam = ReferenceSearchParam("definition")
+
+    public val DEVICE_NAME: StringSearchParam = StringSearchParam("device-name")
+
+    public val EXPIRATION_DATE: DateSearchParam = DateSearchParam("expiration-date")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val LOCATION: ReferenceSearchParam = ReferenceSearchParam("location")
+
+    public val LOT_NUMBER: StringSearchParam = StringSearchParam("lot-number")
+
+    public val MANUFACTURE_DATE: DateSearchParam = DateSearchParam("manufacture-date")
+
+    public val MANUFACTURER: StringSearchParam = StringSearchParam("manufacturer")
+
+    public val MODEL: StringSearchParam = StringSearchParam("model")
+
+    public val ORGANIZATION: ReferenceSearchParam = ReferenceSearchParam("organization")
+
+    public val PARENT: ReferenceSearchParam = ReferenceSearchParam("parent")
+
+    public val SERIAL_NUMBER: StringSearchParam = StringSearchParam("serial-number")
+
+    public val SPECIFICATION: TokenSearchParam = TokenSearchParam("specification")
+
+    public val SPECIFICATION_VERSION: CompositeSearchParam =
+      CompositeSearchParam("specification-version")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
+
+    public val UDI_CARRIER: StringSearchParam = StringSearchParam("udi-carrier")
+
+    public val UDI_DI: StringSearchParam = StringSearchParam("udi-di")
+
+    public val URL: UriSearchParam = UriSearchParam("url")
+
+    public val VERSION: StringSearchParam = StringSearchParam("version")
   }
 
   /** Codes to identify how UDI data was entered. */

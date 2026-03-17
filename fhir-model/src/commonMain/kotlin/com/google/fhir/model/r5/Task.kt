@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1973,6 +1973,53 @@ public data class Task(
         input = input.map { it.build() },
         output = output.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ACTOR: ReferenceSearchParam = ReferenceSearchParam("actor")
+
+    public val AUTHORED_ON: DateSearchParam = DateSearchParam("authored-on")
+
+    public val BASED_ON: ReferenceSearchParam = ReferenceSearchParam("based-on")
+
+    public val BUSINESS_STATUS: TokenSearchParam = TokenSearchParam("business-status")
+
+    public val CODE: TokenSearchParam = TokenSearchParam("code")
+
+    public val ENCOUNTER: ReferenceSearchParam = ReferenceSearchParam("encounter")
+
+    public val FOCUS: ReferenceSearchParam = ReferenceSearchParam("focus")
+
+    public val GROUP_IDENTIFIER: TokenSearchParam = TokenSearchParam("group-identifier")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INTENT: TokenSearchParam = TokenSearchParam("intent")
+
+    public val MODIFIED: DateSearchParam = DateSearchParam("modified")
+
+    public val OUTPUT: ReferenceSearchParam = ReferenceSearchParam("output")
+
+    public val OWNER: ReferenceSearchParam = ReferenceSearchParam("owner")
+
+    public val PART_OF: ReferenceSearchParam = ReferenceSearchParam("part-of")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PERFORMER: TokenSearchParam = TokenSearchParam("performer")
+
+    public val PERIOD: DateSearchParam = DateSearchParam("period")
+
+    public val PRIORITY: TokenSearchParam = TokenSearchParam("priority")
+
+    public val REQUESTEDPERFORMER_REFERENCE: ReferenceSearchParam =
+      ReferenceSearchParam("requestedperformer-reference")
+
+    public val REQUESTER: ReferenceSearchParam = ReferenceSearchParam("requester")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
   }
 
   /** The current status of the task. */

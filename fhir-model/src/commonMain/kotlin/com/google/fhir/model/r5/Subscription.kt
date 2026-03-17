@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -803,6 +803,30 @@ public data class Subscription(
         content = content,
         maxCount = maxCount?.build(),
       )
+  }
+
+  public companion object {
+    public val CONTACT: TokenSearchParam = TokenSearchParam("contact")
+
+    public val CONTENT_LEVEL: TokenSearchParam = TokenSearchParam("content-level")
+
+    public val FILTER_VALUE: StringSearchParam = StringSearchParam("filter-value")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val NAME: StringSearchParam = StringSearchParam("name")
+
+    public val OWNER: ReferenceSearchParam = ReferenceSearchParam("owner")
+
+    public val PAYLOAD: TokenSearchParam = TokenSearchParam("payload")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val TOPIC: UriSearchParam = UriSearchParam("topic")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
+
+    public val URL: UriSearchParam = UriSearchParam("url")
   }
 
   /** What Search Comparator Codes are supported in search. */

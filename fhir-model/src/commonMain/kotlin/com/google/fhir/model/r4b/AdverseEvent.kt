@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -746,6 +746,32 @@ public data class AdverseEvent(
         referenceDocument = referenceDocument.map { it.build() },
         study = study.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ACTUALITY: TokenSearchParam = TokenSearchParam("actuality")
+
+    public val CATEGORY: TokenSearchParam = TokenSearchParam("category")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val EVENT: TokenSearchParam = TokenSearchParam("event")
+
+    public val LOCATION: ReferenceSearchParam = ReferenceSearchParam("location")
+
+    public val RECORDER: ReferenceSearchParam = ReferenceSearchParam("recorder")
+
+    public val RESULTINGCONDITION: ReferenceSearchParam = ReferenceSearchParam("resultingcondition")
+
+    public val SERIOUSNESS: TokenSearchParam = TokenSearchParam("seriousness")
+
+    public val SEVERITY: TokenSearchParam = TokenSearchParam("severity")
+
+    public val STUDY: ReferenceSearchParam = ReferenceSearchParam("study")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
+
+    public val SUBSTANCE: ReferenceSearchParam = ReferenceSearchParam("substance")
   }
 
   /** Overall nature of the adverse event, e.g. real or potential. */

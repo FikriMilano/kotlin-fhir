@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1828,6 +1828,38 @@ public data class MolecularSequence(
         pointer = pointer.map { it.build() },
         structureVariant = structureVariant.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CHROMOSOME: TokenSearchParam = TokenSearchParam("chromosome")
+
+    public val CHROMOSOME_VARIANT_COORDINATE: CompositeSearchParam =
+      CompositeSearchParam("chromosome-variant-coordinate")
+
+    public val CHROMOSOME_WINDOW_COORDINATE: CompositeSearchParam =
+      CompositeSearchParam("chromosome-window-coordinate")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val REFERENCESEQID: TokenSearchParam = TokenSearchParam("referenceseqid")
+
+    public val REFERENCESEQID_VARIANT_COORDINATE: CompositeSearchParam =
+      CompositeSearchParam("referenceseqid-variant-coordinate")
+
+    public val REFERENCESEQID_WINDOW_COORDINATE: CompositeSearchParam =
+      CompositeSearchParam("referenceseqid-window-coordinate")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
+
+    public val VARIANT_END: NumberSearchParam = NumberSearchParam("variant-end")
+
+    public val VARIANT_START: NumberSearchParam = NumberSearchParam("variant-start")
+
+    public val WINDOW_END: NumberSearchParam = NumberSearchParam("window-end")
+
+    public val WINDOW_START: NumberSearchParam = NumberSearchParam("window-start")
   }
 
   /** Type for orientation. */

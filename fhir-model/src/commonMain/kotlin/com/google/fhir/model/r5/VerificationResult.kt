@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -830,6 +830,30 @@ public data class VerificationResult(
         attestation = attestation?.build(),
         validator = validator.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ATTESTATION_METHOD: TokenSearchParam = TokenSearchParam("attestation-method")
+
+    public val ATTESTATION_ONBEHALFOF: ReferenceSearchParam =
+      ReferenceSearchParam("attestation-onbehalfof")
+
+    public val ATTESTATION_WHO: ReferenceSearchParam = ReferenceSearchParam("attestation-who")
+
+    public val PRIMARYSOURCE_DATE: DateSearchParam = DateSearchParam("primarysource-date")
+
+    public val PRIMARYSOURCE_TYPE: TokenSearchParam = TokenSearchParam("primarysource-type")
+
+    public val PRIMARYSOURCE_WHO: ReferenceSearchParam = ReferenceSearchParam("primarysource-who")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val STATUS_DATE: DateSearchParam = DateSearchParam("status-date")
+
+    public val TARGET: ReferenceSearchParam = ReferenceSearchParam("target")
+
+    public val VALIDATOR_ORGANIZATION: ReferenceSearchParam =
+      ReferenceSearchParam("validator-organization")
   }
 
   /** The validation status of the target */

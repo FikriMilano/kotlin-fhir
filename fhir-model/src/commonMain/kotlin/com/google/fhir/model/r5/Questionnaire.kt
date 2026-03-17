@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1990,6 +1990,51 @@ public data class Questionnaire(
         code = code.map { it.build() },
         item = item.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val COMBO_CODE: TokenSearchParam = TokenSearchParam("combo-code")
+
+    public val CONTEXT: TokenSearchParam = TokenSearchParam("context")
+
+    public val CONTEXT_QUANTITY: QuantitySearchParam = QuantitySearchParam("context-quantity")
+
+    public val CONTEXT_TYPE: TokenSearchParam = TokenSearchParam("context-type")
+
+    public val CONTEXT_TYPE_QUANTITY: CompositeSearchParam =
+      CompositeSearchParam("context-type-quantity")
+
+    public val CONTEXT_TYPE_VALUE: CompositeSearchParam = CompositeSearchParam("context-type-value")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val DEFINITION: UriSearchParam = UriSearchParam("definition")
+
+    public val DESCRIPTION: StringSearchParam = StringSearchParam("description")
+
+    public val EFFECTIVE: DateSearchParam = DateSearchParam("effective")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val ITEM_CODE: TokenSearchParam = TokenSearchParam("item-code")
+
+    public val JURISDICTION: TokenSearchParam = TokenSearchParam("jurisdiction")
+
+    public val NAME: StringSearchParam = StringSearchParam("name")
+
+    public val PUBLISHER: StringSearchParam = StringSearchParam("publisher")
+
+    public val QUESTIONNAIRE_CODE: TokenSearchParam = TokenSearchParam("questionnaire-code")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT_TYPE: TokenSearchParam = TokenSearchParam("subject-type")
+
+    public val TITLE: StringSearchParam = StringSearchParam("title")
+
+    public val URL: UriSearchParam = UriSearchParam("url")
+
+    public val VERSION: TokenSearchParam = TokenSearchParam("version")
   }
 
   /** Distinguishes groups from questions and display text and indicates data type for questions. */

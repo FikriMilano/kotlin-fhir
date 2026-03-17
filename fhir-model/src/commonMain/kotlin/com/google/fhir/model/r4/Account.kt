@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -669,6 +669,24 @@ public data class Account(
         guarantor = guarantor.map { it.build() },
         partOf = partOf?.build(),
       )
+  }
+
+  public companion object {
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val NAME: StringSearchParam = StringSearchParam("name")
+
+    public val OWNER: ReferenceSearchParam = ReferenceSearchParam("owner")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PERIOD: DateSearchParam = DateSearchParam("period")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
   }
 
   /** Indicates whether the account is available to be used. */

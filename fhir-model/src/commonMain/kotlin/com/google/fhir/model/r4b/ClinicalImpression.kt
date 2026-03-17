@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -838,6 +838,34 @@ public data class ClinicalImpression(
         supportingInfo = supportingInfo.map { it.build() },
         note = note.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ASSESSOR: ReferenceSearchParam = ReferenceSearchParam("assessor")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val ENCOUNTER: ReferenceSearchParam = ReferenceSearchParam("encounter")
+
+    public val FINDING_CODE: TokenSearchParam = TokenSearchParam("finding-code")
+
+    public val FINDING_REF: ReferenceSearchParam = ReferenceSearchParam("finding-ref")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INVESTIGATION: ReferenceSearchParam = ReferenceSearchParam("investigation")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PREVIOUS: ReferenceSearchParam = ReferenceSearchParam("previous")
+
+    public val PROBLEM: ReferenceSearchParam = ReferenceSearchParam("problem")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
+
+    public val SUPPORTING_INFO: ReferenceSearchParam = ReferenceSearchParam("supporting-info")
   }
 
   /** Codes that reflect the current state of a clinical impression within its overall lifecycle. */

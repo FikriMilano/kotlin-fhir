@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -716,6 +716,43 @@ public data class DiagnosticReport(
         conclusionCode = conclusionCode.map { it.build() },
         presentedForm = presentedForm.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ASSESSED_CONDITION: ReferenceSearchParam = ReferenceSearchParam("assessed-condition")
+
+    public val BASED_ON: ReferenceSearchParam = ReferenceSearchParam("based-on")
+
+    public val CATEGORY: TokenSearchParam = TokenSearchParam("category")
+
+    public val CODE: TokenSearchParam = TokenSearchParam("code")
+
+    public val CONCLUSION: TokenSearchParam = TokenSearchParam("conclusion")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val ENCOUNTER: ReferenceSearchParam = ReferenceSearchParam("encounter")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val ISSUED: DateSearchParam = DateSearchParam("issued")
+
+    public val MEDIA: ReferenceSearchParam = ReferenceSearchParam("media")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PERFORMER: ReferenceSearchParam = ReferenceSearchParam("performer")
+
+    public val RESULT: ReferenceSearchParam = ReferenceSearchParam("result")
+
+    public val RESULTS_INTERPRETER: ReferenceSearchParam =
+      ReferenceSearchParam("results-interpreter")
+
+    public val SPECIMEN: ReferenceSearchParam = ReferenceSearchParam("specimen")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
   }
 
   /** The status of the diagnostic report. */

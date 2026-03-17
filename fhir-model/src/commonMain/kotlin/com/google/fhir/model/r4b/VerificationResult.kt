@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -826,6 +826,10 @@ public data class VerificationResult(
         attestation = attestation?.build(),
         validator = validator.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val TARGET: ReferenceSearchParam = ReferenceSearchParam("target")
   }
 
   /** The validation status of the target */

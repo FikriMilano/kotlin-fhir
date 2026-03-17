@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -364,6 +364,22 @@ public data class PaymentNotice(
         amount = amount.build(),
         paymentStatus = paymentStatus?.build(),
       )
+  }
+
+  public companion object {
+    public val CREATED: DateSearchParam = DateSearchParam("created")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val PAYMENT_STATUS: TokenSearchParam = TokenSearchParam("payment-status")
+
+    public val REPORTER: ReferenceSearchParam = ReferenceSearchParam("reporter")
+
+    public val REQUEST: ReferenceSearchParam = ReferenceSearchParam("request")
+
+    public val RESPONSE: ReferenceSearchParam = ReferenceSearchParam("response")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
   }
 
   /** This value set includes Status codes. */

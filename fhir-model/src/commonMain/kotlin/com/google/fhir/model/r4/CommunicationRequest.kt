@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -732,6 +732,40 @@ public data class CommunicationRequest(
         reasonReference = reasonReference.map { it.build() },
         note = note.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val AUTHORED: DateSearchParam = DateSearchParam("authored")
+
+    public val BASED_ON: ReferenceSearchParam = ReferenceSearchParam("based-on")
+
+    public val CATEGORY: TokenSearchParam = TokenSearchParam("category")
+
+    public val ENCOUNTER: ReferenceSearchParam = ReferenceSearchParam("encounter")
+
+    public val GROUP_IDENTIFIER: TokenSearchParam = TokenSearchParam("group-identifier")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val MEDIUM: TokenSearchParam = TokenSearchParam("medium")
+
+    public val OCCURRENCE: DateSearchParam = DateSearchParam("occurrence")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PRIORITY: TokenSearchParam = TokenSearchParam("priority")
+
+    public val RECIPIENT: ReferenceSearchParam = ReferenceSearchParam("recipient")
+
+    public val REPLACES: ReferenceSearchParam = ReferenceSearchParam("replaces")
+
+    public val REQUESTER: ReferenceSearchParam = ReferenceSearchParam("requester")
+
+    public val SENDER: ReferenceSearchParam = ReferenceSearchParam("sender")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val SUBJECT: ReferenceSearchParam = ReferenceSearchParam("subject")
   }
 
   /** Codes identifying the lifecycle stage of a request. */

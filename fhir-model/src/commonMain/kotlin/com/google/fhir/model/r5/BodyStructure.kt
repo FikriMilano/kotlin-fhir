@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -754,5 +754,17 @@ public data class BodyStructure(
         image = image.map { it.build() },
         patient = patient.build(),
       )
+  }
+
+  public companion object {
+    public val EXCLUDED_STRUCTURE: TokenSearchParam = TokenSearchParam("excluded_structure")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INCLUDED_STRUCTURE: TokenSearchParam = TokenSearchParam("included_structure")
+
+    public val MORPHOLOGY: TokenSearchParam = TokenSearchParam("morphology")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
   }
 }

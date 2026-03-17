@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -643,6 +643,26 @@ public data class EpisodeOfCare(
         team = team.map { it.build() },
         account = account.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CARE_MANAGER: ReferenceSearchParam = ReferenceSearchParam("care-manager")
+
+    public val CONDITION: ReferenceSearchParam = ReferenceSearchParam("condition")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val INCOMING_REFERRAL: ReferenceSearchParam = ReferenceSearchParam("incoming-referral")
+
+    public val ORGANIZATION: ReferenceSearchParam = ReferenceSearchParam("organization")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
+
+    public val `TYPE`: TokenSearchParam = TokenSearchParam("type")
   }
 
   /** The status of the episode of care. */

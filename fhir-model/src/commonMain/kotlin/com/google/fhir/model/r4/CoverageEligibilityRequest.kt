@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1108,6 +1108,22 @@ public data class CoverageEligibilityRequest(
         insurance = insurance.map { it.build() },
         item = item.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CREATED: DateSearchParam = DateSearchParam("created")
+
+    public val ENTERER: ReferenceSearchParam = ReferenceSearchParam("enterer")
+
+    public val FACILITY: ReferenceSearchParam = ReferenceSearchParam("facility")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val PATIENT: ReferenceSearchParam = ReferenceSearchParam("patient")
+
+    public val PROVIDER: ReferenceSearchParam = ReferenceSearchParam("provider")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
   }
 
   /** This value set includes Status codes. */

@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2025-2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,7 +55,8 @@ class FhirCodegen(
       baseClassNameSet = baseClassesSet,
     )
 
-  private val modelFileSpecGenerator = ModelFileSpecGenerator(codegenContext, searchParamsByResource)
+  private val modelFileSpecGenerator =
+    ModelFileSpecGenerator(codegenContext, searchParamsByResource)
   private val surrogateFileSpecGenerator = SurrogateFileSpecGenerator(codegenContext)
   private val serializerFileSpecGenerator = SerializerFileSpecGenerator(codegenContext)
   private val enumFileSpecGenerator = EnumFileSpecGenerator(codegenContext)

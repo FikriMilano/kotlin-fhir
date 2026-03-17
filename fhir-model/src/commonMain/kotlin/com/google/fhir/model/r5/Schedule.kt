@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -383,5 +383,26 @@ public data class Schedule(
         planningHorizon = planningHorizon?.build(),
         comment = comment?.build(),
       )
+  }
+
+  public companion object {
+    public val ACTIVE: TokenSearchParam = TokenSearchParam("active")
+
+    public val ACTOR: ReferenceSearchParam = ReferenceSearchParam("actor")
+
+    public val DATE: DateSearchParam = DateSearchParam("date")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val NAME: StringSearchParam = StringSearchParam("name")
+
+    public val SERVICE_CATEGORY: TokenSearchParam = TokenSearchParam("service-category")
+
+    public val SERVICE_TYPE: TokenSearchParam = TokenSearchParam("service-type")
+
+    public val SERVICE_TYPE_REFERENCE: ReferenceSearchParam =
+      ReferenceSearchParam("service-type-reference")
+
+    public val SPECIALTY: TokenSearchParam = TokenSearchParam("specialty")
   }
 }

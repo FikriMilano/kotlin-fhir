@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2595,6 +2595,36 @@ public data class MedicationKnowledge(
         regulatory = regulatory.map { it.build() },
         kinetics = kinetics.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val CLASSIFICATION: TokenSearchParam = TokenSearchParam("classification")
+
+    public val CLASSIFICATION_TYPE: TokenSearchParam = TokenSearchParam("classification-type")
+
+    public val CODE: TokenSearchParam = TokenSearchParam("code")
+
+    public val DOSEFORM: TokenSearchParam = TokenSearchParam("doseform")
+
+    public val INGREDIENT: ReferenceSearchParam = ReferenceSearchParam("ingredient")
+
+    public val INGREDIENT_CODE: TokenSearchParam = TokenSearchParam("ingredient-code")
+
+    public val MANUFACTURER: ReferenceSearchParam = ReferenceSearchParam("manufacturer")
+
+    public val MONITORING_PROGRAM_NAME: TokenSearchParam =
+      TokenSearchParam("monitoring-program-name")
+
+    public val MONITORING_PROGRAM_TYPE: TokenSearchParam =
+      TokenSearchParam("monitoring-program-type")
+
+    public val MONOGRAPH: ReferenceSearchParam = ReferenceSearchParam("monograph")
+
+    public val MONOGRAPH_TYPE: TokenSearchParam = TokenSearchParam("monograph-type")
+
+    public val SOURCE_COST: TokenSearchParam = TokenSearchParam("source-cost")
+
+    public val STATUS: TokenSearchParam = TokenSearchParam("status")
   }
 
   /** MedicationKnowledge Status Codes */

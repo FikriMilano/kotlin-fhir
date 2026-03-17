@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Google LLC
+ * Copyright 2026 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -547,5 +547,41 @@ public data class Practitioner(
         qualification = qualification.map { it.build() },
         communication = communication.map { it.build() },
       )
+  }
+
+  public companion object {
+    public val ACTIVE: TokenSearchParam = TokenSearchParam("active")
+
+    public val ADDRESS: StringSearchParam = StringSearchParam("address")
+
+    public val ADDRESS_CITY: StringSearchParam = StringSearchParam("address-city")
+
+    public val ADDRESS_COUNTRY: StringSearchParam = StringSearchParam("address-country")
+
+    public val ADDRESS_POSTALCODE: StringSearchParam = StringSearchParam("address-postalcode")
+
+    public val ADDRESS_STATE: StringSearchParam = StringSearchParam("address-state")
+
+    public val ADDRESS_USE: TokenSearchParam = TokenSearchParam("address-use")
+
+    public val COMMUNICATION: TokenSearchParam = TokenSearchParam("communication")
+
+    public val EMAIL: TokenSearchParam = TokenSearchParam("email")
+
+    public val FAMILY: StringSearchParam = StringSearchParam("family")
+
+    public val GENDER: TokenSearchParam = TokenSearchParam("gender")
+
+    public val GIVEN: StringSearchParam = StringSearchParam("given")
+
+    public val IDENTIFIER: TokenSearchParam = TokenSearchParam("identifier")
+
+    public val NAME: StringSearchParam = StringSearchParam("name")
+
+    public val PHONE: TokenSearchParam = TokenSearchParam("phone")
+
+    public val PHONETIC: StringSearchParam = StringSearchParam("phonetic")
+
+    public val TELECOM: TokenSearchParam = TokenSearchParam("telecom")
   }
 }
