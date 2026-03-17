@@ -34,18 +34,6 @@ private data class SearchParameterDef(
 
 private val json = Json { ignoreUnknownKeys = true }
 
-private val fhirTypeToClassName: Map<String, String> =
-  mapOf(
-    "number" to "NumberSearchParam",
-    "date" to "DateSearchParam",
-    "string" to "StringSearchParam",
-    "token" to "TokenSearchParam",
-    "reference" to "ReferenceSearchParam",
-    "composite" to "CompositeSearchParam",
-    "quantity" to "QuantitySearchParam",
-    "uri" to "UriSearchParam",
-    "special" to "SpecialSearchParam",
-  )
 
 private data class SearchParamTestSuite(
   val fhirVersion: String,
@@ -134,8 +122,7 @@ class SearchParamTest :
                     as String
                 paramName.shouldBe(expected.code)
                 val expectedClassName =
-                  fhirTypeToClassName[expected.type]
-                    ?: error("Unknown search param type: ${expected.type}")
+                  "${expected.type.replaceFirstChar(Char::uppercaseChar)}SearchParam"
                 actual::class.simpleName.shouldBe(expectedClassName)
               }
             }
