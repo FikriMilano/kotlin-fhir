@@ -140,6 +140,8 @@ kotlin {
         val jvmTest by getting {
             dependencies {
                 implementation(libs.kotest.runner.junit5)
+                implementation(kotlin("reflect"))
+                implementation(libs.kotlinx.serialization.json)
             }
         }
         val jsMain by getting
