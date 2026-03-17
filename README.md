@@ -130,7 +130,7 @@ represented as nested data classes since they are never reused outside the Struc
 each occurrence of a choice type (e.g. in [R4](https://hl7.org/fhir/R4/formats.html#choice)), a
 single sealed interface is generated with a subclass for each type.
 
-| FHIR concept <img src="images/fhir.png" alt="kotlin" style="height: 1em"/> | Kotlin concept <img src="images/kotlin.png" alt="kotlin" style="height: 1em"/>                                    |
+| FHIR concept <img src="images/fhir.png" alt="kotlin" style="height: 1em"/> |                  Kotlin concept <img src="images/kotlin.png" alt="kotlin" style="height: 1em"/>                   |
 |----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | StructureDefinition JSON file (e.g. `StructureDefinition-Patient.json`)    | Kotlin .kt file (e.g. `Patient.kt`)                                                                               |
 | StructureDefinition (e.g. `Patient`)                                       | Kotlin data class (e.g. `data class Patient`)                                                                     |
@@ -228,17 +228,17 @@ The codegen reads `SearchParameter-*.json` files from the FHIR core packages and
 
 A `SearchParam` sealed interface is generated in each version package with concrete classes for each FHIR search parameter type:
 
-| FHIR search parameter type | Kotlin class |
-|:---------------------------|:-------------|
-| number                     | `NumberSearchParam` |
-| date                       | `DateSearchParam` |
-| string                     | `StringSearchParam` |
-| token                      | `TokenSearchParam` |
+| FHIR search parameter type | Kotlin class           |
+|:---------------------------|:-----------------------|
+| number                     | `NumberSearchParam`    |
+| date                       | `DateSearchParam`      |
+| string                     | `StringSearchParam`    |
+| token                      | `TokenSearchParam`     |
 | reference                  | `ReferenceSearchParam` |
 | composite                  | `CompositeSearchParam` |
-| quantity                   | `QuantitySearchParam` |
-| uri                        | `UriSearchParam` |
-| special                    | `SpecialSearchParam` |
+| quantity                   | `QuantitySearchParam`  |
+| uri                        | `UriSearchParam`       |
+| special                    | `SpecialSearchParam`   |
 
 Each concrete resource class has a companion object with search parameter constants. For example, `Patient` has:
 
