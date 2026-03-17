@@ -733,35 +733,11 @@ private fun TypeSpec.Builder.addDataTypeFunction(type: Type, sealedInterfaceClas
       .build()
   )
 
-/** Kotlin reserved words that need backtick-escaping when used as identifiers. */
-private val kotlinReservedWords =
-  setOf(
-    "class",
-    "in",
-    "is",
-    "as",
-    "fun",
-    "val",
-    "var",
-    "when",
-    "for",
-    "if",
-    "else",
-    "do",
-    "while",
-    "return",
-    "object",
-    "type",
-  )
-
 /**
  * Converts a search parameter code (e.g., "general-practitioner") to a Kotlin constant name (e.g.,
  * "GENERAL_PRACTITIONER").
  */
-private fun String.toSearchParamConstantName(): String {
-  val name = replace("-", "_").uppercase()
-  return if (name.lowercase() in kotlinReservedWords) "`$name`" else name
-}
+private fun String.toSearchParamConstantName(): String = replace("-", "_").uppercase()
 
 /** Maps a [SearchParameterDefinition] type string to the corresponding [SearchParam] class name. */
 private fun SearchParameterDefinition.toSearchParamClassName(packageName: String): ClassName =
